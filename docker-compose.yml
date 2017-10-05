@@ -20,6 +20,7 @@ services:
       MURA_INDEXFILEINURLS: "true"
     volumes:
         -   ./:/var/www/themes/default
+        - mura_bs4_sites_data:/var/www/sites
     ports:
         - "8888:8888"
 
@@ -36,3 +37,4 @@ services:
 
 volumes:
     mura_bs4_mysql_data:
+    mura_bs4_sites_data:
