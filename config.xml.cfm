@@ -7,7 +7,7 @@
 <mura>
 
 	<imagesizes>
-		<imagesize name="carouselimage" width="1200" height="500" />
+		<imagesize name="carouselimage" width="1506" height="628" />
 	</imagesizes>
 
 	<extensions>
