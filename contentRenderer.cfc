@@ -447,7 +447,7 @@
 		this.avgRatingWrapperClass="";
 
 		//
-		this.navPrevtDecoration="";
+		this.navPrevDecoration="";
 		this.navNextDecoration="";
 
 	</cfscript>
