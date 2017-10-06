@@ -93,7 +93,7 @@
 		// nav and list item vars
 		this.navWrapperClass = "mura-nav bg-light p-3 mb-5 border rounded";
 		this.navWrapperBodyClass = "";
-		this.navLIClass = "nav-item"
+		this.navLIClass = "nav-item";
 		this.liHasKidsClass = "";
 		this.liHasKidsCustomString = "";
 		this.liCurrentClass = "";
@@ -585,6 +585,35 @@
 			</cfoutput>
 		</cfsavecontent>
 		<cfreturn local.str />
+	</cffunction>
+
+	<cffunction name="dspPrimaryNavKids">
+		<cfset var returnString="">
+		<cfset var kids=getFeed('content').set(
+				arguments
+			).getIterator()>
+		<cfset var kid="">
+		<cfset var started=false>
+		<cfif kids.hasNext()>
+			<cfsavecontent variable="returnString">
+				<cfoutput>
+	        <div class="dropdown-menu">
+						<cfloop condition="kids.hasNext()">
+						<cfset kid=kids.next()>
+						<cfif allowLink(kid.getRestricted(),kid.getRestrictGroups(),m.event('r').loggedIn)>
+							<cfset started=true>
+	          	<a class="dropdown-item" href="#kid.getURL()#">#esapiEncode('html',kid.getMenuTitle())#</a>
+						</cfif>
+						</cfloop>
+	        </div>
+				</cfoutput>
+			</cfsavecontent>
+		</cfif>
+		<cfif started>
+			<cfreturn returnString>
+		<cfelse>
+			<cfreturn "">
+		</cfif>
 	</cffunction>
 
 </cfcomponent>
