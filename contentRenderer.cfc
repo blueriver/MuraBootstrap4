@@ -446,9 +446,11 @@
 		this.raterWrapperClass="";
 		this.avgRatingWrapperClass="";
 
-		//
+		//7.1
 		this.navPrevDecoration="";
 		this.navNextDecoration="";
+		this.userFavoritesWrapperClass="bg-light p-3 mb-5 border rounded";
+		this.pageToolsWrapperClass="bg-light p-3 mb-5 border rounded";
 
 	</cfscript>
 
