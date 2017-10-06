@@ -18,11 +18,11 @@
 			or ListLen($.content().getTags())
 			or itCategories.hasNext()
 			or commentCount>
-			<div>
+			<ul class="list-inline">
 
 				<!--- Content Release Date --->
 					<cfif IsDate($.setDynamicContent($.content('releasedate')))>
-						<span class="badge badge-light">
+						<li class="list-inline-item">
 							<i class="fa fa-clock-o" aria-hidden="true"></i> #LSDateFormat($.setDynamicContent($.content('releasedate')))#
 						</span>
 					</cfif>
@@ -30,7 +30,7 @@
 
 				<!--- Comments --->
 					<cfif commentCount gt 0>
-						<li class="list-inline-item mura-comment-count">
+						<li class="list-inline-item">
 							<i class="fa fa-comments" aria-hidden="true"></i> #commentCount# Comment<cfif commentCount gt 1>s</cfif>
 						</li>
 					</cfif>
@@ -38,7 +38,7 @@
 
 				<!--- Tags --->
 					<cfif ListLen($.content().getTags())>
-						<li class="list-inline-item mura-tags">
+						<li class="list-inline-item">
 							<i class="fa fa-tags" aria-hidden="true"></i>
 							<cfloop from="1" to="#ListLen($.content().getTags())#" index="t">
 							#esapiEncode('html', trim(ListGetAt($.content().getTags(), t)))#<cfif t neq ListLen($.content().getTags())>, </cfif>
@@ -49,7 +49,7 @@
 
 				<!--- Categories --->
 					<cfif itCategories.hasNext()>
-						<li class="list-inline-item mura-categories">
+						<li class="list-inline-item">
 							<i class="fa fa-folder-open" aria-hidden="true"></i>
 							<cfloop condition="itCategories.hasNext()">
 								<cfset categoryItem = itCategories.next()>
@@ -61,12 +61,12 @@
 
 				<!--- Credits --->
 					<cfif Len($.setDynamicContent($.content('credits')))>
-						<li class="list-inline-item mura-credits">
+						<li class="list-inline-item">
 							<i class="fa fa-user" aria-hidden="true"></i> #esapiEncode('html', $.setDynamicContent($.content('credits')))#
 						</li>
 					</cfif>
 				<!--- /Credits --->
-			</div>
+			</ul>
 		</cfif>
 
 	</cfif>
