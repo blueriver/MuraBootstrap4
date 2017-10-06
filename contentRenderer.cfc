@@ -446,6 +446,10 @@
 		this.raterWrapperClass="";
 		this.avgRatingWrapperClass="";
 
+		//
+		this.navPrevtDecoration="";
+		this.navNextDecoration="";
+
 	</cfscript>
 
 	<cffunction name="dspCarouselByFeedName" output="false">

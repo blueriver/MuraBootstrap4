@@ -30,7 +30,7 @@
 						<div class="card text-center">
 							<div class="card-body">
 
-								<i class="fa fa-laptop fa-5x text-primary"></i>
+								<i class="fa fa-laptop fa-5x text-primary" aria-hidden="true"></i>
 
 								<h2 class="mt-2 mb-3">Responsive Design</h2>
 
@@ -44,7 +44,7 @@
 						<div class="card text-center">
 							<div class="card-body">
 
-								<i class="fa fa-pencil fa-5x text-primary"></i>
+								<i class="fa fa-pencil fa-5x text-primary" aria-hidden="true"></i>
 
 								<h2 class="mt-2 mb-3">Creative Ideas</h2>
 
@@ -59,7 +59,7 @@
 						<div class="card text-center">
 							<div class="card-body">
 
-								<i class="fa fa-code fa-5x text-primary"></i>
+								<i class="fa fa-code fa-5x text-primary" aria-hidden="true"></i>
 
 								<h2 class="mt-2 mb-3">Bootstrap4</h2>
 
@@ -78,7 +78,6 @@
 				<h3>Build ambitious websites easier &amp; faster.</h3>
 			</div>
 		</div>
-
 
 		<div class="template pb-5">
 
