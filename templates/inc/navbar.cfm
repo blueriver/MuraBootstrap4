@@ -21,7 +21,7 @@
 						, id='navPrimary'
 						, class='navbar-nav mr-auto'
 						, displayHome='always'
-						, closeFolders=false
+						, closeFolders=true
 						, showCurrentChildrenOnly=false
 						, liClass='nav-item'
 						, liHasKidsClass='dropdown'
