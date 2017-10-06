@@ -23,61 +23,7 @@
 			, autoStart=true
 		)#
 
-		<div class="py-5">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="card text-center">
-							<div class="card-body">
-
-								<i class="fa fa-laptop fa-5x text-primary" aria-hidden="true"></i>
-
-								<h2 class="mt-2 mb-3">Responsive Design</h2>
-
-								<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="card text-center">
-							<div class="card-body">
-
-								<i class="fa fa-pencil fa-5x text-primary" aria-hidden="true"></i>
-
-								<h2 class="mt-2 mb-3">Creative Ideas</h2>
-
-								<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<div class="card text-center">
-							<div class="card-body">
-
-								<i class="fa fa-code fa-5x text-primary" aria-hidden="true"></i>
-
-								<h2 class="mt-2 mb-3">Bootstrap4</h2>
-
-								<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="jumbotron jumbotron-fluid text-center mb-0 bg-secondary text-light">
-			<div class="container">
-				<h2>Mura CMS is Feature-Rich, but Easy to Use</h2>
-				<h3>Build ambitious websites easier &amp; faster.</h3>
-			</div>
-		</div>
+		#$.dspObjects(1)#
 
 		<div class="template pb-5">
 
