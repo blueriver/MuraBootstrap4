@@ -1,11 +1,4 @@
-.mura-form{
-
-	/* bootstrap class mapping */
-
-	@import url('../../assets/bootstrap/less/variables.less');
-	@import url('../../assets/bootstrap/less/mixins.less');
-	@import url('../../assets/bootstrap/less/buttons.less');
-	@import url('../../assets/bootstrap/less/forms.less');
+.mura-form {
 
 	textarea,
 	input[type=text]:not([class*="datepicker"]),
