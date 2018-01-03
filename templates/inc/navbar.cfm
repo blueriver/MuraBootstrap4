@@ -40,10 +40,10 @@
 					)#
 				</cf_CacheOMatic>
 				<script>
-					$(function(){
-						$(#serializeJSON($.getCurrentURLArray())#).each(
-							function(index, value){
-								$("##navPrimary [href='" + value + "']").closest("li").addClass("active");
+					Mura(function(){
+						#serializeJSON($.getCurrentURLArray())#.forEach(
+							function(value){
+								Mura("##navPrimary [href='" + value + "']").closest("li").addClass("active");
 							}
 						);
 					})
