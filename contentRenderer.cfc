@@ -69,6 +69,7 @@
 
 
 		// GENERAL
+		this.deferMuraJS=true;
 		this.layoutmanager=true;
 		this.legacyobjects=false;
 		this.validateCSRFTokens=true; //This will eventually default to true
