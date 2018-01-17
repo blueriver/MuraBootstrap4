@@ -43,7 +43,13 @@
 					Mura(function(){
 						#serializeJSON($.getCurrentURLArray())#.forEach(
 							function(value){
-								Mura("##navPrimary [href='" + value + "']").closest("li").addClass("active");
+								navItem=Mura("##navPrimary [href='" + value + "']");
+								if(navItem.length){
+									var navItem=Mura("##navPrimary [href='" + value + "']").closest("li");
+									if(navItem.length){
+										navItem.addClass("active");
+									}
+								}
 							}
 						);
 					})
