@@ -152,10 +152,12 @@
 		this.formSelectClass = this.formGeneralControlClass;
 		this.formTextareaClass = this.formGeneralControlClass;
 		this.formFileClass = this.formGeneralControlClass;
-		this.formCheckboxClass = "";
-		this.formCheckboxLabelClass = "checkbox";
-		this.formRadioClass = "";
-		this.formRadioLabelClass = "radio";
+		this.formCheckboxClass = "form-check-input";
+		this.formCheckboxLabelClass = "form-check-label";
+		this.formCheckboxWrapperClass = "form-check";
+		this.formRadioClass = "form-check-input";
+		this.formRadioLabelClass = "form-check-label";
+		this.formRadioWrapperClass = "form-check";
 		this.formButtonWrapperClass = "btn-group";
 		this.formButtonInnerClass="";
 		this.formButtonClass = "btn btn-primary";
