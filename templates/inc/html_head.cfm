@@ -10,7 +10,7 @@
 	<meta name="generator" content="Mura CMS #$.globalConfig('version')#">
 
 	<title>#esapiEncode('html', $.content('HTMLTitle'))# - #esapiEncode('html', $.siteConfig('site'))#</title>
-	
+
 	<!--- Mura CMS Base Styles--->
 	<!--- Optional: Mura CMS Skin Styles. Duplicate to your theme to customize, changing 'assetPath' to 'themeAssetPath' below. Don't forget to move, remove or replace sprite.png. --->
 	#$.outputMuraCSS(version="7.1", includeskin=true)#
@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/site.css">
 
 	<!--- jQuery --->
-	<script src="#$.siteConfig('themeAssetPath')#/js/libraries/jquery-3.1.1.min.js"></script>
+	<script src="#$.siteConfig('themeAssetPath')#/js/libraries/jquery-3.3.1.min.js"></script>
 
 	<!--- FAV AND TOUCH ICONS --->
 	<link rel="shortcut icon" href="#$.globalConfig('corePath')#/modules/v1/core_assets/images/favicon.ico">
