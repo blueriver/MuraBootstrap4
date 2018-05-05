@@ -16,7 +16,7 @@
 	#$.outputMuraCSS(version="7.1", includeskin=true)#
 
 	<!--- Bootstrap core CSS --->
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/bootstrap.css">
 
 	<!--- Font Awesome --->
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/font-awesome/css/font-awesome.css">
