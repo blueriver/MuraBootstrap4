@@ -1,0 +1,11 @@
+// import custom variables (bootstrap overrides)
+@import "variables";
+
+// import bootstrap from assets directory
+// ==================================================
+// https://getbootstrap.com/docs/4.1/getting-started/theming/#importing
+// ==================================================
+@import "../../assets/bootstrap/scss/bootstrap.scss";
+
+// import custom scss
+@import "custom";

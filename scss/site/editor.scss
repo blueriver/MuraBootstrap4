@@ -1,0 +1,8 @@
+@import 'partials/partials--helpers';
+@import '../../css/bootstrap.css';
+@import 'partials/theme/typography';
+
+body {
+	background: $white;
+	padding: 1em;
+}
