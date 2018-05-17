@@ -57,11 +57,11 @@
 
 				<form method="post" id="searchForm" class="form-inline" role="search" action="#m.createHREF(filename='search-results')#">
 					<div class="input-group">
-						<input type="text" name="Keywords" id="navKeywords" class="form-control" value="#esapiEncode('html', $.event('keywords'))#" placeholder="#$.rbKey('search.search')#" aria-label="Search">
+						<input type="text" name="Keywords" id="navKeywords" class="form-control" value="#esapiEncode('html', $.event('keywords'))#" placeholder="#$.rbKey('search.search')#" aria-label="#$.rbKey('search.search')#">
 						<span class="input-group-btn">
 							<button type="submit" class="btn btn-secondary">
 								<i class="fa fa-search" aria-hidden="true"></i>
-								<span class="sr-only">Search</span>
+								<span class="sr-only">#$.rbKey('search.search')#</span>
 							</button>
 						</span>
 					</div>
