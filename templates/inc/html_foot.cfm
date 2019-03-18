@@ -4,3 +4,13 @@
 	<!--- Theme JavaScript --->
 	<!--- <script src="#$.siteConfig('themeAssetPath')#/js/theme/theme.js"></script> --->
 </cfoutput>
+
+<script>
+	Mura(()=>{
+		 Mura(document).on('submit','form',
+		 function(e){
+			 console.log(e)
+		 }
+	 )
+	})
+</script>

@@ -1,0 +1,28 @@
+div[data-layout="grid"] {
+
+	.mura-item-content {
+		a {
+			// .transition(all, 0.3s, ease-in);
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.mura-item-meta {
+
+		margin: 0 0 .5em 0;
+
+		div[class^="mura-item-meta_"] {
+			margin: .5em 0 0 0;
+		}
+
+		.mura-item-meta__date {
+			color: $gray-600;
+		}
+
+		.mura-item-meta__credits {
+			color: $gray-600;
+		}
+	}
+}

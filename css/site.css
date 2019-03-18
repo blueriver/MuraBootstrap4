@@ -97,18 +97,20 @@
 .navbar-nav .nav-item .dropdown-menu {
   margin: 0; }
 
-div[data-cssclass="home-news"] {
-  padding: 2em 0 0 0; }
-  div[data-cssclass="home-news"] .mura-object-meta {
-    text-align: center; }
-  div[data-cssclass="home-news"] .mura-collection-item .mura-item-content a:hover {
-    opacity: 0.8; }
-  div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta div[class^="mura-item-meta_"] {
-    margin: 1em 0 0 0; }
-  div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta .mura-item-meta__date {
-    color: #6c757d; }
-  div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta .mura-item-meta__credits {
-    color: #6c757d; }
+div[data-cssclass="home-news"] .mura-object-meta {
+  text-align: center; }
+
+div[data-cssclass="home-news"] .mura-collection-item .mura-item-content a:hover {
+  opacity: 0.8; }
+
+div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta div[class^="mura-item-meta_"] {
+  margin: 1em 0 0 0; }
+
+div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta .mura-item-meta__date {
+  color: #6c757d; }
+
+div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta .mura-item-meta__credits {
+  color: #6c757d; }
 
 .mura-nav .active {
   color: #343a40; }
@@ -162,6 +164,37 @@ div[data-cssclass="home-news"] {
   display: block;
   clear: both;
   content: ""; }
+
+.mura-object {
+  /*
+	.frontEndToolsModal +	.mura-object-meta {
+		margin-top: -24px;
+	}
+
+	.frontEndToolsModal +	.mura-object-content {
+		margin-top: -24px;
+	}
+	*/ }
+  .mura-object .mura-object-meta {
+    padding: 24px 0 0 0; }
+  .mura-object .mura-object-content {
+    padding: 0 0 24px 0; }
+  .mura-object .mura-object + .mura-object .mura-object-content {
+    padding-top: 0; }
+  .mura-object .mura-object + .mura-object .mura-object-meta + .mura-object-content {
+    padding-top: 0; }
+
+div[data-layout="grid"] .mura-item-content a:hover {
+  opacity: 0.8; }
+
+div[data-layout="grid"] .mura-item-meta {
+  margin: 0 0 .5em 0; }
+  div[data-layout="grid"] .mura-item-meta div[class^="mura-item-meta_"] {
+    margin: .5em 0 0 0; }
+  div[data-layout="grid"] .mura-item-meta .mura-item-meta__date {
+    color: #6c757d; }
+  div[data-layout="grid"] .mura-item-meta .mura-item-meta__credits {
+    color: #6c757d; }
 
 .mura-index .releaseDate {
   font-weight: normal;

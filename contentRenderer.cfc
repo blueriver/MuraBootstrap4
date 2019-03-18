@@ -66,9 +66,15 @@
 	--->
 
 	<cfscript>
-
+		this.primaryContentTypes='Page,Link,File';
+		this.cookieConsentEnabled=true;
+		this.cookieConsentType='drawer';
+		this.cookieConsentButtonClass="btn btn-primary";
+		this.cookieConsentWrapperClass="";
+		this.cookieConsentWidth="sm";
 
 		// GENERAL
+		this.directImages=true;
 		this.deferMuraJS=true;
 		this.layoutmanager=true;
 		this.legacyobjects=false;
@@ -89,7 +95,7 @@
 		this.subHead4 = "h5";
 
 		// preloader markup for async objects
-		this.preloaderMarkup='<i class="mura-preloader fa fa-refresh fa-spin"></i>';
+		this.preloaderMarkup='<div class="text-center container"><i class="mura-preloader fa fa-refresh fa-spin"></i></div>';
 
 		// nav and list item vars
 		this.navWrapperClass = "mura-nav bg-light p-3 mb-5 border rounded";
@@ -127,7 +133,7 @@
 
 
 		//Queue async display objects to render when scrolled into view
-		//this.queueObjects=true;
+		this.queueObjects=false;
 
 		// pagination vars
 		this.ulPaginationClass="pagination";
@@ -138,7 +144,7 @@
 		this.aPaginationNotCurrentClass="page-link";
 
 		//These are used as primary form settings as well as in the form builder.
-		this.formWrapperClass = "";
+		this.formWrapperClass = "container";
 		this.formWrapperClass=this.generalWrapperClass;
 		this.formWrapperBodyClass=this.generalWrapperBodyClass;
 		this.formErrorWrapperClass = "";
@@ -329,7 +335,7 @@
 		this.remoteFeedWrapperClass="";
 
 		// dsp_login.cfm
-		this.loginWrapperClass="";
+		this.loginWrapperClass="container";
 		this.loginWrapperInnerClass="";
 		this.loginFormClass="form-horizontal form-signin";
 		this.forgotPasswordFormClass="form-horizontal form-sendlogin";
@@ -460,10 +466,10 @@
 	<cffunction name="dspCarouselByFeedName" output="false">
 		<cfargument name="feedName" type="string" default="Slideshow" />
 		<cfargument name="showCaption" type="boolean" default="true" />
-		<cfargument name="cssID" type="string" default="myCarousel" />
-		<cfargument name="size" type="string" default="custom" hint="If you want to use a custom height/width, then use 'custom' ... otherwise, you can use 'small, medium, large' OR any other predefined custom image size 'name' you created via the back-end administrator." />
-		<cfargument name="width" type="numeric" default="1280" hint="width in pixels" />
-		<cfargument name="height" type="numeric" default="500" hint="height in pixels" />
+		<cfargument name="carouselID" type="string" default="myCarousel" />
+		<cfargument name="imageSize" type="string" default="custom" hint="If you want to use a custom height/width, then use 'custom' ... otherwise, you can use 'small, medium, large' OR any other predefined custom image size 'name' you created via the back-end administrator." />
+		<cfargument name="imageWidth"  default="1280" hint="width in pixels" />
+		<cfargument name="imageHeight" default="500" hint="height in pixels" />
 		<cfargument name="interval" type="any" default="5000" hint="Use either milliseconds OR use 'false' to NOT auto-advance to next slide." />
 		<cfargument name="autoStart" type="boolean" default="true" />
 		<cfargument name="showIndicators" type="boolean" default="true" />
@@ -472,15 +478,19 @@
 			var local = {};
 			local.imageArgs = {};
 
-			if ( not ListFindNoCase('small,medium,large,custom', arguments.size) and variables.$.getBean('imageSize').loadBy(name=arguments.size,siteID=variables.$.event('siteID')).getIsNew() ) {
-				arguments.size = 'custom';
+			if ( not ListFindNoCase('small,medium,large,custom', arguments.imageSize) and variables.$.getBean('imageSize').loadBy(name=arguments.imageSize,siteID=variables.$.event('siteID')).getIsNew() ) {
+				arguments.imageSize = 'custom';
 			};
 
-			if ( not Len(Trim(arguments.size)) or LCase(arguments.size) eq 'custom' ) {
-				local.imageArgs.width = Val(arguments.width);
-				local.imageArgs.height = Val(arguments.height);
+			if(not len(arguments.cssid)){
+				arguments.cssID='myCarousel';
+			}
+
+			if ( not Len(Trim(arguments.imageSize)) or LCase(arguments.imageSize) eq 'custom' ) {
+				local.imageArgs.width = Val(arguments.imageWidth);
+				local.imageArgs.height = Val(arguments.imageHeight);
 			} else {
-				local.imageArgs.size = arguments.size;
+				local.imageArgs.size = arguments.imageSize;
 			};
 		</cfscript>
 
@@ -488,104 +498,119 @@
 			<cfoutput>
 				<!--- BEGIN: Bootstrap Carousel --->
 				<!--- IMPORTANT: This will only output items that have associated images --->
-				<cfset local.feed = variables.$.getBean('feed').loadBy(name=arguments.feedName)>
-				<cfset local.iterator = local.feed.getIterator()>
+				<cfif not isdefined('arguments.iterator')>
+					<cfif isdefined('arguments.feedid') and len(arguments.feedid)>
+						<cfset local.feed = variables.$.getBean('feed').loadBy(feedid=arguments.feedid)>
+					<cfelse>
+						<cfset local.feed = variables.$.getBean('feed').loadBy(name=arguments.feedName)>
+					</cfif>
+					<cfset local.iterator = local.feed.getIterator()>
+				<cfelse>
+						<cfset local.iterator = arguments.iterator>
+				</cfif>
 
 
-					<cfif local.feed.getIsNew()>
+				<cfif isDefined('local.feed') and local.feed.getIsNew()>
 
-						<div class="alert alert-warning alert-dismissible fade show" role="alert">
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							The <strong>#HTMLEditFormat(arguments.feedName)#</strong> Content Collection/Local Index does not exist.
-						</div>
+					<div class="alert alert-warning alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						The <strong>#HTMLEditFormat(arguments.feedName)#</strong> Content Collection/Local Index does not exist.
+					</div>
 
-					<cfelseif local.iterator.hasNext()>
+				<cfelseif local.iterator.hasNext()>
 
-						<div id="#arguments.cssID#" class="carousel slide" data-ride="carousel" data-interval="#arguments.interval#">
+					<div id="#arguments.carouselID#" class="carousel slide carousel-fade" data-ride="carousel" data-interval="#arguments.interval#">
 
-							<!--- Indicators --->
-							<cfif arguments.showIndicators>
-								<ol class="carousel-indicators">
-									<cfset local.iterator.reset()>
-									<cfset local.idx = 0>
-									<cfloop condition="local.iterator.hasNext()">
-										<cfset local.item=iterator.next()>
-										<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
-											<li data-target="###arguments.cssID#" data-slide-to="#idx#" class="<cfif local.idx eq 0>active</cfif>"></li>
-											<cfset local.idx++>
-										</cfif>
-									</cfloop>
-								</ol>
-							</cfif>
-
-							<!--- Wrapper for slides --->
-							<div class="carousel-inner">
+						<!--- Indicators --->
+						<cfif arguments.showIndicators>
+							<ol class="carousel-indicators">
 								<cfset local.iterator.reset()>
 								<cfset local.idx = 0>
 								<cfloop condition="local.iterator.hasNext()">
 									<cfset local.item=iterator.next()>
 									<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
-										<div class="carousel-item<cfif local.idx eq 0> active</cfif>">
-
-											<img src="#local.item.getImageURL(argumentCollection=local.imageArgs)#" alt="#HTMLEditFormat(local.item.getTitle())#" class="d-block w-100">
-											<cfif arguments.showCaption>
-												<div class="carousel-caption d-none d-md-block p-md-5">
-													<div class="container">
-														<h3><a href="#local.item.getURL()#">#HTMLEditFormat(local.item.getTitle())#</a></h3>
-														#local.item.getSummary()#
-														<a class="btn btn-primary btn-sm mb-2" href="#local.item.getURL()#">Read More</a>
-													</div>
-												</div>
-											</cfif>
-										</div>
+										<li data-target="###arguments.cssID#" data-slide-to="#idx#" class="<cfif local.idx eq 0>active</cfif>"></li>
 										<cfset local.idx++>
 									</cfif>
 								</cfloop>
-							</div>
+							</ol>
+						</cfif>
 
-							<cfif local.idx>
-								<!--- Controls --->
-								<cfif local.idx gt 1>
+						<!--- Wrapper for slides --->
+						<div class="carousel-inner">
+							<cfset local.iterator.reset()>
+							<cfset local.idx = 0>
+							<cfloop condition="local.iterator.hasNext()">
+								<cfset local.item=iterator.next()>
+								<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
+									<div class="carousel-item<cfif local.idx eq 0> active</cfif>">
 
-									<a class="carousel-control-prev" href="###arguments.cssID#" role="button" data-slide="prev">
-										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-										<span class="sr-only">Previous</span>
-									</a>
-									<a class="carousel-control-next" href="###arguments.cssID#" role="button" data-slide="next">
-										<span class="carousel-control-next-icon" aria-hidden="true"></span>
-										<span class="sr-only">Next</span>
-									</a>
-									<!--- AutoStart --->
-									<cfif arguments.autoStart>
-										<script>jQuery(document).ready(function($){$('###arguments.cssID#').carousel({interval:#arguments.interval#});});</script>
-									</cfif>
-
+										<img src="#local.item.getImageURL(argumentCollection=local.imageArgs)#" alt="#HTMLEditFormat(local.item.getTitle())#" class="d-block w-100">
+										<cfif arguments.showCaption>
+											<div class="carousel-caption d-none d-md-block p-md-5">
+												<div class="container">
+													<h3><a href="#local.item.getURL()#">#HTMLEditFormat(local.item.getTitle())#</a></h3>
+													#local.item.getSummary()#
+													<a class="btn btn-primary btn-sm mb-2" href="#local.item.getURL()#">Read More</a>
+												</div>
+											</div>
+										</cfif>
+									</div>
+									<cfset local.idx++>
 								</cfif>
+							</cfloop>
+						</div>
 
-							<cfelse>
-
-								<div class="alert alert-warning alert-dismissible fade show" role="alert">
-									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-									Your feed has no items <em>with images</em>.
-								</div>
+						<cfif local.idx>
+							<!--- Controls --->
+							<cfif local.idx gt 1>
+								<a class="carousel-control-prev" href="###arguments.cssID#" role="button" data-slide="prev">
+								 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								 <span class="sr-only">Previous</span>
+							 </a>
+							 <a class="carousel-control-next" href="###arguments.cssID#" role="button" data-slide="next">
+								 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+								 <span class="sr-only">Next</span>
+							 </a>
+								<!--- AutoStart --->
+								<cfif arguments.autoStart>
+									<script>
+										jQuery(function($){
+											try{
+												jQuery('###arguments.carouselID#').carousel({interval:#arguments.interval#});
+											} catch(e){
+												console.log(e)
+											}
+										});
+									</script>
+								</cfif>
 
 							</cfif>
 
-						</div>
-					<cfelse>
+						<cfelse>
 
-						<div class="alert alert-warning alert-dismissible fade show" role="alert">
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							<strong>Heads up!</strong> Your feed has no items.
-						</div>
+							<div class="alert alert-warning alert-dismissible fade show" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								Your feed has no items <em>with images</em>.
+							</div>
 
-					</cfif>
+						</cfif>
+
+					</div>
+				<cfelse>
+
+					<div class="alert alert-warning alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<strong>Heads up!</strong> Your feed has no items.
+					</div>
+
+				</cfif>
 
 			</cfoutput>
 		</cfsavecontent>

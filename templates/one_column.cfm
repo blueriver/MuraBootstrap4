@@ -6,7 +6,9 @@
 		<cfinclude template="inc/navbar.cfm" />
 		<div class="template py-5">
 			<div class="container">
+				<cfif !$.content().getIsHome()>
 				<cfinclude template="inc/breadcrumb.cfm" />
+				</cfif>
 				<div class="row">
 					<section class="content col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<cfset pageTitle = $.content('type') neq 'Page' ? $.content('title') : ''>

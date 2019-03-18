@@ -1,5 +1,5 @@
 <cfoutput>
-	<cfif !$.content().getIsHome()>
+	<cfif !$.content().getIsHome() and $.getTemplate() neq 'section.cfm'>
 
 		<cfif !YesNoFormat($.event('muraMobileTemplate')) or (StructKeyExists(cookie, 'mobileFormat') and !cookie.mobileFormat)>
 			<!--- Page Title --->
@@ -69,9 +69,6 @@
 			</ul>
 		</cfif>
 
-	</cfif>
-
-
 	<!--- Primary Associated Image --->
 		<cfif $.content().hasImage(usePlaceholder=false)>
 			<cfscript>
@@ -92,6 +89,7 @@
 		<div class="mura-body">
 			#$.renderEditableAttribute(attribute="body",type="htmlEditor")#
 		</div>
+	</cfif>
 	<!--- /Body --->
 
 </cfoutput>
