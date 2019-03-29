@@ -5,7 +5,7 @@
 	<body id="#$.getTopID()#" class="depth-#$.content('depth')# #$.createCSSHook($.content('menuTitle'))#">
 		<cfinclude template="inc/navbar.cfm" />
 		<div class="template py-5">
-			<div class="container">
+			<div class="mura-container">
 				<cfif !$.content().getIsHome()>
 				<cfinclude template="inc/breadcrumb.cfm" />
 				</cfif>

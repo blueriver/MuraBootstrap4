@@ -1,5 +1,5 @@
 <cfoutput>
-	<cfif !$.content().getIsHome() and $.getTemplate() neq 'section.cfm'>
+	<cfif true or !$.content().getIsHome() and $.getTemplate()>
 
 		<cfif !YesNoFormat($.event('muraMobileTemplate')) or (StructKeyExists(cookie, 'mobileFormat') and !cookie.mobileFormat)>
 			<!--- Page Title --->

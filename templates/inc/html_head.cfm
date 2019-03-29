@@ -13,7 +13,7 @@
 
 	<!--- Mura CMS Base Styles--->
 	<!--- Optional: Mura CMS Skin Styles. Duplicate to your theme to customize, changing 'assetPath' to 'themeAssetPath' below. Don't forget to move, remove or replace sprite.png. --->
-	#$.outputMuraCSS(version="7.1", includeskin=true)#
+	#$.outputMuraCSS(version="7.2", includeskin=true)#
 
 	<!--- Bootstrap core CSS --->
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/bootstrap.css">
