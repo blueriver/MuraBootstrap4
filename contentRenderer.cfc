@@ -73,6 +73,9 @@
 		this.cookieConsentWrapperClass="";
 		this.cookieConsentWidth="sm";
 
+		this.primaryContentTypes="Page,Link,File";
+		this.modulethemeoptions=[{name="Lite",value="module-lite"},{name="Dark",value="module-dark"}];
+		
 		// GENERAL
 		this.directImages=true;
 		this.deferMuraJS=true;
@@ -95,7 +98,7 @@
 		this.subHead4 = "h5";
 
 		// preloader markup for async objects
-		this.preloaderMarkup='<div class="text-center container"><i class="mura-preloader fa fa-refresh fa-spin"></i></div>';
+		this.preloaderMarkup='<div class="mura-preloader-wrapper"><div class="mura-preloader fa fa-refresh fa-spin"><span></span></div></div>';
 
 		// nav and list item vars
 		this.navWrapperClass = "mura-nav bg-light p-3 mb-5 border rounded";

@@ -1,9 +1,3 @@
-<!--
-	To add mobile-specific content fields to your Edit Content screen:
-	1) Uncomment the extension type='base' node below with the 'Mobile Options' in it
-	2) Reload Application
-	3) That's it!
--->
 <mura>
 
 	<imagesizes>
@@ -11,36 +5,6 @@
 	</imagesizes>
 
 	<extensions>
-		<!--
-		<extension type="Base" subType="Default">
-			<attributeset name="Mobile Options" container="Basic">
-				<attribute
-					name="hasMobileBody"
-					label="Has Mobile Content?"
-					hint="If you have mobile-specific content, select Yes."
-					type="RadioGroup"
-					defaultValue="false"
-					required="false"
-					validation=""
-					regex=""
-					message=""
-					optionList="true^false"
-					optionLabelList="Yes^No" />
-				<attribute
-					name="mobileBody"
-					label="Mobile Content"
-					hint="Enter any mobile-specific content here."
-					type="HTMLEditor"
-					defaultValue=""
-					required="false"
-					validation=""
-					regex=""
-					message=""
-					optionList=""
-					optionLabelList="" />
-			</attributeset>
-		</extension>
-		-->
+		<extension adminonly="0" availablesubtypes="" basekeyfield="contentHistID" basetable="tcontent" datatable="tclassextenddata" description="" hasassocfile="1" hasbody="0" hasconfigurator="0" hassummary="1" iconclass="mi-th" subtype="Landing" type="Page"/>
 	</extensions>
-
 </mura>

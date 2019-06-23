@@ -1,6 +1,6 @@
 <cfif arguments.iterator.hasNext()>
 <cfoutput>
-<div class="mura-collection mura-grid-custom">	
+<div class="mura-collection mura-grid-custom">
 	<cfif iterator.hasNext()>
 	<cfsilent>
 		<cfset item=arguments.iterator.next()>
@@ -15,6 +15,8 @@
 				</cfif>
 			</div>
 			</cfif>
+
+			<!---<div><a href="#item.getEditURL(complete=true,compactDisplay=true,instanceid=objectparams.instanceid)#" class="frontEndToolsModal">Edit</div>--->
 			#variables.$.dspObject_include(
 				theFile='collection/includes/dsp_meta_list.cfm',
 				item=item,
@@ -38,7 +40,7 @@
 				</cfif>
 			</div>
 			</cfif>
-
+			<div><a href="#item.getEditURL(complete=true,compactDisplay=true,instanceid=objectparams.instanceid)#" class="frontEndToolsModal">Edit</div>
 			#variables.$.dspObject_include(
 				theFile='collection/includes/dsp_meta_list.cfm',
 				item=item,

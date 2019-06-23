@@ -3,7 +3,7 @@ version: '2.1'
 services:
   #Mura Server
   mura_bs4:
-    image: blueriver/mura:latest
+    image: blueriver/muracms:7.2
     environment:
       MURA_ADMIN_USERNAME: admin
       MURA_ADMIN_PASSWORD: admin

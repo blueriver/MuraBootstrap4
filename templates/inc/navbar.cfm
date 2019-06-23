@@ -17,7 +17,7 @@
 						http://docs.getmura.com/v6/front-end/template-variables/document-body/
 					--->
 					#$.dspPrimaryNav(
-						viewDepth=1
+						viewDepth=3
 						, id='navPrimary'
 						, class='navbar-nav mr-auto'
 						, displayHome='always'
