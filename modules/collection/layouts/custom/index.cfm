@@ -40,7 +40,7 @@
 				</cfif>
 			</div>
 			</cfif>
-			<div><a href="#item.getEditURL(complete=true,compactDisplay=true,instanceid=objectparams.instanceid)#" class="frontEndToolsModal">Edit</div>
+			<!---<div><a href="#item.getEditURL(complete=true,compactDisplay=true,instanceid=objectparams.instanceid)#" class="frontEndToolsModal">Edit</div>--->
 			#variables.$.dspObject_include(
 				theFile='collection/includes/dsp_meta_list.cfm',
 				item=item,
