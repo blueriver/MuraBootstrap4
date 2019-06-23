@@ -1,5 +1,5 @@
 <cfoutput>
-<header>
+<header class="sticky-top">
 	<nav class="navbar navbar-expand-lg bg-light navbar-light navbar-static-top py-4">
 		<div class="container">
 
