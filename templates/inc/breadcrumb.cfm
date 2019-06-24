@@ -1,3 +1,3 @@
 <cfoutput>
-	<nav class="mb-5">#$.dspCrumbListLinks(class="")#</nav>
+	<nav class="">#$.dspCrumbListLinks(class="")#</nav>
 </cfoutput>
