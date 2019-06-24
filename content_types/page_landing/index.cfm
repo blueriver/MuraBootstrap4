@@ -1,4 +1,4 @@
 <cfoutput>
 	#m.dspThemeInclude("templates/inc/header.cfm")#
-	#m.dspObjects(2)#
+	#m.dspObjects(1)#
 </cfoutput>
