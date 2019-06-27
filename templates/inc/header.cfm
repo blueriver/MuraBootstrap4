@@ -1,6 +1,6 @@
 <cfoutput>
 <div class="jumbotron text-center mb-0" style="color: white; background-image: url(#m.content().getImageURL(size='carouselimage')#); background-size: cover; background-repeat: no-repeat; background-attachment: scroll;">
-	<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52);">#m.renderEditableAttribute(attribute='menutitle')#</h1>
+	<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52);">#m.renderEditableAttribute(attribute='title')#</h1>
 	<cfset commentCount = Val($.content().getStats().getComments())>
 	<cfset itCategories = $.content().getCategoriesIterator()>
 	<cfif

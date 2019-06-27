@@ -7,6 +7,5 @@
 			object="calendar",
 			params=objectParams
 		)#
-	</cfoutput>
 	</div>
 </cfoutput>

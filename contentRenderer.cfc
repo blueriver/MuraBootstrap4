@@ -75,7 +75,7 @@
 
 		this.primaryContentTypes="Page,Link,File";
 		this.modulethemeoptions=[{name="Lite",value="module-lite"},{name="Dark",value="module-dark"}];
-		
+		this.coloroptions=[{name='White',value="##ffffff"},{name='Black',value="##000000"},{name='Grey',value="##A9A9A9"}];
 		// GENERAL
 		this.directImages=true;
 		this.deferMuraJS=true;
