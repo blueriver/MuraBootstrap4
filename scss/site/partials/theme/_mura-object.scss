@@ -1,24 +1,7 @@
 @import "../helpers/bootstrap";
 
 .mura-object {
-	.mura-object-meta {
-		padding: 24px 0 0 0;
-	}
 
-	.mura-object-content {
-		padding: 0 0 24px 0;
-	}
-
-	/*
-	.frontEndToolsModal +	.mura-object-meta {
-		margin-top: -24px;
-	}
-
-	.frontEndToolsModal +	.mura-object-content {
-		margin-top: -24px;
-	}
-	*/
-	
 	.mura-object + .mura-object {
 		.mura-object-content {
 			padding-top: 0;

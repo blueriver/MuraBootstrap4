@@ -27,7 +27,6 @@
   .mura-calendar-nav th a {
     line-height: 1;
     padding: 2px 2px 4px; }
-
 .mura-calendar-nav td {
   padding: 5px 0; }
 
@@ -53,18 +52,14 @@
 .mura-comments > .mura-comment-sort-container,
 .mura-comments .mura-comment-more-comments-container {
   margin-bottom: 1rem; }
-
 .mura-comments dl:last-child {
   border-bottom: 0;
   padding-bottom: 0; }
-
 .mura-comments dt > em {
   font-weight: normal;
   font-style: italic; }
-
 .mura-comments #mura-comment-post-comment legend {
   border: 0; }
-
 .mura-comments dd.mura-comment-reply {
   display: inline-block;
   font-family: FontAwesome;
@@ -77,7 +72,6 @@
     margin-right: .25em;
     color: #f00;
     content: "\f112"; }
-
 .mura-comments dd.mura-comment-spam {
   display: inline-block;
   font-family: FontAwesome;
@@ -93,22 +87,17 @@
 
 .navbar-nav .nav-item:hover > .dropdown-menu {
   display: block; }
-
 .navbar-nav .nav-item .dropdown-menu {
   margin: 0; }
 
 div[data-cssclass="home-news"] .mura-object-meta {
   text-align: center; }
-
 div[data-cssclass="home-news"] .mura-collection-item .mura-item-content a:hover {
   opacity: 0.8; }
-
 div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta div[class^="mura-item-meta_"] {
   margin: 1em 0 0 0; }
-
 div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta .mura-item-meta__date {
   color: #6c757d; }
-
 div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta .mura-item-meta__credits {
   color: #6c757d; }
 
@@ -165,28 +154,13 @@ div[data-cssclass="home-news"] .mura-collection-item .mura-item-meta .mura-item-
   clear: both;
   content: ""; }
 
-.mura-object {
-  /*
-	.frontEndToolsModal +	.mura-object-meta {
-		margin-top: -24px;
-	}
-
-	.frontEndToolsModal +	.mura-object-content {
-		margin-top: -24px;
-	}
-	*/ }
-  .mura-object .mura-object-meta {
-    padding: 24px 0 0 0; }
-  .mura-object .mura-object-content {
-    padding: 0 0 24px 0; }
-  .mura-object .mura-object + .mura-object .mura-object-content {
-    padding-top: 0; }
-  .mura-object .mura-object + .mura-object .mura-object-meta + .mura-object-content {
-    padding-top: 0; }
+.mura-object .mura-object + .mura-object .mura-object-content {
+  padding-top: 0; }
+.mura-object .mura-object + .mura-object .mura-object-meta + .mura-object-content {
+  padding-top: 0; }
 
 div[data-layout="grid"] .mura-item-content a:hover {
   opacity: 0.8; }
-
 div[data-layout="grid"] .mura-item-meta {
   margin: 0 0 .5em 0; }
   div[data-layout="grid"] .mura-item-meta div[class^="mura-item-meta_"] {
@@ -209,3 +183,5 @@ div[data-layout="grid"] .mura-item-meta {
 .mura-breadcrumb li {
   display: list-item;
   margin-right: 0; }
+
+/*# sourceMappingURL=site.css.map */
