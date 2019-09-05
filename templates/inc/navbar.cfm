@@ -55,7 +55,7 @@
 					})
 				</script>
 
-				<form method="post" id="searchForm" class="form-inline" role="search" action="#m.createHREF(filename='search-results')#">
+				<!--- <form method="post" id="searchForm" class="form-inline" role="search" action="#m.createHREF(filename='search-results')#">
 					<div class="input-group">
 						<input type="text" name="Keywords" id="navKeywords" class="form-control" value="#esapiEncode('html', $.event('keywords'))#" placeholder="#$.rbKey('search.search')#" aria-label="Search">
 						<span class="input-group-btn">
@@ -69,7 +69,7 @@
 					<input type="hidden" name="newSearch" value="true">
 					<input type="hidden" name="noCache" value="1">
 					#variables.$.renderCSRFTokens(format='form',context='search')#
-				</form>
+				</form> --->
 
 			</div><!--- /.navbar-collapse --->
 		</div><!--- /.container --->
