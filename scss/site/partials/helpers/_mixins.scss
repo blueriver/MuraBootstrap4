@@ -12,3 +12,113 @@
 	margin-right: .25em;
 	color: $brand-primary;
 }
+
+// 7.2 Module Specific Themes
+$module-padding: 20px 10px !default;
+
+// @mixin module-theme($module-bg-color, $module-bg-text-color, $module-padding) {
+//     background-color: $module-bg-color;
+//     color: $module-bg-text-color;
+//     padding: $module-padding;
+// }
+// 
+// .module-brand { @include module-theme($mura-primary, $white-color, $module-padding); }
+// .module-light-gray { @include module-theme($light-gray, $white-color, $module-padding); }
+// .module-medium-gray { @include module-theme($medium-gray, $white-color, $module-padding); }
+// .module-dark-gray { @include module-theme($dark-gray, $white-color, $module-padding); }
+// .module-black { @include module-theme($mura-black, $white-color, $module-padding); }
+// .module-orange { @include module-theme($mura-orange, $white-color, $module-padding); }
+// .module-red    { @include module-theme($mura-red, $white-color, $module-padding); }
+// .module-azul { @include module-theme($mura-azul, $white-color, $module-padding); }
+// .module-sea-foam  { @include module-theme($mura-sea-foam, $white-color, $module-padding); }
+// .module-teal { @include module-theme($mura-teal, $white-color, $module-padding); }
+// .module-green { @include module-theme($mura-green, $white-color, $module-padding); }
+// .module-cranberry { @include module-theme($mura-cranberry, $white-color, $module-padding); }
+// .module-goldenrod    { @include module-theme($mura-goldenrod, $white-color, $module-padding); }
+// .module-violet { @include module-theme($mura-violet, $white-color, $module-padding); }
+// .module-purple  { @include module-theme($mura-purple, $white-color, $module-padding); }
+// .module-blue { @include module-theme($mura-blue, $white-color, $module-padding); }
+
+// Site BTN
+@mixin site-btn($btn-bg, $btn-border) {
+    background: $btn-bg;
+    border: 1px solid $btn-border;
+    padding: 8px 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 16px;
+    color: black;
+    
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+        background: black;
+    }
+}
+
+// Header Theme
+@mixin header-theme($theme-heading-font-size, $theme-heading-text-color, $theme-text-color) {
+    color: $theme-text-color;
+    
+    h2 {
+        font-size: $theme-heading-font-size;
+        color: $theme-heading-text-color;
+    }
+    
+    a {
+        @include site-btn(none, black);
+        color: $theme-text-color;
+    }
+}
+.header-theme {
+    @include header-theme(48px, #808080, black);
+}
+
+// Header Theme - White - THIS IS WHERE YOU LEFT OFF (WHITE VARIATION) Use an @IF?
+@mixin header-theme-white($theme-heading-font-size, $theme-heading-text-color, $theme-text-color) {
+jkhlkjh
+}
+.header-theme-white {
+    @include header-theme-white(48px, #808080, black);
+}
+
+// 3-Up Theme
+@mixin threeup-theme($threeup-heading-size, $threeup-heading-color, $threeup-img, $threeup-h4) {
+    h2 {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: $threeup-heading-size;
+        color: $threeup-heading-color;
+    }
+    
+    img {
+        margin-bottom: $threeup-img;
+    }
+    
+    h4 {
+        color: $threeup-h4;
+        margin-bottom: 12px;
+    }
+}
+.threeup-theme {
+    @include threeup-theme(48px, #808080, 15px, #808080);
+}
+
+// Large Quote CTA
+@mixin large-quote-CTA($lg-CTA-color, $lg-CTA-font-size, $lg-CTA-font-weight) {
+    p {
+        color: $lg-CTA-color;
+        font-size: $lg-CTA-font-size;
+        font-weight: $lg-CTA-font-weight;
+        line-height: 1.5em;
+        margin-bottom: 40px;
+    }
+    
+    a {
+        @include site-btn(none, black);
+    }
+}
+.large-quote-CTA {
+    @include large-quote-CTA(#808080, 20px, 500);
+}
