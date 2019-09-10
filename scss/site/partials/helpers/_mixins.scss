@@ -40,15 +40,15 @@ $module-padding: 20px 10px !default;
 // .module-blue { @include module-theme($mura-blue, $white-color, $module-padding); }
 
 // Site BTN
-@mixin site-btn($btn-bg, $btn-border) {
+@mixin site-btn($btn-bg, $btn-border, $btn-color) {
     background: $btn-bg;
     border: 1px solid $btn-border;
+    color: $btn-color;
     padding: 8px 30px;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 3px;
     border-radius: 16px;
-    color: black;
     
     &:hover {
         text-decoration: none;
@@ -67,20 +67,28 @@ $module-padding: 20px 10px !default;
     }
     
     a {
-        @include site-btn(none, black);
+        @include site-btn(none, #000, #000);
         color: $theme-text-color;
     }
 }
 .header-theme {
-    @include header-theme(48px, #808080, black);
+    @include header-theme(48px, #808080, #000);
 }
 
-// Header Theme - White - THIS IS WHERE YOU LEFT OFF (WHITE VARIATION) Use an @IF?
-@mixin header-theme-white($theme-heading-font-size, $theme-heading-text-color, $theme-text-color) {
-jkhlkjh
+// Header Theme - White Variation
+@mixin header-theme-white($theme-heading-white-font-size) {
+    color: #fff; 
+    
+    h2 {
+        font-size: $theme-heading-white-font-size;
+    }
+    
+    a {
+        @include site-btn(#fff, none, #000);
+    }
 }
 .header-theme-white {
-    @include header-theme-white(48px, #808080, black);
+    @include header-theme-white(48px);
 }
 
 // 3-Up Theme
@@ -94,6 +102,7 @@ jkhlkjh
     
     img {
         margin-bottom: $threeup-img;
+        border-radius: 10px;
     }
     
     h4 {
@@ -116,9 +125,116 @@ jkhlkjh
     }
     
     a {
-        @include site-btn(none, black);
+        @include site-btn(none, #000 ,#000); 
     }
 }
 .large-quote-CTA {
     @include large-quote-CTA(#808080, 20px, 500);
+}
+
+// Heading Underline Theme
+@mixin heading-underline($heading-underline-size, $heading-underline-color) {
+    h4 {
+        display: inline-block;
+        position: relative;
+        font-weight: bold;
+        padding-bottom: 60px;
+        font-size: $heading-underline-size;
+        color: $heading-underline-color;
+        
+        &::after {
+            content:" ";
+            position: absolute;
+            height: 2px;
+            width: 100px;
+            background-color: #e6e6e6;
+            bottom: 30px;
+            left: calc(50% - 50px);
+        }
+    }
+}
+.heading-underline {
+    @include heading-underline(24px, #808080);
+}
+
+// Small Quote CTA (blue bar)
+@mixin small-quote-CTA() {
+    color: #fff;
+    
+    a {
+        @include site-btn(transparent, #fff, #fff)
+        
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
+.small-quote-CTA {
+    @include small-quote-CTA();
+}
+
+// Card Theme
+@mixin card-theme($card-theme-bg, $card-theme-heading-size, $card-theme-heading-color) {
+    background-color: $card-theme-bg;
+    padding: 22px;
+    box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    
+    h5 {
+        font-size: $card-theme-heading-size;
+        color: $card-theme-heading-color;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .mura-object-content {
+        position: relative;
+        height: 100%;
+        
+        a {
+            color: #29abe2;
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            right: 0;
+        }
+    }
+    
+    &:last-child {
+        width: calc(25% - 40px) !important;
+    }
+}
+.card-theme {
+    @include card-theme(#f2f2f2, 24px, #808080);
+}
+
+// Footer Theme
+@mixin footer-theme() {
+    color: #b5b5b5;
+    
+    ul {
+        list-style-type: none;
+        
+        li {
+            
+            a {
+                color: #b5b5b5;
+                text-decoration: none;
+            }
+            
+            &:first-child {
+                font-weight: bold;
+                margin-bottom: 22px;
+            }
+        }
+    }
+}
+.footer-theme {
+    @include footer-theme();
 }

@@ -468,26 +468,14 @@
         this.primaryContentTypes="Folder,Page,Link,File";
         
         this.modulethemeoptions=[
-            // {name="Brand Default",value="module-brand"},
-            // {name="Black",value="module-black"},
-            // {name="Light Gray",value="module-light-gray"},
-            // {name="Medium Gray",value="module-medium-gray"},
-            // {name="Dark Gray",value="module-dark-gray"},
-            // {name="Orange",value="module-orange"},
-            // {name="Red",value="module-red"},
-            // {name="Azul",value="module-azul"},
-            // {name="Sea Foam",value="module-sea-foam"},
-            // {name="Teal",value="module-teal"},
-            // {name="Green",value="module-green"},
-            // {name="Cranberry",value="module-cranberry"},
-            // {name="Goldenrod",value="module-goldenrod"},
-            // {name="Violet",value="module-violet"},
-            // {name="Purple",value="module-purple"},
-            // {name="Blue",value="module-blue"}
 			{name="Header Theme",value="header-theme"},
 			{name="Header Theme White",value="header-theme-white"},
 			{name="Three Up Theme",value="threeup-theme"},
-			{name="Large Quote CTA",value="large-quote-CTA"}
+			{name="Large Quote CTA",value="large-quote-CTA"},
+			{name="Small Quote CTA",value="small-quote-CTA"},
+			{name="Heading Underline",value="heading-underline"},
+			{name="Card Theme",value="card-theme"},
+			{name="Footer Theme",value="footer-theme"}
         ];
         
         this.coloroptions=[
@@ -503,8 +491,7 @@
             {name='Mura Goldenrod',value="##e9ad01"},
             {name='Mura Violet',value="##984ac1"},
             {name='Mura Purple',value="##6565df"},
-            {name='Mura Blue',value="##2e5ad9"},
-			{name='Red',value="##f00000"}
+            {name='Mura Blue',value="##2e5ad9"}
         ];
 		// -----------------------------
 
