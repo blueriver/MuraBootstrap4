@@ -16,29 +16,6 @@
 // 7.2 Module Specific Themes
 $module-padding: 20px 10px !default;
 
-// @mixin module-theme($module-bg-color, $module-bg-text-color, $module-padding) {
-//     background-color: $module-bg-color;
-//     color: $module-bg-text-color;
-//     padding: $module-padding;
-// }
-// 
-// .module-brand { @include module-theme($mura-primary, $white-color, $module-padding); }
-// .module-light-gray { @include module-theme($light-gray, $white-color, $module-padding); }
-// .module-medium-gray { @include module-theme($medium-gray, $white-color, $module-padding); }
-// .module-dark-gray { @include module-theme($dark-gray, $white-color, $module-padding); }
-// .module-black { @include module-theme($mura-black, $white-color, $module-padding); }
-// .module-orange { @include module-theme($mura-orange, $white-color, $module-padding); }
-// .module-red    { @include module-theme($mura-red, $white-color, $module-padding); }
-// .module-azul { @include module-theme($mura-azul, $white-color, $module-padding); }
-// .module-sea-foam  { @include module-theme($mura-sea-foam, $white-color, $module-padding); }
-// .module-teal { @include module-theme($mura-teal, $white-color, $module-padding); }
-// .module-green { @include module-theme($mura-green, $white-color, $module-padding); }
-// .module-cranberry { @include module-theme($mura-cranberry, $white-color, $module-padding); }
-// .module-goldenrod    { @include module-theme($mura-goldenrod, $white-color, $module-padding); }
-// .module-violet { @include module-theme($mura-violet, $white-color, $module-padding); }
-// .module-purple  { @include module-theme($mura-purple, $white-color, $module-padding); }
-// .module-blue { @include module-theme($mura-blue, $white-color, $module-padding); }
-
 // Site BTN
 @mixin site-btn($btn-bg, $btn-border, $btn-color) {
     background: $btn-bg;
@@ -256,32 +233,6 @@ $module-padding: 20px 10px !default;
             }
         }
     }
-    
-    // h5 {
-    //     font-size: $card-theme-heading-size;
-    //     color: $card-theme-heading-color;
-    // }
-    // 
-    // p:last-child {
-    //     margin-bottom: 0;
-    // }
-    // 
-    // .mura-object-content {
-    //     position: relative;
-    //     height: 100%;
-    // 
-    //     a {
-    //         color: #29abe2;
-    //         position: absolute;
-    //         bottom: -22px;
-    //         left: 0;
-    //         right: 0;
-    //     }
-    // }
-    // 
-    // &:last-child {
-    //     width: calc(25% - 40px) !important;
-    // }
 }
 .card-theme {
     @include card-theme(48px, #808080, #f2f2f2, 24px, #808080);
