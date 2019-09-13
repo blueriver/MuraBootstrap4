@@ -91,6 +91,28 @@ $module-padding: 20px 10px !default;
     @include header-theme-white(48px);
 }
 
+// Logo Strip Theme
+@mixin logo-strip-theme($bg-color, $logo-strip-heading-size, $logo-strip-heading-color) {
+    background-color: $bg-color;
+    
+    h2 {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: $logo-strip-heading-size;
+        color: $logo-strip-heading-color;
+    }
+    
+    a {
+        
+        img {
+            border-radius: 10px;
+        }
+    }
+}
+.logo-strip-theme {
+    @include logo-strip-theme(#29abe2, 32px, #fff);
+}
+
 // 3-Up Theme
 @mixin threeup-theme($threeup-heading-size, $threeup-heading-color, $threeup-img, $threeup-h4) {
     h2 {
@@ -105,9 +127,10 @@ $module-padding: 20px 10px !default;
         border-radius: 10px;
     }
     
-    h4 {
+    a {
         color: $threeup-h4;
-        margin-bottom: 12px;
+        margin-bottom: 12px; 
+        font-size: 24px;
     }
 }
 .threeup-theme {
@@ -116,7 +139,7 @@ $module-padding: 20px 10px !default;
 
 // Large Quote CTA
 @mixin large-quote-CTA($lg-CTA-color, $lg-CTA-font-size, $lg-CTA-font-weight) {
-    p {
+    p:first-child {
         color: $lg-CTA-color;
         font-size: $lg-CTA-font-size;
         font-weight: $lg-CTA-font-weight;
@@ -175,43 +198,144 @@ $module-padding: 20px 10px !default;
 }
 
 // Card Theme
-@mixin card-theme($card-theme-bg, $card-theme-heading-size, $card-theme-heading-color) {
-    background-color: $card-theme-bg;
-    padding: 22px;
-    box-shadow: 0px 2px 4px 2px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    padding-bottom: 40px;
-    
-    h5 {
-        font-size: $card-theme-heading-size;
-        color: $card-theme-heading-color;
+@mixin card-theme($card-theme-main-heading-size, $card-theme-main-heading-color, $card-theme-bg, $card-theme-heading-size, $card-theme-heading-color) {
+    h2 {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: $card-theme-main-heading-size;
+        color: $card-theme-main-heading-color;
     }
     
-    p:last-child {
-        margin-bottom: 0;
-    }
-    
-    .mura-object-content {
-        position: relative;
-        height: 100%;
+    // For a Collection
+    .mura-grid-four {
+        display: flex;
+        flex-wrap: wrap;
         
-        a {
-            color: #29abe2;
-            position: absolute;
-            bottom: -22px;
-            left: 0;
-            right: 0;
+        .mura-collection-item {
+            margin-bottom: 40px;
+            padding-right: 40px;
+            
+            &__holder {
+                background-color: #f2f2f2;
+                padding: 22px;
+                -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+                box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                padding-bottom: 40px;
+                position: relative;
+                height: 100%;
+                
+                .mura-item-meta {
+                    
+                    &__title {
+                        
+                        a {
+                            font-size: $card-theme-heading-size;
+                            color: $card-theme-heading-color;
+                        }
+                    }
+                    
+                    &__summary {
+                        
+                        p {
+                            
+                            a {
+                                color: #29abe2;
+                                position: absolute;
+                                bottom: 20px;
+                                left: 0;
+                                right: 0;
+                            }
+                            
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
-    &:last-child {
-        width: calc(25% - 40px) !important;
-    }
+    // h5 {
+    //     font-size: $card-theme-heading-size;
+    //     color: $card-theme-heading-color;
+    // }
+    // 
+    // p:last-child {
+    //     margin-bottom: 0;
+    // }
+    // 
+    // .mura-object-content {
+    //     position: relative;
+    //     height: 100%;
+    // 
+    //     a {
+    //         color: #29abe2;
+    //         position: absolute;
+    //         bottom: -22px;
+    //         left: 0;
+    //         right: 0;
+    //     }
+    // }
+    // 
+    // &:last-child {
+    //     width: calc(25% - 40px) !important;
+    // }
 }
 .card-theme {
-    @include card-theme(#f2f2f2, 24px, #808080);
+    @include card-theme(48px, #808080, #f2f2f2, 24px, #808080);
+}
+
+// Grey Callout Theme
+@mixin grey-callout-theme($grey-callout-heading-size, $grey-callout-heading-color) {
+    h3 {
+        font-size: $grey-callout-heading-size;
+        color: $grey-callout-heading-color;
+        padding-bottom: 60px;
+        position: relative;
+        
+        &::after {
+            content:" ";
+            position: absolute;
+            height: 2px;
+            width: 100px;
+            background-color: #e6e6e6;
+            bottom: 30px;
+            left: calc(50% - 50px);
+        }
+    }
+    
+    p {
+
+    }
+    
+    a {
+        @include site-btn(#000, none, #fff);
+    }
+}
+.grey-callout-theme {
+    @include grey-callout-theme(32px, #808080);
+}
+
+// Testimonial Theme
+@mixin testimonial-theme() {
+
+    a {
+        
+        img {
+            
+        }
+    }
+    
+    p {
+        em {
+            font-size: 24px;
+        }
+    }
+}
+.testimonial-theme {
+    @include testimonial-theme();
 }
 
 // Footer Theme

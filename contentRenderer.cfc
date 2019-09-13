@@ -470,11 +470,14 @@
         this.modulethemeoptions=[
 			{name="Header Theme",value="header-theme"},
 			{name="Header Theme White",value="header-theme-white"},
+			{name="Logo Strip",value="logo-strip-theme"},
+			{name="Grey Callout Theme",value="grey-callout-theme"},
 			{name="Three Up Theme",value="threeup-theme"},
 			{name="Large Quote CTA",value="large-quote-CTA"},
 			{name="Small Quote CTA",value="small-quote-CTA"},
 			{name="Heading Underline",value="heading-underline"},
 			{name="Card Theme",value="card-theme"},
+			{name="Testimonial Theme",value="testimonial-theme"},
 			{name="Footer Theme",value="footer-theme"}
         ];
         

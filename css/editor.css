@@ -37,6 +37,16 @@
       color: #fff;
       background: black; }
 
+.logo-strip-theme {
+  background-color: #29abe2; }
+  .logo-strip-theme h2 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff; }
+  .logo-strip-theme a img {
+    border-radius: 10px; }
+
 .threeup-theme h2 {
   text-transform: capitalize;
   font-weight: bold;
@@ -47,11 +57,12 @@
   margin-bottom: 15px;
   border-radius: 10px; }
 
-.threeup-theme h4 {
+.threeup-theme a {
   color: #808080;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  font-size: 24px; }
 
-.large-quote-CTA p {
+.large-quote-CTA p:first-child {
   color: #808080;
   font-size: 20px;
   font-weight: 500;
@@ -107,31 +118,72 @@
       background-color: #fff;
       color: #000; }
 
-.card-theme {
-  background-color: #f2f2f2;
-  padding: 22px;
-  -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  padding-bottom: 40px; }
-  .card-theme h5 {
-    font-size: 24px;
-    color: #808080; }
-  .card-theme p:last-child {
-    margin-bottom: 0; }
-  .card-theme .mura-object-content {
-    position: relative;
-    height: 100%; }
-    .card-theme .mura-object-content a {
-      color: #29abe2;
-      position: absolute;
-      bottom: -22px;
-      left: 0;
-      right: 0; }
-  .card-theme:last-child {
-    width: calc(25% - 40px) !important; }
+.card-theme h2 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 48px;
+  color: #808080; }
+
+.card-theme .mura-grid-four {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .card-theme .mura-grid-four .mura-collection-item {
+    margin-bottom: 40px;
+    padding-right: 40px; }
+    .card-theme .mura-grid-four .mura-collection-item__holder {
+      background-color: #f2f2f2;
+      padding: 22px;
+      -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding-bottom: 40px;
+      position: relative;
+      height: 100%; }
+      .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__title a {
+        font-size: 24px;
+        color: #808080; }
+      .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__summary p a {
+        color: #29abe2;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0; }
+      .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__summary p:last-child {
+        margin-bottom: 0; }
+
+.grey-callout-theme h3 {
+  font-size: 32px;
+  color: #808080;
+  padding-bottom: 60px;
+  position: relative; }
+  .grey-callout-theme h3::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 100px;
+    background-color: #e6e6e6;
+    bottom: 30px;
+    left: calc(50% - 50px); }
+
+.grey-callout-theme a {
+  background: #000;
+  border: 1px solid none;
+  color: #fff;
+  padding: 8px 30px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 16px; }
+  .grey-callout-theme a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: black; }
+
+.testimonial-theme p em {
+  font-size: 24px; }
 
 .footer-theme {
   color: #b5b5b5; }
