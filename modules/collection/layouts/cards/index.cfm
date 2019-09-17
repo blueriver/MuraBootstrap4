@@ -21,12 +21,12 @@
 
 		<div class="mura-collection-item__holder">
 			<cfif listFindNoCase(objectParams.displaylist,'Image')>
-			<div class="mura-item-content card-img-top">
+			<div class="mura-item-content">
 				<cfif item.hasImage()>
 					<cfif objectparams.modalimages>
-						<a href="#item.getImageURL(size='large')#" title="#esapiEncode('html_attr',item.getValue('title'))#" data-rel="shadowbox[gallery]" class="#this.contentListItemImageLinkClass#"><img src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
+						<a href="#item.getImageURL(size='large')#" title="#esapiEncode('html_attr',item.getValue('title'))#" data-rel="shadowbox[gallery]" class="#this.contentListItemImageLinkClass#"><img class="card-img-top" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
 					<cfelse>
-						<a href="#item.getURL()#"><img src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
+						<a href="#item.getURL()#"><img class="card-img-top" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
 					</cfif>
 				</cfif>
 			</div>
