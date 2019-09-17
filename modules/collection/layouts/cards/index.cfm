@@ -17,11 +17,11 @@
 	<cfsilent>
 		<cfset item=iterator.next()>
 	</cfsilent>
-	<div class="mura-collection-item">
+	<div class="mura-collection-item card">
 
 		<div class="mura-collection-item__holder">
 			<cfif listFindNoCase(objectParams.displaylist,'Image')>
-			<div class="mura-item-content">
+			<div class="mura-item-content card-img-top">
 				<cfif item.hasImage()>
 					<cfif objectparams.modalimages>
 						<a href="#item.getImageURL(size='large')#" title="#esapiEncode('html_attr',item.getValue('title'))#" data-rel="shadowbox[gallery]" class="#this.contentListItemImageLinkClass#"><img src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
@@ -31,11 +31,13 @@
 				</cfif>
 			</div>
 			</cfif>
+			<div class="card-body">
 			#m.dspObject_include(
 				theFile='collection/includes/dsp_meta_list.cfm',
 				item=item,
 				fields=objectParams.displaylist
 			)#
+			</div>
 		</div>
 	</div>
 	</cfloop>
