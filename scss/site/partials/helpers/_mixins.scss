@@ -152,12 +152,16 @@ $module-padding: 20px 10px !default;
             left: calc(50% - 50px);
         }
     }
+    
+    img {
+        border-radius: 10px;
+    }
 }
 .heading-underline {
     @include heading-underline(24px, #808080);
 }
 
-// Small Quote CTA (blue bar)
+// Small Quote CTA (lightblue bar)
 @mixin small-quote-CTA() {
     color: #fff;
     
@@ -238,11 +242,13 @@ $module-padding: 20px 10px !default;
     @include card-theme(48px, #808080, #f2f2f2, 24px, #808080);
 }
 
-// Grey Callout Theme
-@mixin grey-callout-theme($grey-callout-heading-size, $grey-callout-heading-color) {
+// Join Our Team Theme
+@mixin join-our-team-theme($join-our-team-heading-size, $join-our-team-heading-color) {
+    color: #fff;
+    
     h3 {
-        font-size: $grey-callout-heading-size;
-        color: $grey-callout-heading-color;
+        font-size: $join-our-team-heading-size;
+        color: $join-our-team-heading-color;
         padding-bottom: 60px;
         position: relative;
         
@@ -258,26 +264,19 @@ $module-padding: 20px 10px !default;
     }
     
     p {
-
+        margin-bottom: 30px; 
     }
-    
+
     a {
-        @include site-btn(#000, none, #fff);
+        @include site-btn(#fff, none, #000);
     }
 }
-.grey-callout-theme {
-    @include grey-callout-theme(32px, #808080);
+.join-our-team-theme {
+    @include join-our-team-theme(32px, #fff);
 }
 
 // Testimonial Theme
 @mixin testimonial-theme() {
-
-    a {
-        
-        img {
-            
-        }
-    }
     
     p {
         em {
@@ -288,6 +287,77 @@ $module-padding: 20px 10px !default;
 .testimonial-theme {
     @include testimonial-theme();
 }
+
+// Hover Links Theme
+@mixin from-our-blog-theme($from-our-blog-heading-size, $from-our-blog-heading-color) {
+    h2 {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: $from-our-blog-heading-size;
+        color: $from-our-blog-heading-color;
+    }
+    
+    .mura-collection {
+        
+        .mura-collection-item {
+            padding: 15px;
+            
+            &__holder {
+                padding: 30px;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+                box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
+                
+                .mura-item-content {
+                    
+                    a {
+                        img {
+                            border-radius: 50%;
+                            margin-bottom: 22px;
+                        }
+                    }
+                }
+                
+                .mura-item-meta {
+                    
+                    &__title {
+                        
+                        a {
+                            color: #29abe2;
+                        }
+                    }
+                    
+                    &__summary {
+                        
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.from-our-blog-theme {
+    @include from-our-blog-theme(48px, #808080);
+}
+
+// Lead In Theme
+// @mixin lead-in-theme() {
+//     h3 {
+// 
+//     }
+// 
+//     p {
+// 
+//         a {
+// 
+//         }
+//     }
+// }
+// .lead-in-theme {
+//     @include lead-in-theme();
+// }
 
 // Footer Theme
 @mixin footer-theme() {
