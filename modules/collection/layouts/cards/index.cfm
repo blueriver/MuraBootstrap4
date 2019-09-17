@@ -1,5 +1,6 @@
 <cfsilent>
 	<cfparam name="objectParams.gridstyle" default="mura-grid-two">
+	<cfparam name="objectParams." default="mura-grid-two">
 	<cfparam name="objectParams.imageSize" default="medium">
 	<cfparam name="objectParams.imageHeight" default="AUTO">
 	<cfparam name="objectParams.imageWidth" default="AUTO">
@@ -12,14 +13,14 @@
 	}>
 </cfsilent>
 <cfoutput>
-<div class="mura-collection #objectParams.gridstyle#">
+<div class="mura-collection #objectParams.gridstyle# card-deck">
 	<cfloop condition="iterator.hasNext()">
 	<cfsilent>
 		<cfset item=iterator.next()>
 	</cfsilent>
-	<div class="mura-collection-item card">
+	<div class="mura-collection-item">
 
-		<div class="mura-collection-item__holder">
+		<div class="mura-collection-item__holder card">
 			<cfif listFindNoCase(objectParams.displaylist,'Image')>
 			<div class="mura-item-content">
 				<cfif item.hasImage()>
