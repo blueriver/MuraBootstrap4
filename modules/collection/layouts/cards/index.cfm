@@ -1,6 +1,5 @@
 <cfsilent>
 	<cfparam name="objectParams.gridstyle" default="mura-grid-two">
-	<cfparam name="objectParams." default="mura-grid-two">
 	<cfparam name="objectParams.imageSize" default="medium">
 	<cfparam name="objectParams.imageHeight" default="AUTO">
 	<cfparam name="objectParams.imageWidth" default="AUTO">
