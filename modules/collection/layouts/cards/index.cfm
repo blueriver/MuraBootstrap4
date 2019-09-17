@@ -19,7 +19,7 @@
 	</cfsilent>
 	<div class="mura-collection-item">
 
-		<div class="mura-collection-item__holder card">
+		<div class="mura-collection-item__holder card mb-5">
 			<cfif listFindNoCase(objectParams.displaylist,'Image')>
 			<div class="mura-item-content">
 				<cfif item.hasImage()>
