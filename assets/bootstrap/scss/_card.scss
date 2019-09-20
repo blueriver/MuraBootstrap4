@@ -11,7 +11,8 @@
   background-color: $card-bg;
   background-clip: border-box;
   border: $card-border-width solid $card-border-color;
-  @include border-radius($card-border-radius);
+  @include border-radius($card-border-radius); 
+  height: 100%;
 
   > hr {
     margin-right: 0;
@@ -286,4 +287,10 @@
       margin-bottom: -$card-border-width;
     }
   }
+}
+
+// Adds a border to the last accordion in a collection in Mura
+// This is becuase Bootstrap has a -1px margin set :(
+.mura-collection-item:last-child .accordion {
+    border-bottom: 1px solid #dfdfdf;
 }

@@ -41,27 +41,10 @@ For clarity, if you create a modified version of Mura CMS, you are not obligated
 modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License
 version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
 --->
+
 <cfoutput>
 <cfparam name="objectParams.bgStyle" default="">
 <cfparam name="objectParams.modalimages" default="false">
-<cfset renderer=$.getContentRenderer()>
-<cfset gridStyles=(isdefined('renderer.contentGridStyleMap')) ? renderer.contentGridStyleMap : ''>
-<cfif isStruct(gridStyles)>
-    <cfset gridStylesList=listSort(structKeyList(gridStyles),'TextNoCase')>
-    <cfset gridStyle=feed.getGridStyle()>
-    <cfif not len(gridStyle)>
-        <cfset gridStyle='mura-grid-two'>
-    </cfif>
-
-    <div class="mura-control-group">
-      	<label>#application.rbFactory.getKeyValue(session.rb,'collections.gridstyle')#</label>
-    	<select name="gridstyle" data-displayobjectparam="gridstyle" class="objectParam">
-    		<cfloop list="#gridStylesList#" index="style">
-    			<option value="#gridStyles['#style#']#"<cfif gridStyle eq gridStyles['#style#']> selected</cfif>>#style#</option>
-    		</cfloop>
-    	</select>
-    </div>
-</cfif>
 
 <!--- <div class="mura-control-group">
     <label>Background Style</label>    
@@ -73,11 +56,12 @@ version 2 without this exception.  You may, if you choose, apply this exception 
         <option value="text-white bg-danger"<cfif objectParams.bgStyle eq "text-white bg-danger"> selected="selected"</cfif>>Danger</option>
         <option value="text-white bg-warning"<cfif objectParams.bgStyle eq "text-white bg-warning"> selected="selected"</cfif>>Warning</option>
         <option value="text-white bg-info"<cfif objectParams.bgStyle eq "text-white bg-info"> selected="selected"</cfif>>Info</option>
+        <option value="bg-light"<cfif objectParams.bgStyle eq "bg-light"> selected="selected"</cfif>>Light</option>
         <option value="text-white bg-dark"<cfif objectParams.bgStyle eq "text-white bg-dark"> selected="selected"</cfif>>Dark</option>
     </select>
 </div> --->
 
-<div class="mura-control-group">
+<!--- <div class="mura-control-group">
   	<label>#application.rbFactory.getKeyValue(session.rb,'collections.imagesize')#</label>
 	<select name="imageSize" data-displayobjectparam="imageSize" class="objectParam">
 		<cfloop list="Small,Medium,Large" index="i">
@@ -173,5 +157,5 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 		handleImageSizeChange();
 	});
-</script>
+</script> --->
 </cfoutput>
