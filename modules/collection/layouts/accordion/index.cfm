@@ -17,13 +17,14 @@
 		<cfloop condition="iterator.hasNext()">
 		<cfsilent>
 			<cfset item=iterator.next()>
+			<!--- <cfset accordionID="accordion-#createUUID()#"> --->
 		</cfsilent>
 		<div class="mura-collection-item">
 
 			<div class="mura-collection-item__holder">
 				
 				<div class="accordion" id="rapidsAccordion">
-					<div class="card ">
+					<div class="card #objectParams.bgStyle#">
 						<div class="card-header" id="##content-#item.getContentID()#">
 						    <h2 class="mb-0">
 								<button class="btn btn-link" type="button" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="true" aria-controls="content-#item.getContentID()#">#item.getTitle()#</button>
@@ -31,7 +32,7 @@
 						</div>
 						
 						<div id="content-#item.getContentID()#" class="collapse show" aria-labelledby="##content-#item.getContentID()#" data-parent="##rapidsAccordion">
-							<div class="card-body #item.getValue('CardBackgroundStyle')#"> <!--- #objectParams.bgStyle# --->
+							<div class="card-body"> <!--- #objectParams.bgStyle# ---> <!--- #item.getValue('CardBackgroundStyle')# --->
 								<cfif listFindNoCase(objectParams.displaylist,'Image')>
 									<div class="mura-item-content">
 										<cfif item.hasImage()>

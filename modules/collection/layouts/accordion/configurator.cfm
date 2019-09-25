@@ -46,7 +46,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 <cfparam name="objectParams.bgStyle" default="">
 <cfparam name="objectParams.modalimages" default="false">
 
-<!--- <div class="mura-control-group">
+<div class="mura-control-group">
     <label>Background Style</label>    
     <select class="objectParam" name="bgStyle">
         <option value=""> - </option>
@@ -59,7 +59,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
         <option value="bg-light"<cfif objectParams.bgStyle eq "bg-light"> selected="selected"</cfif>>Light</option>
         <option value="text-white bg-dark"<cfif objectParams.bgStyle eq "text-white bg-dark"> selected="selected"</cfif>>Dark</option>
     </select>
-</div> --->
+</div>
 
 <!--- <div class="mura-control-group">
   	<label>#application.rbFactory.getKeyValue(session.rb,'collections.imagesize')#</label>

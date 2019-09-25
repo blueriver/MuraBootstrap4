@@ -1,31 +1,39 @@
 .header-theme {
-  color: #000; }
+  color: #869ab8;
+  font-size: 22px;
+  font-weight: 200; }
   .header-theme h2 {
     font-size: 48px;
-    color: #808080; }
+    color: #161c2d; }
+    .header-theme h2 span {
+      color: #335eea; }
   .header-theme a {
     background: none;
-    border: 1px solid #000;
-    color: #000;
+    border: 1px solid #161c2d;
+    color: #161c2d;
     padding: 8px 30px;
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 3px;
     border-radius: 16px;
-    color: #000; }
+    color: #161c2d; }
     .header-theme a:hover {
       text-decoration: none;
       color: #fff;
       background: black; }
+  .header-theme img {
+    border-radius: 15px; }
 
 .header-theme-white {
-  color: #fff; }
+  color: #fff;
+  font-size: 22px;
+  font-weight: 200; }
   .header-theme-white h2 {
     font-size: 48px; }
   .header-theme-white a {
     background: #fff;
     border: 1px solid none;
-    color: #000;
+    color: #161c2d;
     padding: 8px 30px;
     font-size: 10px;
     text-transform: uppercase;
@@ -40,31 +48,37 @@
   background-color: #29abe2; }
   .logo-strip-theme h2 {
     text-transform: capitalize;
-    font-weight: bold;
+    font-weight: 100;
     font-size: 32px;
     color: #fff; }
   .logo-strip-theme a img {
     border-radius: 10px; }
 
-.threeup-theme h2 {
-  text-transform: capitalize;
-  font-weight: bold;
-  font-size: 48px;
-  color: #808080; }
-
-.threeup-theme img {
-  margin-bottom: 15px;
-  border-radius: 10px; }
-
-.threeup-theme a {
-  color: #808080;
-  margin-bottom: 12px;
-  font-size: 24px; }
+.threeup-theme {
+  font-size: 22px;
+  color: #869ab8;
+  font-weight: 200;
+  border-top: 2px solid #f1f4f8; }
+  .threeup-theme .mura-collection-item {
+    padding: 30px; }
+  .threeup-theme h2 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 48px;
+    color: #161c2d; }
+  .threeup-theme img {
+    margin-bottom: 15px;
+    border-radius: 10px; }
+  .threeup-theme a {
+    color: #161c2d;
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 100; }
 
 .large-quote-CTA p:first-child {
-  color: #808080;
-  font-size: 20px;
-  font-weight: 500;
+  color: #869ab8;
+  font-size: 24px;
+  font-weight: 200;
   line-height: 1.5em;
   margin-bottom: 40px; }
 
@@ -88,7 +102,8 @@
   font-weight: bold;
   padding-bottom: 60px;
   font-size: 24px;
-  color: #808080; }
+  color: #808080;
+  font-weight: 200; }
   .heading-underline h4::after {
     content: " ";
     position: absolute;
@@ -98,12 +113,20 @@
     bottom: 30px;
     left: calc(50% - 50px); }
 
+.heading-underline p {
+  font-size: 18px;
+  color: #869ab8;
+  font-weight: 200; }
+
 .heading-underline img {
   border-radius: 10px; }
 
-.small-quote-CTA {
-  color: #fff; }
-  .small-quote-CTA a {
+.small-quote-CTA p {
+  color: #869ab8;
+  font-size: 22px;
+  font-weight: 200;
+  margin-bottom: 0; }
+  .small-quote-CTA p a {
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
@@ -112,11 +135,11 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     border-radius: 16px; }
-    .small-quote-CTA a:hover {
+    .small-quote-CTA p a:hover {
       text-decoration: none;
       color: #fff;
       background: black; }
-    .small-quote-CTA a:hover {
+    .small-quote-CTA p a:hover {
       background-color: #fff;
       color: #000; }
 
@@ -147,22 +170,25 @@
       .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__title a {
         font-size: 24px;
         color: #808080; }
-      .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__summary p a {
-        color: #29abe2;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0; }
-      .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__summary p:last-child {
-        margin-bottom: 0; }
+      .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__summary p {
+        font-weight: 200; }
+        .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__summary p a {
+          color: #29abe2;
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0; }
+        .card-theme .mura-grid-four .mura-collection-item__holder .mura-item-meta__summary p:last-child {
+          margin-bottom: 0; }
 
 .join-our-team-theme {
-  color: #fff; }
+  color: #869ab8; }
   .join-our-team-theme h3 {
     font-size: 32px;
     color: #fff;
     padding-bottom: 60px;
-    position: relative; }
+    position: relative;
+    font-weight: 300; }
     .join-our-team-theme h3::after {
       content: " ";
       position: absolute;
@@ -172,7 +198,9 @@
       bottom: 30px;
       left: calc(50% - 50px); }
   .join-our-team-theme p {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 200; }
   .join-our-team-theme a {
     background: #fff;
     border: 1px solid none;
@@ -188,40 +216,70 @@
       background: black; }
 
 .testimonial-theme p em {
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 100; }
 
 .from-our-blog-theme h2 {
   text-transform: capitalize;
-  font-weight: bold;
   font-size: 48px;
-  color: #808080; }
+  color: #161c2d;
+  margin-bottom: 33px;
+  font-weight: 300; }
 
-.from-our-blog-theme .mura-collection .mura-collection-item {
-  padding: 15px; }
-  .from-our-blog-theme .mura-collection .mura-collection-item__holder {
-    padding: 30px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2); }
-    .from-our-blog-theme .mura-collection .mura-collection-item__holder .mura-item-content a img {
-      border-radius: 50%;
-      margin-bottom: 22px; }
-    .from-our-blog-theme .mura-collection .mura-collection-item__holder .mura-item-meta__title a {
-      color: #29abe2; }
-    .from-our-blog-theme .mura-collection .mura-collection-item__holder .mura-item-meta__summary p {
-      margin-bottom: 0; }
+.from-our-blog-theme .mura-collection .mura-collection-item__holder .mura-item-meta__title a {
+  color: #335eea;
+  margin-bottom: 12px;
+  font-weight: 200;
+  display: inline-block; }
+
+.from-our-blog-theme .mura-collection .mura-collection-item__holder .mura-item-meta__summary p {
+  margin-bottom: 0;
+  color: #869ab8;
+  font-size: 18px;
+  font-weight: 200; }
+
+.accordion-theme h2 {
+  text-transform: capitalize;
+  font-size: 48px;
+  color: #161c2d;
+  margin-bottom: 33px;
+  font-weight: 300; }
+
+.accordion-theme .card-header h2 {
+  font-size: 22px; }
+  .accordion-theme .card-header h2 button {
+    color: #869ab8;
+    font-size: 18px; }
+
+.accordion-theme .card-body a {
+  color: #335eea;
+  margin-bottom: 12px;
+  display: inline-block;
+  font-weight: 200; }
+  .accordion-theme .card-body a img {
+    border-radius: 6px;
+    margin-bottom: 0; }
+
+.accordion-theme .card-body p {
+  color: #869ab8;
+  font-size: 18px;
+  font-weight: 200; }
 
 .footer-theme {
-  color: #b5b5b5; }
+  color: #b5b5b5;
+  padding: 50px 0;
+  font-weight: 200; }
+  .footer-theme h2 {
+    font-size: 18px; }
   .footer-theme ul {
-    list-style-type: none; }
+    list-style-type: none;
+    padding-left: 0; }
     .footer-theme ul li a {
       color: #b5b5b5;
-      text-decoration: none; }
-    .footer-theme ul li:first-child {
-      font-weight: bold;
-      margin-bottom: 22px; }
+      text-decoration: none;
+      font-weight: 200; }
+      .footer-theme ul li a:hover {
+        text-decoration: underline; }
 
 /* CALENDAR
 ===================================== */

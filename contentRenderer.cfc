@@ -479,7 +479,8 @@
 			{name="Card Theme",value="card-theme"},
 			{name="Testimonial Theme",value="testimonial-theme"},
 			{name="Footer Theme",value="footer-theme"},
-			{name="From Our Blog",value="from-our-blog-theme"}
+			{name="From Our Blog",value="from-our-blog-theme"},
+			{name="Accordion",value="accordion-theme"}
         ];
         
         this.coloroptions=[

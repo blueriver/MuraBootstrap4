@@ -63,7 +63,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
     </div>
 </cfif>
 
-<!--- <div class="mura-control-group">
+<div class="mura-control-group">
     <label>Background Style</label>    
     <select class="objectParam" name="bgStyle">
         <option value=""> - </option>
@@ -75,7 +75,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
         <option value="text-white bg-info"<cfif objectParams.bgStyle eq "text-white bg-info"> selected="selected"</cfif>>Info</option>
         <option value="text-white bg-dark"<cfif objectParams.bgStyle eq "text-white bg-dark"> selected="selected"</cfif>>Dark</option>
     </select>
-</div> --->
+</div>
 
 <div class="mura-control-group">
   	<label>#application.rbFactory.getKeyValue(session.rb,'collections.imagesize')#</label>
