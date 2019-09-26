@@ -1,14 +1,6 @@
 <cfoutput>
  <header>
-	 <!--- Breadcrumb Nav: Not sure where to place this just yet. Need to see it in action.
-	 <nav aria-label="breadcrumb">
-		  <ol class="breadcrumb">
-		    <li class="breadcrumb-item"><a href="##">Home</a></li>
-		    <li class="breadcrumb-item"><a href="##">Parent</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">This Page</li>
-		  </ol>
-	</nav>
-	 --->
+	<nav aria-label="breadcrumb">#$.dspCrumbListLinks(class="")#</nav>
 	<h1><div class="mura-editable-attribute inline" data-attribute="title">#m.content('title')#</div></h1>
 	<p class="summary"><div class="mura-editable-attribute inline" data-attribute="summary">#m.content('summary')#</div></p>
 	<cfset commentCount = Val($.content().getStats().getComments())>
