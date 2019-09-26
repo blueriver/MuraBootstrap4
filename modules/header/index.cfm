@@ -9,8 +9,8 @@
 		  </ol>
 	</nav>
 	 --->
-	<h1>#m.renderEditableAttribute(attribute='title')#</h1>
-	<p class="summary">#m.renderEditableAttribute(attribute='summary')#</p>
+	<h1><div class="mura-editable-attribute inline" data-attribute="title">#m.content('title')#</div></h1>
+	<p class="summary"><div class="mura-editable-attribute inline" data-attribute="summary">#m.content('summary')#</div></p>
 	<cfset commentCount = Val($.content().getStats().getComments())>
 	<cfset itCategories = $.content().getCategoriesIterator()>
 	<cfif

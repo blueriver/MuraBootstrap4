@@ -1,7 +1,8 @@
 <cfoutput>
 	#m.dspObject(
 		object="header",
-		objectParams=m.content('headerParams')
+		objectParams=m.content('headerParams'),
+		targetattr='headerParams'
 	)#
 	#m.renderEditableAttribute(attribute="body",type="htmlEditor")#
 	#m.dspObject(
