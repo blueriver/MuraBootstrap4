@@ -1,7 +1,7 @@
 <cfoutput>
 	#m.dspObject(
 		object="header",
-		objectParams=m.content('headerParams'),
+		objectParams=urlDecode(m.content('headerParams')),
 		targetattr='headerParams'
 	)#
 	<div class="container mt-3">
