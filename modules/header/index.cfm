@@ -1,6 +1,6 @@
 <cfoutput>
  <header>
-	 <!--- Breadcrumb Nav: Not sure where to place this just yet. Need to see it in action. --->
+	 <!--- Breadcrumb Nav: Not sure where to place this just yet. Need to see it in action.
 	 <nav aria-label="breadcrumb">
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item"><a href="##">Home</a></li>
@@ -8,7 +8,7 @@
 		    <li class="breadcrumb-item active" aria-current="page">This Page</li>
 		  </ol>
 	</nav>
-	
+	 --->
 	<h1>#m.renderEditableAttribute(attribute='title')#</h1>
 	<p class="summary">#m.renderEditableAttribute(attribute='summary')#</p>
 	<cfset commentCount = Val($.content().getStats().getComments())>

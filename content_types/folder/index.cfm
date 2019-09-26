@@ -1,10 +1,11 @@
 <cfoutput>
-
-	<div class="container mt-3">
-		#m.renderEditableAttribute(attribute="body",type="htmlEditor")#
-		#m.dspObject(
-			object="folder",
-			params=objectParams
-		)#
-	</div>
+	#m.dspObject(
+		object="header",
+		objectParams=m.content('headerParams')
+	)#
+	#m.renderEditableAttribute(attribute="body",type="htmlEditor")#
+	#m.dspObject(
+		object="folder",
+		params=objectParams
+	)#
 </cfoutput>
