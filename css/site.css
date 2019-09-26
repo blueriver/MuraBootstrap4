@@ -150,10 +150,7 @@
   color: #808080; }
 
 .card-theme .mura-grid-four {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .card-theme .mura-grid-four .mura-collection-item {
     margin-bottom: 40px;
@@ -479,3 +476,5 @@ div[data-layout="grid"] .mura-item-meta {
 .mura-breadcrumb li {
   display: list-item;
   margin-right: 0; }
+
+/*# sourceMappingURL=site.css.map */

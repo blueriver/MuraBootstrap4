@@ -1,6 +1,7 @@
 <cfoutput>
  <header>
 	<div class="container">
+	<nav aria-label="breadcrumb">#$.dspCrumbListLinks(class="")#</nav>
 	<h1><div id="mura-editable-attribute-title" class="mura-editable-attribute inline" data-type="text" data-attribute="title">#m.content('title')#</div></h1>
 	<p class="summary"><div id="mura-editable-attribute-summary" data-type="text" class="mura-editable-attribute inline" data-attribute="summary">#m.content('summary')#</div></p>
 	<cfset commentCount = Val($.content().getStats().getComments())>
@@ -15,7 +16,7 @@
 	<ul class="list-inline">
 <!--- Content Release Date --->
 	<cfif IsDate($.setDynamicContent($.content('releasedate')))>
-		<li>
+		<li class="list-inline-item release-date">
 			<i class="fa fa-clock-o" aria-hidden="true"></i> #LSDateFormat($.setDynamicContent($.content('releasedate')))#
 		</li>
 	</cfif>
@@ -31,7 +32,7 @@
 
 <!--- Comments --->
 	<cfif commentCount gt 0>
-		<li class="list-inline-item">
+		<li class="list-inline-item comments">
 			<i class="fa fa-comments" aria-hidden="true"></i> #commentCount# Comment<cfif commentCount gt 1>s</cfif>
 		</li>
 	</cfif>
@@ -55,9 +56,8 @@
 
 <!--- Tags --->
 	<ul class="tags list-inline">
-		<li class="list-inline-item">Tags:</li>
 		<cfif ListLen($.content().getTags())>
-			<li class="list-inline-item">
+			<li class="list-inline-item badge badge-light">
 				<i class="fa fa-tags" aria-hidden="true"></i>
 				<cfloop from="1" to="#ListLen($.content().getTags())#" index="t">
 				#esapiEncode('html', trim(ListGetAt($.content().getTags(), t)))#<cfif t neq ListLen($.content().getTags())>, </cfif>
@@ -69,7 +69,4 @@
 	</cfif>
 	</div>
 </header>
-<div class="container">
-	<nav aria-label="breadcrumb">#$.dspCrumbListLinks(class="")#</nav>
-</div>
 </cfoutput>
