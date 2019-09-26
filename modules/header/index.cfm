@@ -1,6 +1,6 @@
 <cfoutput>
  <header>
-	 <div class="container">
+	<div class="container">
 	<nav aria-label="breadcrumb">#$.dspCrumbListLinks(class="")#</nav>
 	<h1><div id="mura-editable-attribute-title" class="mura-editable-attribute inline" data-type="text" data-attribute="title">#m.content('title')#</div></h1>
 	<p class="summary"><div id="mura-editable-attribute-summary" data-type="text" class="mura-editable-attribute inline" data-attribute="summary">#m.content('summary')#</div></p>
