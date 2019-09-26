@@ -1,1 +1,1 @@
-<mura name="Header" contenttypes="Page/Default"></div>
+<mura name="Header" contenttypes="Page/Default"></mura>
