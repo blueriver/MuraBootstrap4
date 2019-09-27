@@ -1,9 +1,19 @@
+<cfsilent>
+	<cfif request.muraFrontEndRequest>
+		<cfset objectparams.title=$.content('title')>
+		<cfset objectparams.summary=$.content('summary')>
+	<cfelse>
+		<cfparam name="objectparams.title" default="#$.content('title')#">
+		<cfparam name="objectparams.summary" default="#$.content('summary')#">
+	</cfif>
+</cfsilent>
+
 <cfoutput>
  <header>
 	<div class="container">
 	<nav aria-label="breadcrumb">#$.dspCrumbListLinks(class="")#</nav>
-	<h1><div id="mura-editable-attribute-title" class="mura-editable-attribute inline" data-type="text" data-attribute="title">#m.content('title')#</div></h1>
-	<p class="summary"><div id="mura-editable-attribute-summary" data-type="text" class="mura-editable-attribute inline" data-attribute="summary">#m.content('summary')#</div></p>
+	<h1><div id="mura-editable-attribute-title" class="mura-editable-attribute inline" data-type="text" data-attribute="title">#esapiEncode('html',objectparams.title)#</div></h1>
+	<div class="summary" id="mura-editable-attribute-summary" data-type="text" class="mura-editable-attribute inline" data-attribute="summary">#objectparams.title#</div>
 	<cfset commentCount = Val($.content().getStats().getComments())>
 	<cfset itCategories = $.content().getCategoriesIterator()>
 	<cfif
