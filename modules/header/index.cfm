@@ -13,7 +13,7 @@
 	<div class="container">
 	<nav aria-label="breadcrumb">#$.dspCrumbListLinks(class="")#</nav>
 	<h1><div id="mura-editable-attribute-title" class="mura-editable-attribute inline" data-type="text" data-attribute="title">#esapiEncode('html',objectparams.title)#</div></h1>
-	<div class="summary" id="mura-editable-attribute-summary" data-type="text" class="mura-editable-attribute inline" data-attribute="summary">#objectparams.title#</div>
+	<div class="summary" id="mura-editable-attribute-summary" data-type="text" class="mura-editable-attribute inline" data-attribute="summary">#objectparams.summary#</div>
 	<cfset commentCount = Val($.content().getStats().getComments())>
 	<cfset itCategories = $.content().getCategoriesIterator()>
 	<cfif
