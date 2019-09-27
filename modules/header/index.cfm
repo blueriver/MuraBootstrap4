@@ -53,13 +53,13 @@
 <!--- Categories --->
 	<ul class="categories list-inline">
 		<cfif itCategories.hasNext()>
-			<li class="list-inline-item badge badge-dark">
-				<i class="fa fa-folder-open" aria-hidden="true"></i>
 				<cfloop condition="itCategories.hasNext()">
 					<cfset categoryItem = itCategories.next()>
-					#HTMLEditFormat(categoryItem.getName())#</a><cfif itCategories.hasNext()>, </cfif>
+				<li class="list-inline-item badge badge-dark">
+					<i class="fa fa-folder-open" aria-hidden="true"></i>
+						#HTMLEditFormat(categoryItem.getName())#
+				</li>
 				</cfloop>
-			</li>
 		</cfif>
 	</ul>
 <!--- /Categories --->
@@ -67,12 +67,13 @@
 <!--- Tags --->
 	<ul class="tags list-inline">
 		<cfif ListLen($.content().getTags())>
+			
+				<cfloop from="1" to="#ListLen($.content().getTags())#" index="t">
 			<li class="list-inline-item badge badge-light">
 				<i class="fa fa-tags" aria-hidden="true"></i>
-				<cfloop from="1" to="#ListLen($.content().getTags())#" index="t">
-				#esapiEncode('html', trim(ListGetAt($.content().getTags(), t)))#<cfif t neq ListLen($.content().getTags())>, </cfif>
-				</cfloop>
+				#esapiEncode('html', trim(ListGetAt($.content().getTags(), t)))#<!--- <cfif t neq ListLen($.content().getTags())>, </cfif> --->
 			</li>
+			</cfloop>
 		</cfif>
 	</ul>
 <!--- /Tags --->
