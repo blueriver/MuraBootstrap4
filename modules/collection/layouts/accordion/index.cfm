@@ -31,7 +31,7 @@
 							</h2>
 						</div>
 						
-						<div id="content-#item.getContentID()#" class="collapse show" aria-labelledby="##content-#item.getContentID()#" data-parent="##rapidsAccordion">
+						<div id="content-#item.getContentID()#" class="collapse" aria-labelledby="##content-#item.getContentID()#" data-parent="##rapidsAccordion">
 							<div class="card-body"> <!--- #objectParams.bgStyle# ---> <!--- #item.getValue('CardBackgroundStyle')# --->
 								<cfif listFindNoCase(objectParams.displaylist,'Image')>
 									<div class="mura-item-content">
