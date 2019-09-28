@@ -27,7 +27,7 @@
 					<div class="card #objectParams.bgStyle#">
 						<div class="card-header" id="##content-#item.getContentID()#">
 						    <h2 class="mb-0">
-								<button class="btn btn-link" type="button" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="true" aria-controls="content-#item.getContentID()#">#item.getTitle()#</button>
+								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</button>
 							</h2>
 						</div>
 						
