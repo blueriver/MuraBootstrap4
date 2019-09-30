@@ -16,7 +16,6 @@
     &::before {
       display: inline-block; // Suppress underlining of the separator in modern browsers
       padding-right: $breadcrumb-item-padding;
-      color: $breadcrumb-divider-color;
       content: $breadcrumb-divider;
     }
   }

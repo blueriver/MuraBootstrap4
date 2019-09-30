@@ -371,6 +371,24 @@
     color: #f00;
     content: "\f05e"; }
 
+header li {
+  font-size: .8rem !important;
+  font-weight: normal !important;
+  float: none; }
+  header li.tag {
+    color: #000000 !important; }
+
+header .mura-breadcrumb {
+  padding: 0;
+  margin-bottom: .5rem;
+  /*
+			&:last-child {
+				display: none;
+			}
+*/ }
+  header .mura-breadcrumb li {
+    margin-right: .25em; }
+
 .navbar-nav .nav-item:hover > .dropdown-menu {
   display: block; }
 
@@ -472,9 +490,5 @@ div[data-layout="grid"] .mura-item-meta {
   border: 0;
   padding: 0;
   margin: 0; }
-
-.mura-breadcrumb li {
-  display: list-item;
-  margin-right: 0; }
 
 /*# sourceMappingURL=site.css.map */

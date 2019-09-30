@@ -3658,7 +3658,6 @@ input[type="button"].btn-block {
 
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
-  color: #fff;
   content: "/"; }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
