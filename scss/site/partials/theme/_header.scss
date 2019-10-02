@@ -1,6 +1,38 @@
 // ==================================================
 // Header
 // ==================================================
+header {
+		
+	li {
+			font-size: .8rem !important;
+			font-weight: normal !important;
+			float: none;
+			
+		&.tag {
+			color: $black !important;
+			}
+		
+		}
+	
+	.mura-breadcrumb {
+	
+	padding: 0;
+	margin-bottom: .5rem;
+	
+		li {
+			margin-right: .25em;
+			}
+			
+/*
+			&:last-child {
+				display: none;
+			}
+*/
+		
+		}
+}
+
+
 
 .navbar-nav {
 	.nav-item {

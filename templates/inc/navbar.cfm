@@ -2,8 +2,8 @@
 <header class="sticky-top">
 	<nav class="navbar navbar-expand-lg bg-light navbar-light navbar-static-top py-4">
 		<div class="container">
-
-			<a class="navbar-brand" href="#$.createHREF(filename='')#">#esapiEncode('html', $.siteConfig('site'))#</a>
+			
+			<a class="navbar-brand" title="#esapiEncode('html_attr', $.siteConfig('site'))#" href="#$.createHREF(filename='')#">LOGO HERE</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>

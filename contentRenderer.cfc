@@ -98,7 +98,7 @@
 		this.subHead4 = "h5";
 
 		// preloader markup for async objects
-		this.preloaderMarkup='<div class="mura-preloader-wrapper"><div class="mura-preloader fa fa-refresh fa-spin"><span></span></div></div>';
+		this.preloaderMarkup='<div class="mura-preloader-wrapper container"><div class="mura-preloader fa fa-refresh fa-spin"><span></span></div></div>';
 
 		// nav and list item vars
 		this.navWrapperClass = "mura-nav bg-light p-3 mb-5 border rounded";
@@ -463,6 +463,42 @@
 		this.navNextDecoration="";
 		this.userFavoritesWrapperClass="bg-light p-3 mb-5 border rounded";
 		this.pageToolsWrapperClass="bg-light p-3 mb-5 border rounded";
+		
+		// 7.2 Module Specific Themes
+        this.primaryContentTypes="Folder,Page,Link,File";
+        
+        this.modulethemeoptions=[
+			{name="Header Theme",value="header-theme"},
+			{name="Header Theme White",value="header-theme-white"},
+			{name="Logo Strip",value="logo-strip-theme"},
+			{name="Join Our Team",value="join-our-team-theme"},
+			{name="Three Up Theme",value="threeup-theme"},
+			{name="Large Quote CTA",value="large-quote-CTA"},
+			{name="Small Quote CTA",value="small-quote-CTA"},
+			{name="Heading Underline",value="heading-underline"},
+			{name="Card Theme",value="card-theme"},
+			{name="Testimonial Theme",value="testimonial-theme"},
+			{name="Footer Theme",value="footer-theme"},
+			{name="From Our Blog",value="from-our-blog-theme"},
+			{name="Accordion",value="accordion-theme"}
+        ];
+        
+        this.coloroptions=[
+            {name='White',value="##ffffff"},
+            {name='Mura Black',value="##2c2c2c"},
+            {name='Mura Red',value="##E34A36"},
+            {name='Mura Orange',value="##fd7334"},
+            {name='Mura Azul',value="##00b7e3"},
+            {name='Mura Sea Foam',value="##5fd18c"},
+            {name='Mura Teal',value="##00c8b2"},
+            {name='Mura Green',value="##93c220"},
+            {name='Mura Cranberry',value="##da2048"},
+            {name='Mura Goldenrod',value="##e9ad01"},
+            {name='Mura Violet',value="##984ac1"},
+            {name='Mura Purple',value="##6565df"},
+            {name='Mura Blue',value="##2e5ad9"}
+        ];
+		// -----------------------------
 
 	</cfscript>
 
