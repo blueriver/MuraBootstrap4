@@ -13,5 +13,6 @@
 		</extension>
 		<extension adminonly="0" availablesubtypes="" basekeyfield="contentHistID" basetable="tcontent" datatable="tclassextenddata" description="" hasassocfile="1" hasbody="0" hasconfigurator="0" hassummary="1" iconclass="mi-th" subtype="Default" type="Page"/>
 		<extension adminonly="0" availablesubtypes="" basekeyfield="contentHistID" basetable="tcontent" datatable="tclassextenddata" description="" hasassocfile="1" hasbody="1" hasconfigurator="0" hassummary="1" iconclass="mi-indent" subtype="Article" type="Page"/>
+		<extension adminonly="0" availablesubtypes="" basekeyfield="contentHistID" basetable="tcontent" datatable="tclassextenddata" description="" hasassocfile="1" hasbody="0" hasconfigurator="1" hassummary="1" iconclass="mi-folder-open-o" subtype="Default" type="Folder"/>
 	</extensions>
 </mura>
