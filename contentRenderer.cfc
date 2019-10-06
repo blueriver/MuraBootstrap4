@@ -136,7 +136,7 @@
 
 
 		//Queue async display objects to render when scrolled into view
-		this.queueObjects=false;
+		this.queueObjects=true;
 
 		// pagination vars
 		this.ulPaginationClass="pagination";
