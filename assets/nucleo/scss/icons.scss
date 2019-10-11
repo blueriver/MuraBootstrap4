@@ -1,0 +1,1008 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$nc-js-console-1: unicode(ea02);
+$nc-js-console-10: unicode(ea03);
+$nc-js-console-9: unicode(ea04);
+$nc-js-console-5: unicode(ea05);
+$nc-js-console-2: unicode(ea06);
+$nc-js-console-3: unicode(ea07);
+$nc-js-console-4: unicode(ea08);
+$nc-js-console-8: unicode(ea09);
+$nc-js-console-6: unicode(ea0a);
+$nc-js-console-7: unicode(ea0b);
+$nc-paragraph-2-1: unicode(ea0c);
+$nc-paragraph-2-2: unicode(ea0d);
+$nc-paragraph-2-3: unicode(ea0e);
+$nc-paragraph-2-4: unicode(ea0f);
+$nc-paragraph-2-5: unicode(ea10);
+$nc-paragraph-2-6: unicode(ea11);
+$nc-paragraph-2-7: unicode(ea12);
+$nc-paragraph-2-8: unicode(ea13);
+$nc-paragraph-2-9: unicode(ea14);
+$nc-paragraph-2-11: unicode(ea15);
+$nc-paragraph-2-10: unicode(ea16);
+$nc-shuttle-1: unicode(ea17);
+$nc-shuttle-2: unicode(ea18);
+$nc-shuttle-3: unicode(ea19);
+$nc-shuttle-4: unicode(ea1a);
+$nc-shuttle-5: unicode(ea1b);
+$nc-shuttle-6: unicode(ea1c);
+$nc-shuttle-7: unicode(ea1d);
+$nc-shuttle-8: unicode(ea1e);
+$nc-shuttle-9: unicode(ea1f);
+$nc-shuttle-10: unicode(ea20);
+$nc-shuttle-11: unicode(ea21);
+$nc-flight-connection-1: unicode(ea22);
+$nc-flight-connection-2: unicode(ea23);
+$nc-flight-connection-3: unicode(ea24);
+$nc-flight-connection-4: unicode(ea25);
+$nc-satellite: unicode(ea26);
+$nc-flight-connection-5: unicode(ea27);
+$nc-flight-connection-6: unicode(ea28);
+$nc-flight-connection-7: unicode(ea29);
+$nc-flight-connection-8: unicode(ea2a);
+$nc-airport-1: unicode(ea2b);
+$nc-airport-2: unicode(ea2c);
+$nc-airport-3: unicode(ea2d);
+$nc-airport-4: unicode(ea2e);
+$nc-airport-5: unicode(ea2f);
+$nc-airport-6: unicode(ea30);
+$nc-airport-7: unicode(ea31);
+$nc-airport-8: unicode(ea32);
+$nc-airport-9: unicode(ea33);
+$nc-airport-10: unicode(ea34);
+$nc-flight-connection-9: unicode(ea35);
+$nc-security-officer-1: unicode(ea36);
+$nc-security-officer-2: unicode(ea37);
+$nc-airport-11: unicode(ea38);
+$nc-security-officer-3: unicode(ea39);
+$nc-security-officer-4: unicode(ea3a);
+$nc-security-officer-5: unicode(ea3b);
+$nc-security-officer-6: unicode(ea3c);
+$nc-security-officer-7: unicode(ea3d);
+$nc-security-officer-8: unicode(ea3e);
+$nc-info-point-1: unicode(ea3f);
+$nc-info-point-2: unicode(ea40);
+$nc-info-point-3: unicode(ea41);
+$nc-info-point-4: unicode(ea42);
+$nc-info-point-5: unicode(ea43);
+$nc-info-point-6: unicode(ea44);
+$nc-info-point-7: unicode(ea45);
+$nc-info-point-8: unicode(ea46);
+$nc-info-point-9: unicode(ea47);
+$nc-security-officer-9: unicode(ea48);
+$nc-info-point-10: unicode(ea49);
+$nc-security-gate-1: unicode(ea4a);
+$nc-info-point-11: unicode(ea4b);
+$nc-security-gate-2: unicode(ea4c);
+$nc-security-gate-3: unicode(ea4d);
+$nc-security-gate-4: unicode(ea4e);
+$nc-security-gate-5: unicode(ea4f);
+$nc-security-gate-6: unicode(ea50);
+$nc-security-gate-7: unicode(ea51);
+$nc-antenna: unicode(ea52);
+$nc-security-gate-8: unicode(ea53);
+$nc-security-gate-9: unicode(ea54);
+$nc-flight-1: unicode(ea55);
+$nc-flight-2: unicode(ea56);
+$nc-flight-3: unicode(ea57);
+$nc-flight-4: unicode(ea58);
+$nc-flight-5: unicode(ea59);
+$nc-flight-6: unicode(ea5a);
+$nc-flight-7: unicode(ea5b);
+$nc-flight-8: unicode(ea5c);
+$nc-flight-9: unicode(ea5d);
+$nc-security-gate-10: unicode(ea5e);
+$nc-take-off-1: unicode(ea5f);
+$nc-take-off-2: unicode(ea60);
+$nc-take-off-3: unicode(ea61);
+$nc-take-off-4: unicode(ea62);
+$nc-take-off-5: unicode(ea63);
+$nc-take-off-6: unicode(ea64);
+$nc-take-off-7: unicode(ea65);
+$nc-take-off-8: unicode(ea66);
+$nc-landing-1: unicode(ea67);
+$nc-landing-2: unicode(ea68);
+$nc-landing-3: unicode(ea69);
+$nc-landing-4: unicode(ea6a);
+$nc-landing-5: unicode(ea6b);
+$nc-landing-6: unicode(ea6c);
+$nc-landing-7: unicode(ea6d);
+$nc-landing-8: unicode(ea6e);
+$nc-landing-9: unicode(ea6f);
+$nc-baggage-collection-1: unicode(ea70);
+$nc-baggage-collection-2: unicode(ea71);
+$nc-baggage-collection-3: unicode(ea72);
+$nc-baggage-collection-4: unicode(ea73);
+$nc-baggage-collection-5: unicode(ea74);
+$nc-baggage-collection-6: unicode(ea75);
+$nc-baggage-collection-7: unicode(ea76);
+$nc-baggage-collection-8: unicode(ea77);
+$nc-baggage-collection-9: unicode(ea78);
+$nc-baggage-collection-10: unicode(ea79);
+$nc-baggage-collection-11: unicode(ea7a);
+$nc-baggage-scale-11: unicode(ea7b);
+$nc-baggage-scale-1: unicode(ea7c);
+$nc-baggage-scale-7: unicode(ea7d);
+$nc-baggage-scale-2: unicode(ea7e);
+$nc-baggage-scale-3: unicode(ea7f);
+$nc-baggage-scale-4: unicode(ea80);
+$nc-baggage-scale-5: unicode(ea81);
+$nc-baggage-scale-6: unicode(ea82);
+$nc-baggage-scale-10: unicode(ea83);
+$nc-baggage-scale-8: unicode(ea84);
+$nc-baggage-scale-9: unicode(ea85);
+$nc-toilette-1: unicode(ea86);
+$nc-toilette-2: unicode(ea87);
+$nc-toilette-3: unicode(ea88);
+$nc-toilette-4: unicode(ea89);
+$nc-toilette-5: unicode(ea8a);
+$nc-toilette-6: unicode(ea8b);
+$nc-toilette-7: unicode(ea8c);
+$nc-toilette-8: unicode(ea8d);
+$nc-toilette-9: unicode(ea8e);
+$nc-no-smoking-4: unicode(ea8f);
+$nc-no-smoking-1: unicode(ea90);
+$nc-no-smoking-2: unicode(ea91);
+$nc-no-smoking-3: unicode(ea92);
+$nc-no-smoking-9: unicode(ea93);
+$nc-no-smoking-5: unicode(ea94);
+$nc-no-smoking-6: unicode(ea95);
+$nc-no-smoking-7: unicode(ea96);
+$nc-no-smoking-8: unicode(ea97);
+$nc-smoking-1: unicode(ea98);
+$nc-smoking-2: unicode(ea99);
+$nc-smoking-9: unicode(ea9a);
+$nc-smoking-3: unicode(ea9b);
+$nc-smoking-4: unicode(ea9c);
+$nc-smoking-5: unicode(ea9d);
+$nc-smoking-6: unicode(ea9e);
+$nc-smoking-7: unicode(ea9f);
+$nc-smoking-8: unicode(eaa0);
+$nc-currency-exchange-2-1: unicode(eaa1);
+$nc-currency-exchange-2-2: unicode(eaa2);
+$nc-currency-exchange-2-3: unicode(eaa3);
+$nc-currency-exchange-2-4: unicode(eaa4);
+$nc-currency-exchange-2-5: unicode(eaa5);
+$nc-currency-exchange-2-6: unicode(eaa6);
+$nc-currency-exchange-2-7: unicode(eaa7);
+$nc-currency-exchange-2-8: unicode(eaa8);
+$nc-currency-exchange-2-9: unicode(eaa9);
+$nc-data-table-1: unicode(eaaa);
+$nc-data-table-2: unicode(eaab);
+$nc-data-table-3: unicode(eaac);
+$nc-data-table-4: unicode(eaad);
+$nc-data-table-5: unicode(eaae);
+$nc-data-table-6: unicode(eaaf);
+$nc-data-table-7: unicode(eab0);
+$nc-data-table-8: unicode(eab1);
+$nc-data-table-9: unicode(eab2);
+$nc-data-table-10: unicode(eab3);
+$nc-data-table-11: unicode(eab4);
+$nc-find-baggage-1: unicode(eab5);
+$nc-find-baggage-2: unicode(eab6);
+$nc-find-baggage-3: unicode(eab7);
+$nc-find-baggage-4: unicode(eab8);
+$nc-find-baggage-5: unicode(eab9);
+$nc-find-baggage-6: unicode(eaba);
+$nc-find-baggage-7: unicode(eabb);
+$nc-find-baggage-8: unicode(eabc);
+$nc-find-baggage-9: unicode(eabd);
+$nc-passenger-1: unicode(eabe);
+$nc-single-02: unicode(eabf);
+$nc-passenger-2: unicode(eac0);
+$nc-passenger-3: unicode(eac1);
+$nc-passenger-4: unicode(eac2);
+$nc-passenger-5: unicode(eac3);
+$nc-passenger-6: unicode(eac4);
+$nc-passenger-7: unicode(eac5);
+$nc-passenger-8: unicode(eac6);
+$nc-passenger-9: unicode(eac7);
+$nc-take-off-9: unicode(eac8);
+$nc-security-gate-11: unicode(eac9);
+
+.nc-js-console-1::before {
+  content: $nc-js-console-1;
+}
+
+.nc-js-console-10::before {
+  content: $nc-js-console-10;
+}
+
+.nc-js-console-9::before {
+  content: $nc-js-console-9;
+}
+
+.nc-js-console-5::before {
+  content: $nc-js-console-5;
+}
+
+.nc-js-console-2::before {
+  content: $nc-js-console-2;
+}
+
+.nc-js-console-3::before {
+  content: $nc-js-console-3;
+}
+
+.nc-js-console-4::before {
+  content: $nc-js-console-4;
+}
+
+.nc-js-console-8::before {
+  content: $nc-js-console-8;
+}
+
+.nc-js-console-6::before {
+  content: $nc-js-console-6;
+}
+
+.nc-js-console-7::before {
+  content: $nc-js-console-7;
+}
+
+.nc-paragraph-2-1::before {
+  content: $nc-paragraph-2-1;
+}
+
+.nc-paragraph-2-2::before {
+  content: $nc-paragraph-2-2;
+}
+
+.nc-paragraph-2-3::before {
+  content: $nc-paragraph-2-3;
+}
+
+.nc-paragraph-2-4::before {
+  content: $nc-paragraph-2-4;
+}
+
+.nc-paragraph-2-5::before {
+  content: $nc-paragraph-2-5;
+}
+
+.nc-paragraph-2-6::before {
+  content: $nc-paragraph-2-6;
+}
+
+.nc-paragraph-2-7::before {
+  content: $nc-paragraph-2-7;
+}
+
+.nc-paragraph-2-8::before {
+  content: $nc-paragraph-2-8;
+}
+
+.nc-paragraph-2-9::before {
+  content: $nc-paragraph-2-9;
+}
+
+.nc-paragraph-2-11::before {
+  content: $nc-paragraph-2-11;
+}
+
+.nc-paragraph-2-10::before {
+  content: $nc-paragraph-2-10;
+}
+
+.nc-shuttle-1::before {
+  content: $nc-shuttle-1;
+}
+
+.nc-shuttle-2::before {
+  content: $nc-shuttle-2;
+}
+
+.nc-shuttle-3::before {
+  content: $nc-shuttle-3;
+}
+
+.nc-shuttle-4::before {
+  content: $nc-shuttle-4;
+}
+
+.nc-shuttle-5::before {
+  content: $nc-shuttle-5;
+}
+
+.nc-shuttle-6::before {
+  content: $nc-shuttle-6;
+}
+
+.nc-shuttle-7::before {
+  content: $nc-shuttle-7;
+}
+
+.nc-shuttle-8::before {
+  content: $nc-shuttle-8;
+}
+
+.nc-shuttle-9::before {
+  content: $nc-shuttle-9;
+}
+
+.nc-shuttle-10::before {
+  content: $nc-shuttle-10;
+}
+
+.nc-shuttle-11::before {
+  content: $nc-shuttle-11;
+}
+
+.nc-flight-connection-1::before {
+  content: $nc-flight-connection-1;
+}
+
+.nc-flight-connection-2::before {
+  content: $nc-flight-connection-2;
+}
+
+.nc-flight-connection-3::before {
+  content: $nc-flight-connection-3;
+}
+
+.nc-flight-connection-4::before {
+  content: $nc-flight-connection-4;
+}
+
+.nc-satellite::before {
+  content: $nc-satellite;
+}
+
+.nc-flight-connection-5::before {
+  content: $nc-flight-connection-5;
+}
+
+.nc-flight-connection-6::before {
+  content: $nc-flight-connection-6;
+}
+
+.nc-flight-connection-7::before {
+  content: $nc-flight-connection-7;
+}
+
+.nc-flight-connection-8::before {
+  content: $nc-flight-connection-8;
+}
+
+.nc-airport-1::before {
+  content: $nc-airport-1;
+}
+
+.nc-airport-2::before {
+  content: $nc-airport-2;
+}
+
+.nc-airport-3::before {
+  content: $nc-airport-3;
+}
+
+.nc-airport-4::before {
+  content: $nc-airport-4;
+}
+
+.nc-airport-5::before {
+  content: $nc-airport-5;
+}
+
+.nc-airport-6::before {
+  content: $nc-airport-6;
+}
+
+.nc-airport-7::before {
+  content: $nc-airport-7;
+}
+
+.nc-airport-8::before {
+  content: $nc-airport-8;
+}
+
+.nc-airport-9::before {
+  content: $nc-airport-9;
+}
+
+.nc-airport-10::before {
+  content: $nc-airport-10;
+}
+
+.nc-flight-connection-9::before {
+  content: $nc-flight-connection-9;
+}
+
+.nc-security-officer-1::before {
+  content: $nc-security-officer-1;
+}
+
+.nc-security-officer-2::before {
+  content: $nc-security-officer-2;
+}
+
+.nc-airport-11::before {
+  content: $nc-airport-11;
+}
+
+.nc-security-officer-3::before {
+  content: $nc-security-officer-3;
+}
+
+.nc-security-officer-4::before {
+  content: $nc-security-officer-4;
+}
+
+.nc-security-officer-5::before {
+  content: $nc-security-officer-5;
+}
+
+.nc-security-officer-6::before {
+  content: $nc-security-officer-6;
+}
+
+.nc-security-officer-7::before {
+  content: $nc-security-officer-7;
+}
+
+.nc-security-officer-8::before {
+  content: $nc-security-officer-8;
+}
+
+.nc-info-point-1::before {
+  content: $nc-info-point-1;
+}
+
+.nc-info-point-2::before {
+  content: $nc-info-point-2;
+}
+
+.nc-info-point-3::before {
+  content: $nc-info-point-3;
+}
+
+.nc-info-point-4::before {
+  content: $nc-info-point-4;
+}
+
+.nc-info-point-5::before {
+  content: $nc-info-point-5;
+}
+
+.nc-info-point-6::before {
+  content: $nc-info-point-6;
+}
+
+.nc-info-point-7::before {
+  content: $nc-info-point-7;
+}
+
+.nc-info-point-8::before {
+  content: $nc-info-point-8;
+}
+
+.nc-info-point-9::before {
+  content: $nc-info-point-9;
+}
+
+.nc-security-officer-9::before {
+  content: $nc-security-officer-9;
+}
+
+.nc-info-point-10::before {
+  content: $nc-info-point-10;
+}
+
+.nc-security-gate-1::before {
+  content: $nc-security-gate-1;
+}
+
+.nc-info-point-11::before {
+  content: $nc-info-point-11;
+}
+
+.nc-security-gate-2::before {
+  content: $nc-security-gate-2;
+}
+
+.nc-security-gate-3::before {
+  content: $nc-security-gate-3;
+}
+
+.nc-security-gate-4::before {
+  content: $nc-security-gate-4;
+}
+
+.nc-security-gate-5::before {
+  content: $nc-security-gate-5;
+}
+
+.nc-security-gate-6::before {
+  content: $nc-security-gate-6;
+}
+
+.nc-security-gate-7::before {
+  content: $nc-security-gate-7;
+}
+
+.nc-antenna::before {
+  content: $nc-antenna;
+}
+
+.nc-security-gate-8::before {
+  content: $nc-security-gate-8;
+}
+
+.nc-security-gate-9::before {
+  content: $nc-security-gate-9;
+}
+
+.nc-flight-1::before {
+  content: $nc-flight-1;
+}
+
+.nc-flight-2::before {
+  content: $nc-flight-2;
+}
+
+.nc-flight-3::before {
+  content: $nc-flight-3;
+}
+
+.nc-flight-4::before {
+  content: $nc-flight-4;
+}
+
+.nc-flight-5::before {
+  content: $nc-flight-5;
+}
+
+.nc-flight-6::before {
+  content: $nc-flight-6;
+}
+
+.nc-flight-7::before {
+  content: $nc-flight-7;
+}
+
+.nc-flight-8::before {
+  content: $nc-flight-8;
+}
+
+.nc-flight-9::before {
+  content: $nc-flight-9;
+}
+
+.nc-security-gate-10::before {
+  content: $nc-security-gate-10;
+}
+
+.nc-take-off-1::before {
+  content: $nc-take-off-1;
+}
+
+.nc-take-off-2::before {
+  content: $nc-take-off-2;
+}
+
+.nc-take-off-3::before {
+  content: $nc-take-off-3;
+}
+
+.nc-take-off-4::before {
+  content: $nc-take-off-4;
+}
+
+.nc-take-off-5::before {
+  content: $nc-take-off-5;
+}
+
+.nc-take-off-6::before {
+  content: $nc-take-off-6;
+}
+
+.nc-take-off-7::before {
+  content: $nc-take-off-7;
+}
+
+.nc-take-off-8::before {
+  content: $nc-take-off-8;
+}
+
+.nc-landing-1::before {
+  content: $nc-landing-1;
+}
+
+.nc-landing-2::before {
+  content: $nc-landing-2;
+}
+
+.nc-landing-3::before {
+  content: $nc-landing-3;
+}
+
+.nc-landing-4::before {
+  content: $nc-landing-4;
+}
+
+.nc-landing-5::before {
+  content: $nc-landing-5;
+}
+
+.nc-landing-6::before {
+  content: $nc-landing-6;
+}
+
+.nc-landing-7::before {
+  content: $nc-landing-7;
+}
+
+.nc-landing-8::before {
+  content: $nc-landing-8;
+}
+
+.nc-landing-9::before {
+  content: $nc-landing-9;
+}
+
+.nc-baggage-collection-1::before {
+  content: $nc-baggage-collection-1;
+}
+
+.nc-baggage-collection-2::before {
+  content: $nc-baggage-collection-2;
+}
+
+.nc-baggage-collection-3::before {
+  content: $nc-baggage-collection-3;
+}
+
+.nc-baggage-collection-4::before {
+  content: $nc-baggage-collection-4;
+}
+
+.nc-baggage-collection-5::before {
+  content: $nc-baggage-collection-5;
+}
+
+.nc-baggage-collection-6::before {
+  content: $nc-baggage-collection-6;
+}
+
+.nc-baggage-collection-7::before {
+  content: $nc-baggage-collection-7;
+}
+
+.nc-baggage-collection-8::before {
+  content: $nc-baggage-collection-8;
+}
+
+.nc-baggage-collection-9::before {
+  content: $nc-baggage-collection-9;
+}
+
+.nc-baggage-collection-10::before {
+  content: $nc-baggage-collection-10;
+}
+
+.nc-baggage-collection-11::before {
+  content: $nc-baggage-collection-11;
+}
+
+.nc-baggage-scale-11::before {
+  content: $nc-baggage-scale-11;
+}
+
+.nc-baggage-scale-1::before {
+  content: $nc-baggage-scale-1;
+}
+
+.nc-baggage-scale-7::before {
+  content: $nc-baggage-scale-7;
+}
+
+.nc-baggage-scale-2::before {
+  content: $nc-baggage-scale-2;
+}
+
+.nc-baggage-scale-3::before {
+  content: $nc-baggage-scale-3;
+}
+
+.nc-baggage-scale-4::before {
+  content: $nc-baggage-scale-4;
+}
+
+.nc-baggage-scale-5::before {
+  content: $nc-baggage-scale-5;
+}
+
+.nc-baggage-scale-6::before {
+  content: $nc-baggage-scale-6;
+}
+
+.nc-baggage-scale-10::before {
+  content: $nc-baggage-scale-10;
+}
+
+.nc-baggage-scale-8::before {
+  content: $nc-baggage-scale-8;
+}
+
+.nc-baggage-scale-9::before {
+  content: $nc-baggage-scale-9;
+}
+
+.nc-toilette-1::before {
+  content: $nc-toilette-1;
+}
+
+.nc-toilette-2::before {
+  content: $nc-toilette-2;
+}
+
+.nc-toilette-3::before {
+  content: $nc-toilette-3;
+}
+
+.nc-toilette-4::before {
+  content: $nc-toilette-4;
+}
+
+.nc-toilette-5::before {
+  content: $nc-toilette-5;
+}
+
+.nc-toilette-6::before {
+  content: $nc-toilette-6;
+}
+
+.nc-toilette-7::before {
+  content: $nc-toilette-7;
+}
+
+.nc-toilette-8::before {
+  content: $nc-toilette-8;
+}
+
+.nc-toilette-9::before {
+  content: $nc-toilette-9;
+}
+
+.nc-no-smoking-4::before {
+  content: $nc-no-smoking-4;
+}
+
+.nc-no-smoking-1::before {
+  content: $nc-no-smoking-1;
+}
+
+.nc-no-smoking-2::before {
+  content: $nc-no-smoking-2;
+}
+
+.nc-no-smoking-3::before {
+  content: $nc-no-smoking-3;
+}
+
+.nc-no-smoking-9::before {
+  content: $nc-no-smoking-9;
+}
+
+.nc-no-smoking-5::before {
+  content: $nc-no-smoking-5;
+}
+
+.nc-no-smoking-6::before {
+  content: $nc-no-smoking-6;
+}
+
+.nc-no-smoking-7::before {
+  content: $nc-no-smoking-7;
+}
+
+.nc-no-smoking-8::before {
+  content: $nc-no-smoking-8;
+}
+
+.nc-smoking-1::before {
+  content: $nc-smoking-1;
+}
+
+.nc-smoking-2::before {
+  content: $nc-smoking-2;
+}
+
+.nc-smoking-9::before {
+  content: $nc-smoking-9;
+}
+
+.nc-smoking-3::before {
+  content: $nc-smoking-3;
+}
+
+.nc-smoking-4::before {
+  content: $nc-smoking-4;
+}
+
+.nc-smoking-5::before {
+  content: $nc-smoking-5;
+}
+
+.nc-smoking-6::before {
+  content: $nc-smoking-6;
+}
+
+.nc-smoking-7::before {
+  content: $nc-smoking-7;
+}
+
+.nc-smoking-8::before {
+  content: $nc-smoking-8;
+}
+
+.nc-currency-exchange-2-1::before {
+  content: $nc-currency-exchange-2-1;
+}
+
+.nc-currency-exchange-2-2::before {
+  content: $nc-currency-exchange-2-2;
+}
+
+.nc-currency-exchange-2-3::before {
+  content: $nc-currency-exchange-2-3;
+}
+
+.nc-currency-exchange-2-4::before {
+  content: $nc-currency-exchange-2-4;
+}
+
+.nc-currency-exchange-2-5::before {
+  content: $nc-currency-exchange-2-5;
+}
+
+.nc-currency-exchange-2-6::before {
+  content: $nc-currency-exchange-2-6;
+}
+
+.nc-currency-exchange-2-7::before {
+  content: $nc-currency-exchange-2-7;
+}
+
+.nc-currency-exchange-2-8::before {
+  content: $nc-currency-exchange-2-8;
+}
+
+.nc-currency-exchange-2-9::before {
+  content: $nc-currency-exchange-2-9;
+}
+
+.nc-data-table-1::before {
+  content: $nc-data-table-1;
+}
+
+.nc-data-table-2::before {
+  content: $nc-data-table-2;
+}
+
+.nc-data-table-3::before {
+  content: $nc-data-table-3;
+}
+
+.nc-data-table-4::before {
+  content: $nc-data-table-4;
+}
+
+.nc-data-table-5::before {
+  content: $nc-data-table-5;
+}
+
+.nc-data-table-6::before {
+  content: $nc-data-table-6;
+}
+
+.nc-data-table-7::before {
+  content: $nc-data-table-7;
+}
+
+.nc-data-table-8::before {
+  content: $nc-data-table-8;
+}
+
+.nc-data-table-9::before {
+  content: $nc-data-table-9;
+}
+
+.nc-data-table-10::before {
+  content: $nc-data-table-10;
+}
+
+.nc-data-table-11::before {
+  content: $nc-data-table-11;
+}
+
+.nc-find-baggage-1::before {
+  content: $nc-find-baggage-1;
+}
+
+.nc-find-baggage-2::before {
+  content: $nc-find-baggage-2;
+}
+
+.nc-find-baggage-3::before {
+  content: $nc-find-baggage-3;
+}
+
+.nc-find-baggage-4::before {
+  content: $nc-find-baggage-4;
+}
+
+.nc-find-baggage-5::before {
+  content: $nc-find-baggage-5;
+}
+
+.nc-find-baggage-6::before {
+  content: $nc-find-baggage-6;
+}
+
+.nc-find-baggage-7::before {
+  content: $nc-find-baggage-7;
+}
+
+.nc-find-baggage-8::before {
+  content: $nc-find-baggage-8;
+}
+
+.nc-find-baggage-9::before {
+  content: $nc-find-baggage-9;
+}
+
+.nc-passenger-1::before {
+  content: $nc-passenger-1;
+}
+
+.nc-single-02::before {
+  content: $nc-single-02;
+}
+
+.nc-passenger-2::before {
+  content: $nc-passenger-2;
+}
+
+.nc-passenger-3::before {
+  content: $nc-passenger-3;
+}
+
+.nc-passenger-4::before {
+  content: $nc-passenger-4;
+}
+
+.nc-passenger-5::before {
+  content: $nc-passenger-5;
+}
+
+.nc-passenger-6::before {
+  content: $nc-passenger-6;
+}
+
+.nc-passenger-7::before {
+  content: $nc-passenger-7;
+}
+
+.nc-passenger-8::before {
+  content: $nc-passenger-8;
+}
+
+.nc-passenger-9::before {
+  content: $nc-passenger-9;
+}
+
+.nc-take-off-9::before {
+  content: $nc-take-off-9;
+}
+
+.nc-security-gate-11::before {
+  content: $nc-security-gate-11;
+}
+
