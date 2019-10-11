@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/nucleo/css/style.css">
 
 	<!--- Theme CSS --->
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/site.css">
+	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/site.min.css">
 
 	<!--- jQuery --->
 	<script src="#$.siteConfig('themeAssetPath')#/js/libraries/jquery-3.3.1.min.js"></script>
