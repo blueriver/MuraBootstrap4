@@ -20,7 +20,9 @@
 
 	<!--- Font Awesome --->
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/font-awesome/css/font-awesome.css">
-
+	
+	<!-- Nucleo Icons -->
+	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/nucleo/css/style.css">
 
 	<!--- Theme CSS --->
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/site.css">
@@ -30,10 +32,10 @@
 
 	<!--- FAV AND TOUCH ICONS --->
 	<link rel="shortcut icon" href="#$.globalConfig('corePath')#/modules/v1/core_assets/images/favicon.ico">
-	<!--- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="#$.siteConfig('themeAssetPath')#/images/ico/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="#$.siteConfig('themeAssetPath')#/images/ico/ico/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="#$.siteConfig('themeAssetPath')#/images/ico/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="#$.siteConfig('themeAssetPath')#/images/ico/ico/apple-touch-icon-72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="#$.siteConfig('themeAssetPath')#/images/ico/ico/apple-touch-icon-57-precomposed.png"> --->
+	<link rel="apple-touch-icon-precomposed" href="#$.siteConfig('themeAssetPath')#/images/ico/ico/apple-touch-icon-57-precomposed.png">
 
 	<!--- MURA FEEDS --->
 	<cfset rs=$.getBean('feedManager').getFeeds($.event('siteID'),'Local',true,true) />
