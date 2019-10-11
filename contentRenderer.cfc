@@ -98,7 +98,7 @@
 		this.subHead4 = "h5";
 
 		// preloader markup for async objects
-		this.preloaderMarkup='<div class="mura-preloader-wrapper"><div class="mura-preloader fa fa-refresh fa-spin"><span></span></div></div>';
+		this.preloaderMarkup='<div class="mura-preloader-wrapper container"><div class="mura-preloader fa fa-refresh fa-spin"><span></span></div></div>';
 
 		// nav and list item vars
 		this.navWrapperClass = "mura-nav bg-light p-3 mb-5 border rounded";
@@ -136,7 +136,7 @@
 
 
 		//Queue async display objects to render when scrolled into view
-		this.queueObjects=false;
+		this.queueObjects=true;
 
 		// pagination vars
 		this.ulPaginationClass="pagination";
