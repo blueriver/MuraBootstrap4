@@ -1968,6 +1968,14 @@
 		"oAP": "/content_types/page/index.cfm",
 		"oF": 0
 		},
+	"/content_types/page_article/index.cfm": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/content_types/page_article/index.cfm",
+		"oF": 0
+		},
 	"/content_types/page_default/index.cfm": {
 		"cB": 0,
 		"ft": 8192,
@@ -2478,7 +2486,7 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/scss/bootstrap/bootstrap.css",
 		"oF": 0,
 		"oS": 0,
@@ -2496,6 +2504,16 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/scss/site/editor.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/scss/site/editor-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/scss/site/editor.scss": {
 		"aP": 0,
@@ -2860,16 +2878,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"/scss/site/site.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/scss/site/site-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/scss/site/site.scss": {
 		"aP": 1,

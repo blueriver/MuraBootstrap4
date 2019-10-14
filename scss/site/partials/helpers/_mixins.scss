@@ -14,9 +14,10 @@
 }
 
 // 7.2 Module Specific Themes
-$module-padding: 20px 10px !default;
+$module-padding: 4rem !default;
 
 // Site BTN
+/*
 @mixin site-btn($btn-bg, $btn-border, $btn-color) {
     background: $btn-bg;
     border: 1px solid $btn-border;
@@ -33,8 +34,10 @@ $module-padding: 20px 10px !default;
         background: black;
     }
 }
+*/
 
 // Header Theme
+/*
 @mixin header-theme($theme-heading-font-size, $theme-heading-text-color, $theme-text-color) {
     color: $theme-text-color;
     font-size: 22px;
@@ -61,8 +64,10 @@ $module-padding: 20px 10px !default;
 .header-theme {
     @include header-theme(48px, #161c2d, #869ab8);
 }
+*/
 
 // Header Theme - Light Variation
+/*
 @mixin header-theme-white($theme-heading-white-font-size) {
     color: #fff; 
     font-size: 22px;
@@ -79,6 +84,7 @@ $module-padding: 20px 10px !default;
 .header-theme-white {
     @include header-theme-white(48px);
 }
+*/
 
 // Logo Strip Theme
 @mixin logo-strip-theme($bg-color, $logo-strip-heading-size, $logo-strip-heading-color) {
@@ -109,9 +115,11 @@ $module-padding: 20px 10px !default;
     font-weight: 200;
     border-top: 2px solid #f1f4f8;
     
+/*
     .mura-collection-item {
         padding: 30px;
     }
+*/
     
     h2 {
         text-transform: capitalize;
@@ -122,7 +130,7 @@ $module-padding: 20px 10px !default;
     
     img {
         margin-bottom: $threeup-img;
-        border-radius: 10px;
+        @extend .rounded-lg;
     }
     
     a {
@@ -137,6 +145,7 @@ $module-padding: 20px 10px !default;
 }
 
 // Large Quote CTA
+/*
 @mixin large-quote-CTA($lg-CTA-color, $lg-CTA-font-size, $lg-CTA-font-weight) {
     p:first-child {
         color: $lg-CTA-color;
@@ -153,6 +162,7 @@ $module-padding: 20px 10px !default;
 .large-quote-CTA {
     @include large-quote-CTA(#869ab8, 24px, 200);
 }
+*/
 
 // Heading Underline Theme
 @mixin heading-underline($heading-underline-size, $heading-underline-color) {
@@ -192,6 +202,7 @@ $module-padding: 20px 10px !default;
 }
 
 //  Quote CTA 
+/*
 @mixin small-quote-CTA($sm-quote-color) {
     p {
         color: $sm-quote-color;
@@ -212,6 +223,7 @@ $module-padding: 20px 10px !default;
 .small-quote-CTA {
     @include small-quote-CTA(#869ab8);
 }
+*/
 
 // Card Theme
 @mixin card-theme($card-theme-main-heading-size, $card-theme-main-heading-color, $card-theme-bg, $card-theme-heading-size, $card-theme-heading-color) {
@@ -279,6 +291,7 @@ $module-padding: 20px 10px !default;
 }
 
 // Join Our Team Theme
+/*
 @mixin join-our-team-theme($join-our-team-heading-size, $join-our-team-heading-color) {
     color: #869ab8;
     
@@ -313,6 +326,7 @@ $module-padding: 20px 10px !default;
 .join-our-team-theme {
     @include join-our-team-theme(32px, #fff);
 }
+*/
 
 // Testimonial Theme
 @mixin testimonial-theme() {
@@ -390,22 +404,6 @@ $module-padding: 20px 10px !default;
     @include from-our-blog-theme(48px, #161c2d);
 }
 
-// Lead In Theme
-// @mixin lead-in-theme() {
-//     h3 {
-// 
-//     }
-// 
-//     p {
-// 
-//         a {
-// 
-//         }
-//     }
-// }
-// .lead-in-theme {
-//     @include lead-in-theme();
-// }
 
 // Accordion Theme
 @mixin accordion-theme() {
@@ -480,11 +478,6 @@ $module-padding: 20px 10px !default;
                     text-decoration: underline;
                 }
             }
-            
-            // &:first-child {
-            //     font-weight: bold;
-            //     margin-bottom: 22px;
-            // }
         }
     }
 }
