@@ -19,8 +19,10 @@
 <!--- 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/bootstrap.css"> --->
 
 	<!--- Font Awesome --->
-	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/font-awesome/css/font-awesome.css">
-	
+	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/font-awesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/font-awesome/css/brands.min.css">
+	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/font-awesome/css/solid.min.css">
+
 	<!-- Nucleo Icons -->
 	<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/assets/nucleo/css/style.css">
 
