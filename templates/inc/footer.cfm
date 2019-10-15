@@ -1,5 +1,5 @@
 <cfoutput>
-<div class="pt-3 row">
+<div class="pt-3 row bg-dark">
     <div class="container">
         <cfif m.getBean('content').loadBy(title="Footer",type="Component").exists()>
     		#$.dspObject(object='component',objectid="Footer")#
