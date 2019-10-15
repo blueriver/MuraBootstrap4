@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var cssnano = require('gulp-cssnano');
 
 gulp.task('default', function() {
 	gulp.start('bootstrap');
@@ -23,6 +24,7 @@ gulp.task('scss-theme', function() {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
+		.pipe(cssnano())
 		.pipe(gulp.dest('css/'));
 });
 
