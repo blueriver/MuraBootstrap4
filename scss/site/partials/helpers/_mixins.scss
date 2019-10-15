@@ -130,7 +130,7 @@ $module-padding: 4rem !default;
     
     img {
         margin-bottom: $threeup-img;
-        @extend .rounded-lg;
+        //@extend .rounded-lg;
     }
     
     a {

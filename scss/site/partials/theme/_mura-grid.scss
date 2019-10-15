@@ -7,6 +7,12 @@ div[data-layout="grid"] {
 				opacity: 0.8;
 			}
 		}
+
+		img{
+			@extend .shadow;
+			@extend .rounded;
+		}
+		
 	}
 
 	.mura-item-meta {
@@ -25,4 +31,5 @@ div[data-layout="grid"] {
 			color: $gray-600;
 		}
 	}
+		
 }
