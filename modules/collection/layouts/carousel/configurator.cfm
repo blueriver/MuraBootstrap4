@@ -43,7 +43,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 --->
 <cfoutput>
 	<cfinclude template="_defaults.cfm">
-	<cfset renderer=$.getContentRenderer()>
+	<cfset renderer=Mura.getContentRenderer()>
 
 	<div class="mura-control-group">
 		 <label>#application.rbFactory.getKeyValue(session.rb,'collections.imagesize')#</label>

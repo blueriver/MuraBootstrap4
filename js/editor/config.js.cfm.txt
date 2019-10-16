@@ -1,6 +1,6 @@
 <cfsetting showdebugoutput="no">
 <cfset $=application.serviceFactory.getBean("MuraScope").init(session.siteID)>
-<cfset renderer=$.getContentRenderer()>
+<cfset renderer=Mura.getContentRenderer()>
 <cfcontent reset="yes" type="text/javascript">
 /*
 Copyright (c) 2003-2010, CKSource - Frederico Knabben. All rights reserved.

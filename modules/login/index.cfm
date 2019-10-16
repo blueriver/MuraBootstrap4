@@ -52,12 +52,12 @@
 	Mura CMS.
 --->
 
-<cfif not isBoolean(variables.$.event('isBlocked'))>
-	<cfset variables.$.event('isBlocked',false)>
+<cfif not isBoolean(variables.Mura.event('isBlocked'))>
+	<cfset variables.Mura.event('isBlocked',false)>
 </cfif>
 <cfoutput>
 	<div class="jumbotron text-center mb-0" style="background-image: url(#m.content().getImageURL(size='carouselimage')#); background-size: cover; background-repeat: no-repeat; background-attachment: scroll;">
-		<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52); color: white;">#variables.$.rbKey('user.login')#</h1>
+		<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52); color: white;">#variables.Mura.rbKey('user.login')#</h1>
 	</div>
 
 	<div id="svLoginContainer" class="container mt-3 mura-login-container #this.loginWrapperClass#">
@@ -67,7 +67,7 @@
 				The page summary can be used to show some content before the user has logged in.
 				Outputs only if there is content in the summary field.
 			--->
-			#variables.$.content('summary')#
+			#variables.Mura.content('summary')#
 
 			<cfset errorMessage = '' />
 			<cfif StructKeyExists(session, 'mfa') and Len(session.mfa.username)>
@@ -78,14 +78,14 @@
 			</cfif>
 
 			<cfif isBlocked>
-				<cfset errorMessage = variables.$.rbKey('login.blocked') />
-			<cfelseif variables.$.event('status') eq 'denied'>
-				<cfset errorMessage = variables.$.rbKey('login.denied') />
-			<cfelseif variables.$.event('status') eq 'failed'>
-				<cfset errorMessage = variables.$.rbKey('login.failed') />
-			<cfelseif variables.$.event('failedchallenge') eq 'true'>
-				<cfset errorMessage = variables.$.rbKey('login.incorrectauthorizationcode') />
-			<cfelseif variables.$.event('linkinvalid') eq 'true'>
+				<cfset errorMessage = variables.Mura.rbKey('login.blocked') />
+			<cfelseif variables.Mura.event('status') eq 'denied'>
+				<cfset errorMessage = variables.Mura.rbKey('login.denied') />
+			<cfelseif variables.Mura.event('status') eq 'failed'>
+				<cfset errorMessage = variables.Mura.rbKey('login.failed') />
+			<cfelseif variables.Mura.event('failedchallenge') eq 'true'>
+				<cfset errorMessage = variables.Mura.rbKey('login.incorrectauthorizationcode') />
+			<cfelseif variables.Mura.event('linkinvalid') eq 'true'>
 				<cfset errorMessage = 'The link you have entered is invalid or expired.' />
 			</cfif>
 
@@ -95,41 +95,41 @@
 				</div>
 			</cfif>
 
-			<cfif not variables.$.event('isBlocked')>
-				<cfif variables.$.event('status') eq 'challenge' and isdefined('session.mfa')>
-					<cfset output=variables.$.renderEvent('onSiteMFAChallengeRender')>
+			<cfif not variables.Mura.event('isBlocked')>
+				<cfif variables.Mura.event('status') eq 'challenge' and isdefined('session.mfa')>
+					<cfset output=variables.Mura.renderEvent('onSiteMFAChallengeRender')>
 					<cfif len(output)>
 						#output#
 					<cfelse>
-						<cfif variables.$.getBean('configBean').getValue(property='MFAPerDevice',defaultValue=false) and not len(variables.$.event('authcode'))>
-							<p id="loginMsg" class="#this.alertDangerClass#">#variables.$.rbKey('user.newdevice')#</p>
+						<cfif variables.Mura.getBean('configBean').getValue(property='MFAPerDevice',defaultValue=false) and not len(variables.Mura.event('authcode'))>
+							<p id="loginMsg" class="#this.alertDangerClass#">#variables.Mura.rbKey('user.newdevice')#</p>
 						</cfif>
 
-						<cfif len(variables.$.event('authcode'))>
-							<p id="loginMsg" class="#this.alertDangerClass#">#variables.$.rbKey('user.authcodeerror')#</p>
+						<cfif len(variables.Mura.event('authcode'))>
+							<p id="loginMsg" class="#this.alertDangerClass#">#variables.Mura.rbKey('user.authcodeerror')#</p>
 						</cfif>
 
 						<form role="form" id="login" class="mura-login-form #this.loginFormClass# <cfif this.formWrapperClass neq "">#this.formWrapperClass#</cfif>" name="frmLogin" method="post" novalidate="novalidate">
 							<div>
-								<h3>#variables.$.rbKey('user.pleaseenterauthcode')#</h3>
+								<h3>#variables.Mura.rbKey('user.pleaseenterauthcode')#</h3>
 								<!--- Username --->
 								<div class="req #this.loginFormGroupWrapperClass#">
 									<label for="txtUsername" class="#this.loginFormFieldLabelClass#">
-										#variables.$.rbKey('user.authcode')#
-										<ins>(#HTMLEditFormat(variables.$.rbKey('user.required'))#)</ins>
+										#variables.Mura.rbKey('user.authcode')#
+										<ins>(#HTMLEditFormat(variables.Mura.rbKey('user.required'))#)</ins>
 									</label>
 									<div class="#this.loginFormFieldWrapperClass#">
-										<input autocomplete="off" class="#this.loginFormFieldClass#" type="text" id="txtUsername" placeholder="#variables.$.rbKey('user.authcode')#" name="authcode" data-required="true" data-message="#htmlEditFormat(variables.$.rbKey('user.authcoderequired'))#" autofocus>
+										<input autocomplete="off" class="#this.loginFormFieldClass#" type="text" id="txtUsername" placeholder="#variables.Mura.rbKey('user.authcode')#" name="authcode" data-required="true" data-message="#htmlEditFormat(variables.Mura.rbKey('user.authcoderequired'))#" autofocus>
 									</div>
 								</div>
 
-								<cfif variables.$.getBean('configBean').getValue(property='MFAPerDevice',defaultValue=false)>
+								<cfif variables.Mura.getBean('configBean').getValue(property='MFAPerDevice',defaultValue=false)>
 									<input type="hidden" name="rememberdevice" value="1"/>
 									<!---
 									<div class="#this.loginFormGroupWrapperClass#">
 										<div class="#this.loginFormPrefsClass#">
 											<label class="#this.loginFormCheckboxClass#" for="cbRememberDevice" >
-												<input type="checkbox" id="cbRememberDevice" name="rememberdevice" value="1"> #htmlEditFormat(variables.$.rbKey('user.rememberdevice'))#
+												<input type="checkbox" id="cbRememberDevice" name="rememberdevice" value="1"> #htmlEditFormat(variables.Mura.rbKey('user.rememberdevice'))#
 											</label>
 										</div>
 									</div>
@@ -139,10 +139,10 @@
 
 								<div class="#this.loginFormGroupWrapperClass#">
 									<div class="#this.loginFormSubmitWrapperClass#">
-										<button type="submit" class="#this.loginFormSubmitClass#">#htmlEditFormat(variables.$.rbKey('user.submitauthcode'))#</button>
+										<button type="submit" class="#this.loginFormSubmitClass#">#htmlEditFormat(variables.Mura.rbKey('user.submitauthcode'))#</button>
 									</div>
 								</div>
-								#variables.$.renderCSRFTokens(format='form',context='login')#
+								#variables.Mura.renderCSRFTokens(format='form',context='login')#
 								<input type="hidden" name="doaction" value="login">
 								<input type="hidden" name="status" value="challenge">
 								<input type="hidden" name="attemptChallenge" value="true">
@@ -152,21 +152,21 @@
 				<cfelse>
 					<form role="form" id="login" class="mura-login-form #this.loginFormClass# <cfif this.formWrapperClass neq "">#this.formWrapperClass#</cfif>" name="frmLogin" method="post" novalidate="novalidate">
 
-						<cfif listFindNoCase($.globalConfig().getEnableOauth(), 'google') or listFindNoCase($.globalConfig().getEnableOauth(), 'facebook') >
+						<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google') or listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook') >
 								<div class="#this.loginFormGroupWrapperClass#">
 									<div class="#this.loginFormSubmitWrapperClass#">
 										<div class="mura-login-auth-wrapper">
 										<!--- Use Google oAuth Button --->
-										<cfif listFindNoCase($.globalConfig().getEnableOauth(), 'google')>
-											<a href="#$.getBean('googleLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.$.rbKey('login.loginwithgoogle')#" class="mura-login-auth-btn ggl">
+										<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google')>
+											<a href="#Mura.getBean('googleLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.Mura.rbKey('login.loginwithgoogle')#" class="mura-login-auth-btn ggl">
 												<i class="fa fa-lg fa-google mi-google"></i>
-												<span>#variables.$.rbKey('login.loginwithgoogle')#</span>
+												<span>#variables.Mura.rbKey('login.loginwithgoogle')#</span>
 											</a>
 										</cfif>
-										<cfif listFindNoCase($.globalConfig().getEnableOauth(), 'facebook')>
-											<a href="#$.getBean('facebookLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.$.rbKey('login.loginwithfacebook')#" class="mura-login-auth-btn fb">
+										<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook')>
+											<a href="#Mura.getBean('facebookLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.Mura.rbKey('login.loginwithfacebook')#" class="mura-login-auth-btn fb">
 					               	<i class="fa fa-lg fa-facebook mi-facebook"></i>
-			                  	<span>#variables.$.rbKey('login.loginwithfacebook')#</span>
+			                  	<span>#variables.Mura.rbKey('login.loginwithfacebook')#</span>
 			 									</a>
 										</cfif>
 									</div>
@@ -175,42 +175,42 @@
 						</cfif>
 
 						<div>
-							<cfif listFindNoCase($.globalConfig().getEnableOauth(), 'google') or listFindNoCase($.globalConfig().getEnableOauth(), 'facebook') >
-			              <div class="text-divider"><span>#variables.$.rbKey('login.or')#</span></div>
-										<h3>#variables.$.rbKey('login.loginwithcredentials')#</h3>
+							<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google') or listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook') >
+			              <div class="text-divider"><span>#variables.Mura.rbKey('login.or')#</span></div>
+										<h3>#variables.Mura.rbKey('login.loginwithcredentials')#</h3>
 
 							<cfelse>
-									<h3>#variables.$.rbKey('user.pleaselogin')#</h3>
+									<h3>#variables.Mura.rbKey('user.pleaselogin')#</h3>
 							</cfif>
 
 							<!--- Username --->
 							<div class="req #this.loginFormGroupWrapperClass#">
 								<label for="txtUsername" class="#this.loginFormFieldLabelClass#">
-									#variables.$.rbKey('user.username')#
-									<ins>(#HTMLEditFormat(variables.$.rbKey('user.required'))#)</ins>
+									#variables.Mura.rbKey('user.username')#
+									<ins>(#HTMLEditFormat(variables.Mura.rbKey('user.required'))#)</ins>
 								</label>
 								<div class="#this.loginFormFieldWrapperClass#">
-									<input class="#this.loginFormFieldClass#" type="text" id="txtUsername" placeholder="#variables.$.rbKey('user.username')#" name="username" data-required="true" data-message="#htmlEditFormat(variables.$.rbKey('user.usernamerequired'))#" autofocus>
+									<input class="#this.loginFormFieldClass#" type="text" id="txtUsername" placeholder="#variables.Mura.rbKey('user.username')#" name="username" data-required="true" data-message="#htmlEditFormat(variables.Mura.rbKey('user.usernamerequired'))#" autofocus>
 								</div>
 							</div>
 
 							<!--- Password --->
 							<div class="req #this.loginFormGroupWrapperClass#">
 								<label for="txtPassword" class="#this.loginFormFieldLabelClass#">
-									#variables.$.rbKey('user.password')#
-									<ins>(#HTMLEditFormat(variables.$.rbKey('user.required'))#)</ins>
+									#variables.Mura.rbKey('user.password')#
+									<ins>(#HTMLEditFormat(variables.Mura.rbKey('user.required'))#)</ins>
 								</label>
 								<div class="#this.loginFormFieldWrapperClass#">
-									<input class="#this.loginFormFieldClass#" type="password" id="txtPassword" name="password" placeholder="#variables.$.rbKey('user.password')#" data-required="true" data-message="#htmlEditFormat(variables.$.rbKey('user.passwordrequired'))#" autocomplete="off">
+									<input class="#this.loginFormFieldClass#" type="password" id="txtPassword" name="password" placeholder="#variables.Mura.rbKey('user.password')#" data-required="true" data-message="#htmlEditFormat(variables.Mura.rbKey('user.passwordrequired'))#" autocomplete="off">
 								</div>
 							</div>
 
-							<cfif not variables.$.getBean('configBean').getValue(property='MFA',defaultValue=false)>
+							<cfif not variables.Mura.getBean('configBean').getValue(property='MFA',defaultValue=false)>
 								<!--- Remember Me --->
 								<div class="#this.loginFormGroupWrapperClass#">
 									<div class="#this.loginFormPrefsClass#">
 										<label class="#this.loginFormCheckboxClass#" for="cbRememberMe" >
-											<input type="checkbox" id="cbRememberMe" name="rememberMe" value="1"> #htmlEditFormat(variables.$.rbKey('user.rememberme'))#
+											<input type="checkbox" id="cbRememberMe" name="rememberMe" value="1"> #htmlEditFormat(variables.Mura.rbKey('user.rememberme'))#
 										</label>
 									</div>
 								</div>
@@ -219,58 +219,58 @@
 							<!--- Login Button --->
 							<div class="#this.loginFormGroupWrapperClass#">
 								<div class="#this.loginFormSubmitWrapperClass#">
-									<button type="submit" class="#this.loginFormSubmitClass#">#htmlEditFormat(variables.$.rbKey('user.login'))#</button>
+									<button type="submit" class="#this.loginFormSubmitClass#">#htmlEditFormat(variables.Mura.rbKey('user.login'))#</button>
 								</div>
 							</div>
 
 							<input type="hidden" name="doaction" value="login">
-							<input type="hidden" name="linkServID" value="#HTMLEditFormat(variables.$.event('linkServID'))#">
-							<input type="hidden" name="returnURL" value="#HTMLEditFormat(variables.$.event('returnURL'))#">
-							#variables.$.renderCSRFTokens(format='form',context='login')#
+							<input type="hidden" name="linkServID" value="#HTMLEditFormat(variables.Mura.event('linkServID'))#">
+							<input type="hidden" name="returnURL" value="#HTMLEditFormat(variables.Mura.event('returnURL'))#">
+							#variables.Mura.renderCSRFTokens(format='form',context='login')#
 						</div>
 					</form>
 
 
-					<cfif variables.$.event('doaction') eq 'sendlogin'>
-						<cfset msg2=application.userManager.sendLoginByEmail(variables.$.event('email'), variables.$.event('siteID'),'#urlencodedformat(variables.$.event('returnURL'))#')>
+					<cfif variables.Mura.event('doaction') eq 'sendlogin'>
+						<cfset msg2=application.userManager.sendLoginByEmail(variables.Mura.event('email'), variables.Mura.event('siteID'),'#urlencodedformat(variables.Mura.event('returnURL'))#')>
 					</cfif>
 
 					<!--- Forgot Username / Password Form --->
 					<form name="form2" class="mura-send-login #this.forgotPasswordFormClass# <cfif this.formWrapperClass neq "">#this.formWrapperClass#</cfif>" method="post" id="sendLogin" novalidate="novalidate">
 						<div>
-							<h3>#variables.$.rbKey('user.forgetusernameorpassword')#</h3>
-							<p>#variables.$.rbKey('user.forgotloginmessage')#</p>
+							<h3>#variables.Mura.rbKey('user.forgetusernameorpassword')#</h3>
+							<p>#variables.Mura.rbKey('user.forgotloginmessage')#</p>
 
 							<cfif isdefined('msg2')>
-								<cfif FindNoCase('is not a valid',msg2)><div class="#this.loginFormErrorClass#">#HTMLEditFormat(variables.$.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.$.rbKey('user.forgotnotvalid'),variables.$.event('email')))#<cfelseif FindNoCase('no account',msg2)><div class="#this.alertDangerClass#">#HTMLEditFormat(variables.$.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.$.rbKey('user.forgotnotfound'),variables.$.event('email')))#<cfelse><div class="#this.alertSuccessClass#">#variables.$.rbKey('user.forgotsuccess')#</cfif></div>
+								<cfif FindNoCase('is not a valid',msg2)><div class="#this.loginFormErrorClass#">#HTMLEditFormat(variables.Mura.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.Mura.rbKey('user.forgotnotvalid'),variables.Mura.event('email')))#<cfelseif FindNoCase('no account',msg2)><div class="#this.alertDangerClass#">#HTMLEditFormat(variables.Mura.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.Mura.rbKey('user.forgotnotfound'),variables.Mura.event('email')))#<cfelse><div class="#this.alertSuccessClass#">#variables.Mura.rbKey('user.forgotsuccess')#</cfif></div>
 							</cfif>
 
 							<!--- Email --->
 							<div class="#this.loginFormGroupWrapperClass#">
-								<label class="#this.loginFormFieldLabelClass#" for="txtEmail">#variables.$.rbKey('user.email')#</label>
+								<label class="#this.loginFormFieldLabelClass#" for="txtEmail">#variables.Mura.rbKey('user.email')#</label>
 								<div class="#this.loginFormFieldWrapperClass#">
-									<input id="txtEmail" name="email" class="#this.loginFormFieldClass#" type="text" placeholder="#variables.$.rbKey('user.email')#" data-validate="email" data-required="true" data-message="#htmlEditFormat(variables.$.rbKey('user.emailvalidate'))#" />
+									<input id="txtEmail" name="email" class="#this.loginFormFieldClass#" type="text" placeholder="#variables.Mura.rbKey('user.email')#" data-validate="email" data-required="true" data-message="#htmlEditFormat(variables.Mura.rbKey('user.emailvalidate'))#" />
 								</div>
 							</div>
 
 							<!--- Submit Button --->
 							<div class="#this.loginFormGroupWrapperClass#">
 								<div class="#this.loginFormSubmitWrapperClass#">
-									<button type="submit" class="#this.loginFormSubmitClass#">#htmlEditFormat(variables.$.rbKey('user.getpassword'))#</button>
+									<button type="submit" class="#this.loginFormSubmitClass#">#htmlEditFormat(variables.Mura.rbKey('user.getpassword'))#</button>
 								</div>
 							</div>
 
 							<input type="hidden" name="doaction" value="sendlogin">
-							<input type="hidden" name="linkServID" value="#HTMLEditFormat(variables.$.event('linkServID'))#">
+							<input type="hidden" name="linkServID" value="#HTMLEditFormat(variables.Mura.event('linkServID'))#">
 							<input type="hidden" name="display" value="login">
-							<input type="hidden" name="returnURL" value="#HTMLEditFormat(variables.$.event('returnURL'))#">
+							<input type="hidden" name="returnURL" value="#HTMLEditFormat(variables.Mura.event('returnURL'))#">
 						</div>
 					</form>
 
 					<!--- Not Registered? --->
-					<cfif variables.$.siteConfig('ExtranetPublicReg')>
+					<cfif variables.Mura.siteConfig('ExtranetPublicReg')>
 						<div id="notRegistered" class="mura-not-registered">
-							<#variables.$.getHeaderTag('subHead1')# class="center">#variables.$.rbKey('user.notregistered')# <a class="#this.notRegisteredLinkClass#" href="#variables.$.siteConfig('editProfileURL')#&returnURL=#urlencodedformat(variables.$.event('returnURL'))#">#variables.$.rbKey('user.signup')#</a></#variables.$.getHeaderTag('subHead1')#>
+							<#variables.Mura.getHeaderTag('subHead1')# class="center">#variables.Mura.rbKey('user.notregistered')# <a class="#this.notRegisteredLinkClass#" href="#variables.Mura.siteConfig('editProfileURL')#&returnURL=#urlencodedformat(variables.Mura.event('returnURL'))#">#variables.Mura.rbKey('user.signup')#</a></#variables.Mura.getHeaderTag('subHead1')#>
 						</div>
 					</cfif>
 				</cfif>

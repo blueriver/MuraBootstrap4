@@ -3,7 +3,7 @@
 	<nav class="navbar navbar-expand-lg bg-light navbar-light navbar-static-top py-4">
 		<div class="container">
 			
-			<a class="navbar-brand" title="#esapiEncode('html_attr', $.siteConfig('site'))#" href="#$.createHREF(filename='')#">#$.siteConfig('site')#</a>
+			<a class="navbar-brand" title="#esapiEncode('html_attr', Mura.siteConfig('site'))#" href="#Mura.createHREF(filename='')#">#Mura.siteConfig('site')#</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="##siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@
 						For information on dspPrimaryNav(), visit:
 						http://docs.getmura.com/v6/front-end/template-variables/document-body/
 					--->
-					#$.dspPrimaryNav(
+					#Mura.dspPrimaryNav(
 						viewDepth=3
 						, id='navPrimary'
 						, class='navbar-nav mr-auto'
@@ -36,12 +36,12 @@
 						, ulNestedClass='dropdown-menu'
 						, ulNestedAttributes=''
 						, aNotCurrentClass='nav-link'
-						, siteid=$.event('siteid')
+						, siteid=Mura.event('siteid')
 					)#
 				</cf_CacheOMatic>
 				<script>
 					Mura(function(){
-						#serializeJSON($.getCurrentURLArray())#.forEach(
+						#serializeJSON(Mura.getCurrentURLArray())#.forEach(
 							function(value){
 								navItem=Mura("##navPrimary [href='" + value + "']");
 								if(navItem.length){
@@ -57,7 +57,7 @@
 
 				<form method="post" id="searchForm" class="form-inline" role="search" action="#m.createHREF(filename='search-results')#">
 					<div class="input-group">
-						<input type="text" name="Keywords" id="navKeywords" class="form-control" value="#esapiEncode('html', $.event('keywords'))#" placeholder="#$.rbKey('search.search')#" aria-label="Search">
+						<input type="text" name="Keywords" id="navKeywords" class="form-control" value="#esapiEncode('html', Mura.event('keywords'))#" placeholder="#Mura.rbKey('search.search')#" aria-label="Search">
 						<div class="input-group-append">
 							<span class="input-group-text" id="basic-addon2">
 								<i class="fa fa-search" aria-hidden="true"></i>
@@ -68,7 +68,7 @@
 					<input type="hidden" name="display" value="search">
 					<input type="hidden" name="newSearch" value="true">
 					<input type="hidden" name="noCache" value="1">
-					#variables.$.renderCSRFTokens(format='form',context='search')#
+					#variables.Mura.renderCSRFTokens(format='form',context='search')#
 				</form>
 
 			</div><!--- /.navbar-collapse --->

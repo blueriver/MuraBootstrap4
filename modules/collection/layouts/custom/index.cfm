@@ -17,7 +17,7 @@
 			</cfif>
 
 			<!---<div><a href="#item.getEditURL(complete=true,compactDisplay=true,instanceid=objectparams.instanceid)#" class="frontEndToolsModal">Edit</div>--->
-			#variables.$.dspObject_include(
+			#variables.Mura.dspObject_include(
 				theFile='collection/includes/dsp_meta_list.cfm',
 				item=item,
 				fields=arguments.objectParams.displaylist
@@ -41,7 +41,7 @@
 			</div>
 			</cfif>
 			<!---<div><a href="#item.getEditURL(complete=true,compactDisplay=true,instanceid=objectparams.instanceid)#" class="frontEndToolsModal">Edit</div>--->
-			#variables.$.dspObject_include(
+			#variables.Mura.dspObject_include(
 				theFile='collection/includes/dsp_meta_list.cfm',
 				item=item,
 				fields=arguments.objectParams.displaylist
@@ -52,7 +52,7 @@
 	</cfloop>
 </div>
 
-#variables.$.dspObject_include(
+#variables.Mura.dspObject_include(
 	theFile='collection/includes/dsp_pagination.cfm',
 	iterator=iterator,
 	nextN=iterator.getNextN(),

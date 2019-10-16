@@ -2,10 +2,10 @@
 	<div>
 
 		<!--- Use this if you do NOT want [mura] tags to render. --->
-		#$.component('body')#
+		#Mura.component('body')#
 
 		<!--- Use this if you DO want [mura] tags to render. --->
-		<!---#$.setDynamicContent($.component('body'))# --->
+		<!---#Mura.setDynamicContent(Mura.component('body'))# --->
 
 	</div>
 </cfoutput>

@@ -46,7 +46,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 <cfparam name="objectParams.columnCount" default="5">
 <cfparam name="objectParams.bgStyle" default="">
 <cfparam name="objectParams.modalimages" default="false">
-<cfset renderer=$.getContentRenderer()>
+<cfset renderer=Mura.getContentRenderer()>
 <!--- <cfset gridStyles=(isdefined('renderer.contentGridStyleMap')) ? renderer.contentGridStyleMap : ''>
 <cfif isStruct(gridStyles)>
     <cfset gridStylesList=listSort(structKeyList(gridStyles),'TextNoCase')>

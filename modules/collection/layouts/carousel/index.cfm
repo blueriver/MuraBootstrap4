@@ -3,7 +3,7 @@
 <cfset args.iterator=arguments.iterator>
 <cfoutput>
 
-#$.dspCarouselByFeedName(argumentCollection=args)#
+#Mura.dspCarouselByFeedName(argumentCollection=args)#
 
 #m.dspObject_include(
 	theFile='collection/includes/dsp_pagination.cfm',

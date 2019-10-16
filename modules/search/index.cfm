@@ -53,8 +53,8 @@
 --->
 <cfsilent>
 	<!--- In case someone is attempting to use the search box after clicking a tag --->
-	<cfif Len($.event('tag')) and Len($.event('keywords'))>
-		<cfset $.event('tag', '') />
+	<cfif Len(Mura.event('tag')) and Len(Mura.event('keywords'))>
+		<cfset Mura.event('tag', '') />
 	</cfif>
 
 	<cfparam name="variables.rsnewsearch" default="#queryNew('empty')#"/>
@@ -65,16 +65,16 @@
 
 	<cfif (len(request.keywords) or len(request.tag) ) and isdefined('request.newSearch')>
 		<!---
-		<cfif variables.$.getContentRenderer().validateCSRFTokens and not variables.$.validateCSRFTokens(context='search')>
+		<cfif variables.Mura.getContentRenderer().validateCSRFTokens and not variables.Mura.validateCSRFTokens(context='search')>
 			<cfset session.rsSearch=newResultQuery()/>
 			<cfset validCSRFTokens=false>
 		<cfelse>
 		--->
 			<cfset session.aggregation=request.aggregation />
-			<cfset variables.rsNewSearch=application.contentManager.getPublicSearch(variables.$.event('siteID'),request.keywords,request.tag,request.searchSectionID) />
+			<cfset variables.rsNewSearch=application.contentManager.getPublicSearch(variables.Mura.event('siteID'),request.keywords,request.tag,request.searchSectionID) />
 
 			<cfif getSite().getExtranet() eq 1>
-				<cfset session.rsSearch=variables.$.queryPermFIlter(variables.rsnewsearch)/>
+				<cfset session.rsSearch=variables.Mura.queryPermFIlter(variables.rsnewsearch)/>
 			<cfelse>
 				<cfset session.rsSearch=variables.rsnewsearch/>
 			</cfif>
@@ -91,12 +91,12 @@
 	<cfset variables.previous=evaluate((request.startrow-variables.recordsperpage))	>
 	<cfset variables.through=iif(variables.totalrecords lt variables.next,variables.totalrecords,variables.next-1)>
 
-	<cfset variables.iterator=variables.$.getBean("contentIterator")>
+	<cfset variables.iterator=variables.Mura.getBean("contentIterator")>
 	<cfset variables.iterator.setQuery(session.rsSearch,variables.recordsperpage)>
-	<cfset variables.iterator.setStartRow(variables.$.event("startrow"))>
+	<cfset variables.iterator.setStartRow(variables.Mura.event("startrow"))>
 
 	<cfif len(request.searchSectionID)>
-	<cfset variables.sectionBean=application.contentManager.getActiveContent(request.searchSectionID,variables.$.event('siteID')) />
+	<cfset variables.sectionBean=application.contentManager.getActiveContent(request.searchSectionID,variables.Mura.event('siteID')) />
 	</cfif>
 
 	<cfset variables.contentListFieldsType="Search">
@@ -105,7 +105,7 @@
 <cfoutput>
 
 	<div class="jumbotron text-center mb-0" style="background-image: url(#m.content().getImageURL(size='carouselimage')#); background-size: cover; background-repeat: no-repeat; background-attachment: scroll;">
-		<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52); color: white;">#variables.$.rbKey('search.searchresults')#</h1>
+		<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52); color: white;">#variables.Mura.rbKey('search.searchresults')#</h1>
 	</div>
 
 	<div id="svSearchResults" class="mura-search-results mt-3 container #this.searchResultWrapperClass#">
@@ -117,17 +117,17 @@
 					<cfset variables.args[2]=htmlEditFormat(request.tag)>
 					<cfif len(request.searchSectionID)>
 						<cfset variables.args[3]=htmlEditFormat(variables.sectionBean.getTitle())>
-						<p>#variables.$.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.$.rbKey('search.searchtagsection'),variables.args)#</p>
+						<p>#variables.Mura.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.Mura.rbKey('search.searchtagsection'),variables.args)#</p>
 					<cfelse>
-						<p>#variables.$.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.$.rbKey('search.searchtag'),variables.args)#</p>
+						<p>#variables.Mura.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.Mura.rbKey('search.searchtag'),variables.args)#</p>
 					</cfif>
 				<cfelse>
 					<cfset variables.args[2]=htmlEditFormat(request.keywords)>
 					<cfif len(request.searchSectionID)>
 						<cfset variables.args[3]=htmlEditFormat(variables.sectionBean.getTitle())>
-				 		<p>#variables.$.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.$.rbKey('search.searchkeywordsection'),variables.args)#</p>
+				 		<p>#variables.Mura.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.Mura.rbKey('search.searchkeywordsection'),variables.args)#</p>
 					<cfelse>
-						<p>#variables.$.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.$.rbKey('search.searchkeyword'),variables.args)#</p>
+						<p>#variables.Mura.siteConfig("rbFactory").getResourceBundle().messageFormat(variables.Mura.rbKey('search.searchkeyword'),variables.args)#</p>
 					</cfif>
 				</cfif>
 			<cfelse>
@@ -140,17 +140,17 @@
 			<!--- more results --->
 			<div class="#this.searchResultsMoreResultsRowClass#">
 				<div class="moreResults">
-					<p>#variables.$.rbKey('search.displaying')#: #request.startrow# - #variables.through# #variables.$.rbKey('search.of')# #session.rsSearch.recordcount#</p>
+					<p>#variables.Mura.rbKey('search.displaying')#: #request.startrow# - #variables.through# #variables.Mura.rbKey('search.of')# #session.rsSearch.recordcount#</p>
 					<cfif ( session.rsSearch.recordcount gt 0 and  variables.through lt session.rsSearch.recordcount ) OR variables.previous gte 1>
 						<ul class="pager">
 						<cfif variables.previous gte 1>
 							<li class="navPrev">
-								<a href="?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.$.rbKey('search.prev')#</a>
+								<a href="?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.prev')#</a>
 							</li>
 						</cfif>
 						<cfif session.rsSearch.recordcount gt 0 and variables.through lt session.rsSearch.recordcount>
 							<li class="navNext">
-								<a href="?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.$.rbKey('search.next')#</a>
+								<a href="?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.next')#</a>
 							</li>
 						</cfif>
 						</ul>
@@ -161,7 +161,7 @@
 			<!--- RESULTS --->
 			<div class="#this.searchResultsRowClass#">
 				<div id="svPortal" class="mura-index #this.searchResultsListClass#">
-					#variables.$.dspObject_Include(
+					#variables.Mura.dspObject_Include(
 						thefile='collection/includes/dsp_content_list.cfm'
 						, fields=variables.contentListFields
 						, type=variables.contentListFieldsType
@@ -174,17 +174,17 @@
 			<!--- more results --->
 			<div class="#this.searchResultsMoreResultsRowClass#">
 				<div class="moreResults">
-					<p>#variables.$.rbKey('search.displaying')#: #request.startrow# - #variables.through# #variables.$.rbKey('search.of')# #session.rsSearch.recordcount#</p>
+					<p>#variables.Mura.rbKey('search.displaying')#: #request.startrow# - #variables.through# #variables.Mura.rbKey('search.of')# #session.rsSearch.recordcount#</p>
 					<cfif ( session.rsSearch.recordcount gt 0 and  variables.through lt session.rsSearch.recordcount ) OR variables.previous gte 1>
 						<ul class="#this.searchResultsPagerClass#">
 						<cfif variables.previous gte 1>
 							<li class="navPrev">
-								<a href="./?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.$.rbKey('search.prev')#</a>
+								<a href="./?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.prev')#</a>
 							</li>
 						</cfif>
 						<cfif session.rsSearch.recordcount gt 0 and  variables.through lt session.rsSearch.recordcount>
 							<li class="navNext">
-								<a href="./?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.$.rbKey('search.next')#</a>
+								<a href="./?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.next')#</a>
 							</li>
 						</cfif>
 						</ul>
@@ -197,13 +197,13 @@
 		<div class="#this.searchAgainRowClass#">
 			<div class="#this.searchAgainInnerClass#">
 				<form method="post" id="svSearchAgain" name="searchForm" class="mura-search-again #this.searchAgainFormClass#" role="search">
-					<p>#variables.$.rbKey('search.didnotfind')#</p>
-					<label for="txtKeywords">#variables.$.rbKey('search.keywords')#</label>
+					<p>#variables.Mura.rbKey('search.didnotfind')#</p>
+					<label for="txtKeywords">#variables.Mura.rbKey('search.keywords')#</label>
 					<div class="#this.searchAgainInputWrapperClass#">
-						<input type="text" name="Keywords" id="txtKeywords" class="#this.searchAgainFormInputClass#" value="#esapiEncode('html_attr',request.keywords)#" placeholder="#variables.$.rbKey('search.search')#">
+						<input type="text" name="Keywords" id="txtKeywords" class="#this.searchAgainFormInputClass#" value="#esapiEncode('html_attr',request.keywords)#" placeholder="#variables.Mura.rbKey('search.search')#">
 						<span class="#this.searchAgainButtonWrapperClass#">
 							<button type="submit" class="#this.searchAgainSubmitClass#">
-								#$.rbKey('search.search')#
+								#Mura.rbKey('search.search')#
 							</button>
 						</span>
 					</div>
@@ -211,7 +211,7 @@
 					<input type="hidden" name="newSearch" value="true">
 					<input type="hidden" name="noCache" value="1">
 					<input type="hidden" name="searchSectionID" value="#HTMLEditFormat(request.searchSectionID)#">
-					#variables.$.renderCSRFTokens(format='form',context='search')#
+					#variables.Mura.renderCSRFTokens(format='form',context='search')#
 				</form>
 			</div>
 		</div>

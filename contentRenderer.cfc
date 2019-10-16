@@ -62,7 +62,7 @@
 
 			* Add theme-specific methods here
 			* Any methods here will be accessible with the following notation:
-				$.yourFunctionName()
+				Mura.yourFunctionName()
 	--->
 
 	<cfscript>
@@ -517,7 +517,7 @@
 			var local = {};
 			local.imageArgs = {};
 
-			if ( not ListFindNoCase('small,medium,large,custom', arguments.imageSize) and variables.$.getBean('imageSize').loadBy(name=arguments.imageSize,siteID=variables.$.event('siteID')).getIsNew() ) {
+			if ( not ListFindNoCase('small,medium,large,custom', arguments.imageSize) and variables.Mura.getBean('imageSize').loadBy(name=arguments.imageSize,siteID=variables.Mura.event('siteID')).getIsNew() ) {
 				arguments.imageSize = 'custom';
 			};
 
@@ -539,9 +539,9 @@
 				<!--- IMPORTANT: This will only output items that have associated images --->
 				<cfif not isdefined('arguments.iterator')>
 					<cfif isdefined('arguments.feedid') and len(arguments.feedid)>
-						<cfset local.feed = variables.$.getBean('feed').loadBy(feedid=arguments.feedid)>
+						<cfset local.feed = variables.Mura.getBean('feed').loadBy(feedid=arguments.feedid)>
 					<cfelse>
-						<cfset local.feed = variables.$.getBean('feed').loadBy(name=arguments.feedName)>
+						<cfset local.feed = variables.Mura.getBean('feed').loadBy(name=arguments.feedName)>
 					</cfif>
 					<cfset local.iterator = local.feed.getIterator()>
 				<cfelse>
