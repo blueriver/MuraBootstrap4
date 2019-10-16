@@ -1,0 +1,16 @@
+body[class*="depth-"] header {
+
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+    background: #00B0DA;
+    text-align: center;
+    
+    h1,h2,h3,h4,h5,h6,p  {
+    	color:#fff;
+    	margin-bottom: 1rem;
+		}
+		
+	p {
+		font-size: 1.6rem;
+	}
+}
