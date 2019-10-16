@@ -1,0 +1,12 @@
+//Inline Mura CTA
+[data-mura-cta-type="inline"]{
+	padding:0 !important;
+}
+[data-mura-cta-type="inline"] .mura-cta__item__wrapper{
+	background:none !important;
+	box-shadow: none !important;
+	padding:0 !important;
+}
+[data-mura-cta-type="inline"] .mura-cta__item__dismiss{
+	display:none !important;
+}
