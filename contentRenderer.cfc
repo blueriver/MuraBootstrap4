@@ -171,7 +171,7 @@
 		this.formButtonInnerClass="";
 		this.formButtonClass = "btn btn-primary";
 		this.formRequiredWrapperClass="";
-		this.formButtomSubmitClass = "form-submit btn btn-primary";
+		this.formButtonSubmitClass = "form-submit btn btn-primary";
 		this.formButtonSubmitLabel = "Submit";
 		this.formButtonNextClass = "form-nav";
 		this.formButtonNextLabel = "Next";
