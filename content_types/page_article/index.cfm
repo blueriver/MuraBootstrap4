@@ -19,5 +19,5 @@
         </cfif>
     <!--- /Primary Associated Image --->
 	#m.renderEditableAttribute(attribute="body",type="htmlEditor")#
-	</div>
+	</div> 
 </cfoutput>
