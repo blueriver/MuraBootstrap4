@@ -1,5 +1,5 @@
 <cfoutput>
-<div class="row pt-3 py-5 bg-dark">
+<div class="pt-3 py-5 bg-dark">
     <div class="container">
         <cfif m.getBean('content').loadBy(title="Footer",type="Component").exists()>
     		#Mura.dspObject(object='component',objectid="Footer")#
