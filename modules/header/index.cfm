@@ -55,6 +55,7 @@
 		<div class="col-auto ml-auto">
 			<!--- Categories --->	
 			<cfif itCategories.hasNext()>
+			<div>
 				<ul class="list-inline float-md-right">
 					<cfloop condition="itCategories.hasNext()">
 					<cfset categoryItem = itCategories.next()>
@@ -64,10 +65,12 @@
 					</li>
 					</cfloop>
 				</ul>
+			</div>
 			</cfif>
 			<!--- /Categories --->
 			<!--- Tags --->
 			<cfif ListLen(Mura.content().getTags())>
+			<div>
 				<ul class="tags list-inline float-md-right">
 					<cfloop from="1" to="#ListLen(Mura.content().getTags())#" index="t">
 					<li class="list-inline-item badge badge-light tag">
@@ -75,15 +78,18 @@
 					</li>
 					</cfloop>
 				</ul>
+			</div>
 			</cfif>
 			<!--- /Tags --->
 			<!--- Comments --->
 			<cfif commentCount gt 0>
+			<div>
 				<ul class="list-inline">
 					<li class="list-inline-item comments">
 						<i class="fa fa-comments" aria-hidden="true"></i> #commentCount# Comment<cfif commentCount gt 1>s</cfif>
 					</li>
 				</ul>
+			</div>
 			</cfif>
 			<!--- /Comments --->
 		</div>
