@@ -37,6 +37,8 @@
 }
 .page-blog-header{
     [data-object="header"]{
+        margin-bottom:3rem;
+
         header{
             background:transparent;
             padding:0;
@@ -44,9 +46,6 @@
                     text-align:center;
                     color:$gray-900;
             }
-        }
-        [data-object="header"]{
-            margin-bottom:2rem;
         }
     }
 }
