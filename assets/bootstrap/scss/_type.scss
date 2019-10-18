@@ -126,7 +126,7 @@ mark,
 }
 
 .mura-item-meta__date{
-  @extend .text-uppercase, .text-muted, .small;
+  @extend .text-uppercase, .text-muted, .small, .mb-3;
 }
 .mura-item-meta__title{
   @extend .h4;
