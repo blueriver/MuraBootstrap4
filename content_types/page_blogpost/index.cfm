@@ -1,8 +1,8 @@
 <cfoutput>
     <!--- Primary Associated Image --->
-    <cfif $.content().hasImage(usePlaceholder=false)>
+    <cfif Mura.content().hasImage(usePlaceholder=false)>
         <cfscript>
-            img = $.content().getImageURL(
+            img = Mura.content().getImageURL(
                 size = 'carouselimage' // small, medium, large, custom, or any other pre-defined image size
                 ,complete = false // set to true to include the entire URL, not just the absolute path (default)
             );
@@ -20,12 +20,12 @@
     </div>
     <!--- /Breadcrumbs --->
 
-    <div class="container">
+    <div class="container page-blog-header">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-9 col-xl-8">
                 #m.dspObject(
                     object="header",
-                    objectParams=urlDecode(m.content('headerParams')),
+                    objectParams=urlDecode(Mura.content('headerParams')),
                     targetattr='headerParams'
                 )#
                 #m.renderEditableAttribute(attribute="body",type="htmlEditor")#

@@ -14,3 +14,35 @@
 // 		font-size: 1.6rem;
 // 	}
 // }
+
+[data-object="header"]{
+    header{
+        background:#00B7E3;
+        padding:5rem 0;
+
+        h1,h2,h3,h4,h5,h6,p{
+            text-align:center;
+            color:#fff;
+        }        
+    }
+    nav{
+        .mura-breadcrumb{
+            justify-content:center;
+            
+            a{
+                //color:$brand-primary;
+            }
+        }
+    }
+}
+.page-blog-header{
+    header{
+        padding:0;
+            h1,h2,h3,h4,h5,h6,p{
+                text-align:center;
+        }
+    }
+    [data-object="header"]{
+        margin-bottom:2rem;
+    }
+}
