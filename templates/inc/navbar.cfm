@@ -1,6 +1,6 @@
 <cfoutput>
 <div class="sticky-top">
-	<nav class="navbar navbar-expand-lg bg-light navbar-light navbar-static-top py-4">
+	<nav class="navbar navbar-expand-lg bg-white navbar-light navbar-static-top py-4">
 		<div class="container">
 			
 			<a class="navbar-brand" title="#esapiEncode('html_attr', Mura.siteConfig('site'))#" href="#Mura.createHREF(filename='')#">#Mura.siteConfig('site')#</a>
