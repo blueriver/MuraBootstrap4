@@ -7980,10 +7980,10 @@ a.text-danger:hover, a.text-danger:focus {
 a.text-light:hover, a.text-light:focus {
   color: #cbd3da !important; }
 
-.text-dark {
+.text-dark, .mura-item-meta__title a {
   color: #343a40 !important; }
 
-a.text-dark:hover, a.text-dark:focus {
+a.text-dark:hover, .mura-item-meta__title a:hover, a.text-dark:focus, .mura-item-meta__title a:focus {
   color: #121416 !important; }
 
 .text-body {

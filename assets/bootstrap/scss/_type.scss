@@ -130,6 +130,9 @@ mark,
 }
 .mura-item-meta__title{
   @extend .h4;
+  a{
+    @extend .text-dark;
+  }
 }
 .mura-item-meta__summary{
   @extend .text-muted;

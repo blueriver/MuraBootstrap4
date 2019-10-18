@@ -20,7 +20,7 @@
 	</cfsilent>
 	<div class="mura-collection-item mb-4">
 
-		<div class="mura-collection-item__holder card p-0 #objectParams.bgStyle#"> <!--- #item.getValue('CardBackgroundStyle')# --->
+		<div class="mura-collection-item__holder card shadow rounded-lg p-0 #objectParams.bgStyle#"> <!--- #item.getValue('CardBackgroundStyle')# --->
 			<cfif listFindNoCase(objectParams.displaylist,'Image')>
 			<div class="mura-item-content">
 				<cfif item.hasImage()>
