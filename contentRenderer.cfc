@@ -382,13 +382,13 @@
 		this.searchResultsRowClass="";
 		this.searchResultsMoreResultsRowClass="bg-light py-2 px-3 mb-3 border rounded";
 		this.searchResultsListClass="";
-		this.searchResultsPagerClass="pager";
+		this.searchResultsPagerClass="pagination";
 		this.searchAgainRowClass="card";
 		this.searchAgainInnerClass="card-body";
 		this.searchAgainFormClass="navbar-form";
 		this.searchAgainInputWrapperClass=this.formInputWrapperClass;
 		this.searchAgainFormInputClass=this.formInputClass;
-		this.searchAgainButtonWrapperClass=this.formButtonInnerClass;
+		this.searchAgainButtonWrapperClass="input-group-append";
 		this.searchAgainSubmitClass=this.formButtonClass;
 
 		// dsp_user_tools.cfm

@@ -142,14 +142,14 @@
 				<div class="moreResults">
 					<p>#variables.Mura.rbKey('search.displaying')#: #request.startrow# - #variables.through# #variables.Mura.rbKey('search.of')# #session.rsSearch.recordcount#</p>
 					<cfif ( session.rsSearch.recordcount gt 0 and  variables.through lt session.rsSearch.recordcount ) OR variables.previous gte 1>
-						<ul class="pager">
+						<ul class="#searchResultsPagerClass#">
 						<cfif variables.previous gte 1>
-							<li class="navPrev">
+							<li class="navPrev page-link">
 								<a href="?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.prev')#</a>
 							</li>
 						</cfif>
 						<cfif session.rsSearch.recordcount gt 0 and variables.through lt session.rsSearch.recordcount>
-							<li class="navNext">
+							<li class="navNext page-link">
 								<a href="?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.next')#</a>
 							</li>
 						</cfif>
@@ -178,12 +178,12 @@
 					<cfif ( session.rsSearch.recordcount gt 0 and  variables.through lt session.rsSearch.recordcount ) OR variables.previous gte 1>
 						<ul class="#this.searchResultsPagerClass#">
 						<cfif variables.previous gte 1>
-							<li class="navPrev">
+							<li class="navPrev page-link">
 								<a href="./?startrow=#variables.previous#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.prev')#</a>
 							</li>
 						</cfif>
 						<cfif session.rsSearch.recordcount gt 0 and  variables.through lt session.rsSearch.recordcount>
-							<li class="navNext">
+							<li class="navNext page-link">
 								<a href="./?startrow=#next#&amp;display=search&amp;keywords=#HTMLEditFormat(request.keywords)#&amp;searchSectionID=#HTMLEditFormat(request.searchSectionID)#&amp;tag=#HTMLEditFormat(request.tag)#">#variables.Mura.rbKey('search.next')#</a>
 							</li>
 						</cfif>
