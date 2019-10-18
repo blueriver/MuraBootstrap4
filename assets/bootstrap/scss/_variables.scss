@@ -269,9 +269,9 @@ $embed-responsive-aspect-ratios: join(
 //
 // Font, line-height, and color for body text, headings, and more.
 //@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300,400,700&display=swap');
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Work Sans', Arial, Helvetica, sans-serif !default;
+$font-family-sans-serif:      'Open Sans', Arial, Helvetica, sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -297,7 +297,7 @@ $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
-$headings-font-family:        null !default;
+$headings-font-family:        'Work Sans', Arial, Helvetica, sans-serif !default;
 $headings-font-weight:        700 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;

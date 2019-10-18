@@ -140,3 +140,16 @@ mark,
 .mura-item-meta__credits{
   @extend .text-uppercase, .text-muted, .small;
 }
+
+.breadcrumb-item{
+  a{
+    @extend .text-dark;
+  }
+  & + .breadcrumb-item{
+    &:before{
+      content: "\f054" !important;
+      font-family: fontawesome;
+      color:$gray-500;
+    }
+  }
+}
