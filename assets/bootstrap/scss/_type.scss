@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
+  font-style: italic;
   color: $headings-color;
 }
 
@@ -125,7 +126,7 @@ mark,
 }
 
 .mura-item-meta__date{
-  @extend .text-uppercase, .text-muted, .h6;
+  @extend .text-uppercase, .text-muted, .small;
 }
 .mura-item-meta__title{
   @extend .h4;
@@ -134,5 +135,5 @@ mark,
   @extend .text-muted;
 }
 .mura-item-meta__credits{
-  @extend .text-uppercase, .text-muted, .h6;
+  @extend .text-uppercase, .text-muted, .small;
 }
