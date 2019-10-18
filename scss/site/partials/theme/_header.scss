@@ -46,4 +46,7 @@ header {
 .page-header-image{
 	background:no-repeat center center/cover;
 	padding-top:35%;
+	@media screen and (min-width:1600px){
+		padding-top:30%;
+	}
 }
