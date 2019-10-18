@@ -1,6 +1,6 @@
 <cfoutput>
     <!--- Primary Associated Image --->
-    <cfif Mura.content().hasImage(usePlaceholder=false)>
+    <cfif Mura.content().hasImage(usePlaceholder=true)>
         <cfscript>
             img = Mura.content().getImageURL(
                 size = 'carouselimage' // small, medium, large, custom, or any other pre-defined image size
