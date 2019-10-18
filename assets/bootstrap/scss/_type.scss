@@ -123,3 +123,16 @@ mark,
     content: "\2014\00A0"; // em dash, nbsp
   }
 }
+
+.mura-item-meta__date{
+  @extend .text-uppercase, .text-muted, .h6;
+}
+.mura-item-meta__title{
+  @extend .h4;
+}
+.mura-item-meta__summary{
+  @extend .text-muted;
+}
+.mura-item-meta__credits{
+  @extend .text-uppercase, .text-muted, .h6;
+}

@@ -302,7 +302,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .h4, .mura-item-meta__title, .h5, .h6, .mura-item-meta__date, .mura-item-meta__credits {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2; }
@@ -316,13 +316,13 @@ h2, .h2 {
 h3, .h3 {
   font-size: 1.75rem; }
 
-h4, .h4 {
+h4, .h4, .mura-item-meta__title {
   font-size: 1.5rem; }
 
 h5, .h5 {
   font-size: 1.25rem; }
 
-h6, .h6 {
+h6, .h6, .mura-item-meta__date, .mura-item-meta__credits {
   font-size: 1rem; }
 
 .lead {
@@ -7906,7 +7906,7 @@ button.bg-dark:focus {
 .text-lowercase {
   text-transform: lowercase !important; }
 
-.text-uppercase {
+.text-uppercase, .mura-item-meta__date, .mura-item-meta__credits {
   text-transform: uppercase !important; }
 
 .text-capitalize {
@@ -7984,7 +7984,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-body {
   color: #212529 !important; }
 
-.text-muted {
+.text-muted, .mura-item-meta__date, .mura-item-meta__summary, .mura-item-meta__credits {
   color: #6c757d !important; }
 
 .text-black-50 {
