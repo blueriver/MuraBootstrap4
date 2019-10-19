@@ -3453,7 +3453,8 @@ input[type="button"].btn-block {
   line-height: inherit;
   white-space: nowrap;
   font-weight: 700;
-  font-style: italic; }
+  font-style: italic;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
 

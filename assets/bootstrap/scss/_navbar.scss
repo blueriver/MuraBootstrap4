@@ -49,6 +49,7 @@
   white-space: nowrap;
   font-weight: $font-weight-bold;
   font-style: italic;
+  font-family: $headings-font-family;
 
   @include hover-focus {
     text-decoration: none;
