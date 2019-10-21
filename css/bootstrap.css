@@ -4070,7 +4070,7 @@ input[type="button"].btn-block {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem; }
 
-.badge {
+.badge, .mura-item-meta__subtype {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -4085,30 +4085,30 @@ input[type="button"].btn-block {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .badge {
+    .badge, .mura-item-meta__subtype {
       -webkit-transition: none;
       transition: none; } }
-  a.badge:hover, a.badge:focus {
+  a.badge:hover, a.mura-item-meta__subtype:hover, a.badge:focus, a.mura-item-meta__subtype:focus {
     text-decoration: none; }
-  .badge:empty {
+  .badge:empty, .mura-item-meta__subtype:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, .btn .mura-item-meta__subtype {
   position: relative;
   top: -1px; }
 
-.badge-pill {
+.badge-pill, .mura-item-meta__subtype {
   padding-right: 0.6em;
   padding-left: 0.6em;
   border-radius: 10rem; }
 
-.badge-primary {
+.badge-primary, .mura-item-meta__subtype {
   color: #fff;
   background-color: #007bff; }
-  a.badge-primary:hover, a.badge-primary:focus {
+  a.badge-primary:hover, a.mura-item-meta__subtype:hover, a.badge-primary:focus, a.mura-item-meta__subtype:focus {
     color: #fff;
     background-color: #0062cc; }
-  a.badge-primary:focus, a.badge-primary.focus {
+  a.badge-primary:focus, a.mura-item-meta__subtype:focus, a.badge-primary.focus, a.focus.mura-item-meta__subtype {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
@@ -8066,7 +8066,7 @@ a.text-dark:hover, .mura-item-meta__title a:hover, .breadcrumb-item a:hover, a.t
     min-width: 992px !important; }
   .navbar {
     display: none; }
-  .badge {
+  .badge, .mura-item-meta__subtype {
     border: 1px solid #000; }
   .table {
     border-collapse: collapse !important; }

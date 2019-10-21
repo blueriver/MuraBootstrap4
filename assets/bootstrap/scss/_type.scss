@@ -142,6 +142,10 @@ mark,
   @extend .text-uppercase, .text-muted, .small;
 }
 
+.mura-item-meta__subtype{
+  @extend .badge, .badge-pill, .badge-primary;
+}
+
 .breadcrumb-item{
   a{
     @extend .text-dark;
