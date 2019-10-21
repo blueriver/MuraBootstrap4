@@ -44,7 +44,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 <cfoutput>
 <cfparam name="objectParams.columnCount" default="5">
-<cfparam name="objectParams.columnWidth" default="250px">
+<cfparam name="objectParams.columnWidth" default="240px">
 <cfparam name="objectParams.bgStyle" default="">
 <cfparam name="objectParams.modalimages" default="false">
 <cfset renderer=Mura.getContentRenderer()>
@@ -78,7 +78,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 <div class="mura-control-group">
     <label>Column Width</label>
     <select class="objectParam" name="columnWidth">
-        <cfloop from="50" to="400" step="50" index="i">
+        <cfloop from="100" to="400" step="20" index="i">
 			<option value="#i#px"<cfif i & 'px' eq objectParams.columnWidth> selected</cfif>>#i#px</option>
 		</cfloop>
     </select>

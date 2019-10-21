@@ -1,6 +1,6 @@
 <cfsilent>		
 	<cfparam name="objectParams.columnCount" default="5">
-	<cfparam name="objectParams.columnWidth" default="250px">
+	<cfparam name="objectParams.columnWidth" default="240px">
 	<cfparam name="objectParams.imageSize" default="medium">
 	<cfparam name="objectParams.imageHeight" default="AUTO">
 	<cfparam name="objectParams.imageWidth" default="AUTO">
