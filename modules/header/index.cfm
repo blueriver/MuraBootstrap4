@@ -127,7 +127,7 @@
 <!--- Content Release Date --->
 	<cfif IsDate($.setDynamicContent($.content('releasedate')))>
 		<li class="list-inline-item release-date">
-			<i class="fa fa-clock-o" aria-hidden="true"></i> #LSDateFormat($.setDynamicContent($.content('releasedate')))#
+			<i class="fas fa-clock"></i> #LSDateFormat($.setDynamicContent($.content('releasedate')))#
 		</li>
 	</cfif>
 <!--- /Content Release Date --->
@@ -135,7 +135,7 @@
 <!--- Credits --->
 	<cfif Len($.setDynamicContent($.content('credits')))>
 		<li class="list-inline-item credits">
-			<i class="fa fa-user" aria-hidden="true"></i> #esapiEncode('html', $.setDynamicContent($.content('credits')))#
+			<i class="fas fa-user"></i> #esapiEncode('html', $.setDynamicContent($.content('credits')))#
 		</li>
 	</cfif>
 <!--- /Credits --->
@@ -143,7 +143,7 @@
 <!--- Comments --->
 	<cfif commentCount gt 0>
 		<li class="list-inline-item comments">
-			<i class="fa fa-comments" aria-hidden="true"></i> #commentCount# Comment<cfif commentCount gt 1>s</cfif>
+			<i class="fas fa-comments"></i> #commentCount# Comment<cfif commentCount gt 1>s</cfif>
 		</li>
 	</cfif>
 <!--- /Comments --->
@@ -169,7 +169,7 @@
 		<cfif ListLen($.content().getTags())>
 			
 				<cfloop from="1" to="#ListLen($.content().getTags())#" index="t">
-			<li class="list-inline-item badge badge-light tag">
+			<li class="list-inline-item tag">
 <!--- 				<i class="fa fa-tags" aria-hidden="true"></i> --->
 				#esapiEncode('html', trim(ListGetAt($.content().getTags(), t)))#<!--- <cfif t neq ListLen($.content().getTags())>, </cfif> --->
 			</li>
