@@ -104,9 +104,15 @@
 </cfsilent>
 <cfoutput>
 
-	<div class="jumbotron text-center mb-0" style="background-image: url(#m.content().getImageURL(size='carouselimage')#); background-size: cover; background-repeat: no-repeat; background-attachment: scroll;">
+	<!---<div class="jumbotron text-center mb-0" style="background-image: url(#m.content().getImageURL(size='carouselimage')#); background-size: cover; background-repeat: no-repeat; background-attachment: scroll;">
 		<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52); color: white;">#variables.Mura.rbKey('search.searchresults')#</h1>
-	</div>
+	</div>--->
+
+	#m.dspObject(
+		object="header",
+		objectParams=urlDecode(Mura.content('headerParams')),
+		targetattr='headerParams'
+	)#
 
 	<div id="svSearchResults" class="mura-search-results mt-3 container #this.searchResultWrapperClass#">
 		<div class="#this.searchResultInnerClass#">
