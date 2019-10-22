@@ -34,15 +34,15 @@
             }
         }
     }
-    .list-inline{
-        @extend .d-flex, .justify-content-center;
-        .release-date, .credits{
-            @extend .w-100, .text-center, .text-white;
-        }
-    }
+    // .list-inline{
+    //     @extend .d-flex, .justify-content-center;
+    //     .release-date, .credits{
+    //         @extend .w-100, .text-center, .text-white;
+    //     }
+    // }
     .breadcrumb{
-        @extend .rounded-pill, .py-2;
-        background:rgba(255,255,255,.1);
+        //@extend .rounded-pill, .py-2;
+        //background:rgba(255,255,255,.1);
 
         .breadcrumb-item{
             a{
@@ -50,9 +50,9 @@
             }
             & + .breadcrumb-item{
                 &:before{
-                content: "\f054" !important;
-                font-family: fontawesome;
-                color:$gray-400;
+                //content: "\f054" !important;
+                //font-family: fontawesome;
+                color:#fff;
                 }
             }
         }
