@@ -145,16 +145,3 @@ mark,
 .mura-item-meta__subtype{
   @extend .badge, .badge-pill, .badge-primary;
 }
-
-.breadcrumb-item{
-  a{
-    @extend .text-dark;
-  }
-  & + .breadcrumb-item{
-    &:before{
-      content: "\f054" !important;
-      font-family: fontawesome;
-      color:$gray-500;
-    }
-  }
-}

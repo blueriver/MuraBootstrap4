@@ -34,18 +34,36 @@
             }
         }
     }
-}
-.page-blog-header{
-    [data-object="header"]{
-        margin-bottom:3rem;
-
-        header{
-            background:transparent;
-            padding:0;
-                h1,h2,h3,h4,h5,h6,p{
-                    text-align:center;
-                    color:$gray-900;
-            }
+    .list-inline{
+        @extend .d-flex, .justify-content-center;
+        .release-date, .credits{
+            @extend .w-100, .text-center, .text-white;
         }
     }
+    .breadcrumb-item{
+        a{
+          @extend .text-white;
+        }
+        & + .breadcrumb-item{
+          &:before{
+            content: "\f054" !important;
+            font-family: fontawesome;
+            color:$gray-400;
+          }
+        }
+      }
 }
+// .page-blog-header{
+//     [data-object="header"]{
+//         margin-bottom:3rem;
+
+//         header{
+//             background:transparent;
+//             padding:0;
+//                 h1,h2,h3,h4,h5,h6,p{
+//                     text-align:center;
+//                     color:$gray-900;
+//             }
+//         }
+//     }
+// }
