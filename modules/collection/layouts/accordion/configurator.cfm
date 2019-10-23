@@ -58,10 +58,11 @@ version 2 without this exception.  You may, if you choose, apply this exception 
         <option value="text-white bg-info"<cfif objectParams.bgStyle eq "text-white bg-info"> selected="selected"</cfif>>Info</option>
         <option value="bg-light"<cfif objectParams.bgStyle eq "bg-light"> selected="selected"</cfif>>Light</option>
         <option value="text-white bg-dark"<cfif objectParams.bgStyle eq "text-white bg-dark"> selected="selected"</cfif>>Dark</option>
+		<option value="text-dark bg-white"<cfif objectParams.bgStyle eq "text-dark bg-white"> selected="selected"</cfif>>White</option>
     </select>
 </div>
 
-<!--- <div class="mura-control-group">
+<div class="mura-control-group">
   	<label>#application.rbFactory.getKeyValue(session.rb,'collections.imagesize')#</label>
 	<select name="imageSize" data-displayobjectparam="imageSize" class="objectParam">
 		<cfloop list="Small,Medium,Large" index="i">
@@ -157,5 +158,5 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 		handleImageSizeChange();
 	});
-</script> --->
+</script>
 </cfoutput>

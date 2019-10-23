@@ -24,10 +24,10 @@
 			<div class="mura-collection-item__holder">
 				
 				<div class="accordion" id="rapidsAccordion">
-					<div class="card #objectParams.bgStyle#">
-						<div class="card-header" id="##content-#item.getContentID()#">
+					<div class="card">
+						<div class="card-header #objectParams.bgStyle#" id="##content-#item.getContentID()#">
 						    <h2 class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</button>
+								<button class="btn btn-link collapsed text-reset" type="button" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</button>
 							</h2>
 						</div>
 						
