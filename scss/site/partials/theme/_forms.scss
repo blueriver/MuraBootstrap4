@@ -46,3 +46,10 @@
 // 	position: absolute;
 // 	left: -9999px;
 // }
+.mura-form{
+    .mura-control-group{
+        .mura-section{
+            @extend .h5, .mb-4;
+        }
+    }
+}
