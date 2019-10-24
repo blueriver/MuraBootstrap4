@@ -490,6 +490,8 @@
         
         this.coloroptions=[
             {name='White',value="##ffffff"},
+			{name='Mura Light Gray',value="##d5d5d5"},
+			{name='Mura Medium Gray',value="##6b6b6b"},
             {name='Mura Black',value="##2c2c2c"},
             {name='Mura Red',value="##E34A36"},
             {name='Mura Orange',value="##fd7334"},
@@ -501,9 +503,7 @@
             {name='Mura Goldenrod',value="##e9ad01"},
             {name='Mura Violet',value="##984ac1"},
 			{name='Mura Purple',value="##6565df"},
-			{name='Mura Blue',value="##2e5ad9"},
-			{name='Mura Light Gray',value="##d5d5d5"},
-			{name='Mura Medium Gray',value="##6b6b6b"}
+			{name='Mura Blue',value="##2e5ad9"}
         ];
 		// -----------------------------
 
