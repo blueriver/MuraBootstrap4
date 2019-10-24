@@ -43,54 +43,6 @@
 	<cfset rs=Mura.getBean('feedManager').getFeeds(Mura.event('siteID'),'Local',true,true) />
 	<cfset apiEndpoint=Mura.siteConfig().getApi('feed','v1').getEndpoint() />
 	<cfloop query="rs"><link rel="alternate" type="application/rss+xml" title="#esapiEncode('html_attr', Mura.siteConfig('site'))# - #esapiEncode('html_attr', rs.name)#" href="#XMLFormat('#apiEndpoint#/?feedID=#rs.feedID#')#"></cfloop>
-
-	<style>
-     .module-lite {
-			 background:white;
-			 color: black;
-		 }
-
-		 .module-lite h1,
-		 	.module-lite h2,
-			.module-lite h3,
-			.module-lite h4,
-			.module-lite h5,
-			.module-lite h6,
-			.module-lite h1,
-			.module-lite h2,
-			.module-lite h3,
-			.module-lite h4,
-			.module-lite h5,
-			.module-lite a:link,
-			.module-lite a:visited,
-			.module-lite a:hover,
-			.module-lite a:active {
-				color: black;
-			}
-
-		 .module-dark {
-			 background:black;
-			 color: white;
-		 }
-
-		 .module-dark h1,
-		 	.module-dark h2,
-			.module-dark h3,
-			.module-dark h4,
-			.module-dark h5,
-			.module-dark h6,
-			.module-dark h1,
-			.module-dark h2,
-			.module-dark h3,
-			.module-dark h4,
-			.module-dark h5,
-			.module-dark a:link,
-			.module-dark a:visited,
-			.module-dark a:hover,
-			.module-dark a:active {
-				color: white;
-			}
-
-	</style>
+	
 </head>
 </cfoutput>
