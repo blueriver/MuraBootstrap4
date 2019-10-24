@@ -15,7 +15,7 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black:    #2c2c2c !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -34,16 +34,40 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+// $blue:    #2e5ad9 !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
+$blue:			#2e5ad9 !default;
+$violet:    #984ac1 !default;
+$indigo:		$violet !default;
+$purple:		#6565df !default;
+$pink:      #e83e8c !default;
+$red:				#da2048 !default;
+$orange:		#fd7334 !default;
+$goldenrod:	#e9ad01 !default;
+$yellow:    $goldenrod !default;
+$azul:			#00b7e3 !default;
+$sea-foam:	#5fd18c !default;
+$teal:			#00c8b2 !default;
+$green:			#93c220 !default;
+$cranberry:	#da2048 !default;
+$cyan:      #17a2b8 !default;
+
+
+ 
+
+
+$light-gray: lighten($black, 65%) !default;
+$medium-gray: lighten($black, 40%) !default;
+$dark-gray: lighten($black, 35%) !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
