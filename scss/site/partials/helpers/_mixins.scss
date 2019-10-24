@@ -13,8 +13,37 @@
 	color: $brand-primary;
 }
 
+// Module Themes
+//$module-padding: 4vw !default;
+//$module-mobile-vertical-padding: 8vw;
+
+@mixin module-theme($module-bg-color, $module-bg-text-color) {
+    background-color: $module-bg-color;
+    //background-image: $module-bg-image;
+    color: $module-bg-text-color;
+	//padding: $module-padding;
+}
+
+.module-brand { @include module-theme($blue, $white); }
+.module-light-gray { @include module-theme($light-gray, $black); }
+.module-medium-gray { @include module-theme($medium-gray, $black); }
+.module-dark-gray { @include module-theme($dark-gray, $white); }
+.module-black { @include module-theme($black, $white); }
+.module-orange { @include module-theme($orange, $white); }
+.module-red { @include module-theme($red, $white); }
+.module-azul { @include module-theme($azul, $white); }
+.module-sea-foam  { @include module-theme($sea-foam, $white); }
+.module-teal { @include module-theme($teal, $white); }
+.module-green { @include module-theme($green, $white); }
+.module-cranberry { @include module-theme($cranberry, $white); }
+.module-goldenrod { @include module-theme($goldenrod, $white); }
+.module-violet { @include module-theme($violet, $white); }
+.module-purple { @include module-theme($purple, $white); }
+.module-blue { @include module-theme($blue, $white); }
+.module-white { @include module-theme($white, $black); }
+
 // 7.2 Module Specific Themes
-$module-padding: 4rem !default;
+//$module-padding: 4rem !default;
 
 // Site BTN
 /*
@@ -87,7 +116,7 @@ $module-padding: 4rem !default;
 */
 
 // Logo Strip Theme
-@mixin logo-strip-theme($bg-color, $logo-strip-heading-size, $logo-strip-heading-color) {
+/*@mixin logo-strip-theme($bg-color, $logo-strip-heading-size, $logo-strip-heading-color) {
     background-color: $bg-color;
     
     h2 {
@@ -106,20 +135,20 @@ $module-padding: 4rem !default;
 }
 .logo-strip-theme {
     @include logo-strip-theme(#29abe2, 32px, #fff);
-}
+}*/
 
 // 3-Up Theme
-@mixin threeup-theme($threeup-heading-size, $threeup-heading-color, $threeup-img, $threeup-h4, $threeup-theme-color) {
+/*@mixin threeup-theme($threeup-heading-size, $threeup-heading-color, $threeup-img, $threeup-h4, $threeup-theme-color) {
     font-size: 22px;
     color: $threeup-theme-color;
     font-weight: 200;
     border-top: 2px solid #f1f4f8;
     
-/*
-    .mura-collection-item {
-        padding: 30px;
-    }
-*/
+
+    // .mura-collection-item {
+    //     padding: 30px;
+    // }
+
     
     h2 {
         text-transform: capitalize;
@@ -142,7 +171,7 @@ $module-padding: 4rem !default;
 }
 .threeup-theme {
     @include threeup-theme(48px, #161c2d, 15px, #161c2d, #869ab8);
-}
+}*/
 
 // Large Quote CTA
 /*
@@ -165,7 +194,7 @@ $module-padding: 4rem !default;
 */
 
 // Heading Underline Theme
-@mixin heading-underline($heading-underline-size, $heading-underline-color) {
+/*@mixin heading-underline($heading-underline-size, $heading-underline-color) {
     
     h4 {
         display: inline-block;
@@ -199,7 +228,7 @@ $module-padding: 4rem !default;
 }
 .heading-underline {
     @include heading-underline(24px, #808080);
-}
+}*/
 
 //  Quote CTA 
 /*
@@ -226,7 +255,7 @@ $module-padding: 4rem !default;
 */
 
 // Card Theme
-@mixin card-theme($card-theme-main-heading-size, $card-theme-main-heading-color, $card-theme-bg, $card-theme-heading-size, $card-theme-heading-color) {
+/*@mixin card-theme($card-theme-main-heading-size, $card-theme-main-heading-color, $card-theme-bg, $card-theme-heading-size, $card-theme-heading-color) {
     h2 {
         text-transform: capitalize;
         font-weight: bold;
@@ -288,7 +317,7 @@ $module-padding: 4rem !default;
 }
 .card-theme {
     @include card-theme(48px, #808080, #f2f2f2, 24px, #808080);
-}
+}*/
 
 // Join Our Team Theme
 /*
@@ -329,7 +358,7 @@ $module-padding: 4rem !default;
 */
 
 // Testimonial Theme
-@mixin testimonial-theme() {
+/*@mixin testimonial-theme() {
     
     p {
         
@@ -341,10 +370,10 @@ $module-padding: 4rem !default;
 }
 .testimonial-theme {
     @include testimonial-theme();
-}
+}*/
 
 // Hover Links Theme
-@mixin from-our-blog-theme($from-our-blog-heading-size, $from-our-blog-heading-color) {
+/*@mixin from-our-blog-theme($from-our-blog-heading-size, $from-our-blog-heading-color) {
     h2 {
         text-transform: capitalize;
         font-size: $from-our-blog-heading-size;
@@ -402,11 +431,11 @@ $module-padding: 4rem !default;
 }
 .from-our-blog-theme {
     @include from-our-blog-theme(48px, #161c2d);
-}
+}*/
 
 
 // Accordion Theme
-@mixin accordion-theme() {
+/*@mixin accordion-theme() {
     
     h2 {
         text-transform: capitalize;
@@ -451,7 +480,7 @@ $module-padding: 4rem !default;
 }
 .accordion-theme {
     @include accordion-theme();
-}
+}*/
 
 // accordion Theme
 @mixin footer-theme() {
