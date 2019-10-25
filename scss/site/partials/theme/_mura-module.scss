@@ -1,0 +1,30 @@
+[data-objectspacing="tight"],
+[data-objectspacing="loose"],
+[data-metaspacing="tight"],
+[data-metaspacing="loose"],
+[data-contentspacing="tight"],
+[data-contentspacing="loose"] {
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    [data-objectspacing="tight"],
+    [data-metaspacing="tight"],
+    [data-contentspacing="tight"] {
+        padding: 1rem;
+    }
+
+    [data-objectspacing="loose"],
+    [data-metaspacing="loose"],
+    [data-contentspacing="loose"] {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    [data-objectspacing="loose"],
+    [data-metaspacing="loose"],
+    [data-contentspacing="loose"]{
+        padding: 3rem;
+    }
+}
