@@ -485,7 +485,8 @@
         	{name="Violet",value="module-violet"},
         	{name="Purple",value="module-purple"},
         	{name="Blue",value="module-blue"},
-        	{name="White",value="module-white"}
+			{name="White",value="module-white"},
+			{name="Image Grid",value="module-image-grid"}
         ];
         
         this.coloroptions=[
