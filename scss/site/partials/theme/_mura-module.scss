@@ -36,6 +36,9 @@
             display:inline-block;
             margin: 0 0 1rem;
             width:100%;
+            img{
+                @extend .rounded-lg, .shadow;
+            }
         }
     }
 }
