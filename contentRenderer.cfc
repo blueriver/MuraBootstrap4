@@ -486,6 +486,7 @@
         	{name="Purple",value="module-purple"},
         	{name="Blue",value="module-blue"},
 			{name="White",value="module-white"},
+			{name="Image Grid (Flex)",value="module-image-grid-flex"},
 			{name="Image Grid (Block)",value="module-image-grid-block"},
 			{name="Image Grid (Grid)",value="module-image-grid-grid"}
         ];

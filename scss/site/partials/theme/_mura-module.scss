@@ -42,6 +42,44 @@
         }
     }
 }
+.module-image-grid-flex{
+    > .mura-object-content{
+        display: flex !important;//force flex
+        flex-flow: row wrap;
+        //margin-left: -8px; /* Adjustment for the gutter */
+        width: 100%;
+        [data-object="image"]{
+            flex: auto !important;
+            height: 250px !important;
+            min-width: 150px !important;
+            margin: 0 1rem 1rem 0 !important; /* Some gutter */
+            overflow:hidden;
+            @extend .rounded-lg, .shadow;
+            figure{
+                height:250px;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: middle;
+                    max-width: 100%;
+                }
+            }
+        }
+        [data-object="image"]:nth-child(4n+1) {
+            width: 250px !important;
+        }
+        [data-object="image"]:nth-child(4n+2) {
+            width: 325px !important;
+        }
+        [data-object="image"]:nth-child(4n+3) {
+            width: 180px !important;
+        }
+        [data-object="image"]:nth-child(4n+4) {
+            width: 380px !important;
+        }
+    }
+}
 .module-image-grid-grid{
     > .mura-object-content{
         display: grid !important;//overriding inline style
