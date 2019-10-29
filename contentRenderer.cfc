@@ -97,7 +97,7 @@
         ];
 		this.coloroptions=[
             {name='White',value="##ffffff"},
-			{name='Mura Light Gray',value="##d5d5d5"},
+			{name='Mura Light Gray',value="##f5f5f5"},
 			{name='Mura Medium Gray',value="##6b6b6b"},
             {name='Mura Black',value="##2c2c2c"},
             {name='Mura Red',value="##E34A36"},
