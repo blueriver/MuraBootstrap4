@@ -11,8 +11,9 @@
 	}
 }
 [data-object="image"]{
+	@extend .rounded-lg, .shadow;
 	img{
-		@extend .rounded-lg, .shadow;
+		@extend .rounded-lg;
 	}
 }
 
