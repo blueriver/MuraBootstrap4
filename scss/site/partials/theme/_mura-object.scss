@@ -1,27 +1,5 @@
 @import "../helpers/bootstrap";
 
-/*
-.mura-object {
-
-	.mura-object + .mura-object {
-		.mura-object-content {
-			padding-top: 0;
-		}
-
-		.mura-object-meta +	.mura-object-content {
-			padding-top: 0;
-		}
-
-	}
-}
-*/
-// .mura-object{
-// 	.mura-object-content{		
-// 		.card.mura-collection-item__holder{
-// 			padding:0;	
-// 		}
-// 	}
-// }
 @media screen AND (max-width:767px){
 	.mura-region-inherited, .mura-region-local {
 		.mura-object {
