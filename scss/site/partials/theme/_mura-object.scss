@@ -33,7 +33,7 @@
 	}
 }
 [data-object="image"]{
-	> img{
+	img{
 		@extend .rounded-lg, .shadow;
 	}
 }
