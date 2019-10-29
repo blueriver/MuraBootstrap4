@@ -504,16 +504,15 @@
 
 	<cffunction name="dspCarouselByFeedName" output="false">
 		<cfargument name="feedName" type="string" default="Slideshow" />
-		<cfargument name="showCaption" type="boolean" default="true" />
-		<cfargument name="showArrows" type="boolean" default="true" />
-		<cfargument name="showPager" type="boolean" default="true" />
+		<cfargument name="showCaption" type="string" default="Yes" />
+		<cfargument name="showArrows" type="string" default="Yes" />
+		<cfargument name="showPager" type="string" default="Yes" />
 		<cfargument name="carouselID" type="string" default="myCarousel" />
 		<cfargument name="imageSize" type="string" default="custom" hint="If you want to use a custom height/width, then use 'custom' ... otherwise, you can use 'small, medium, large' OR any other predefined custom image size 'name' you created via the back-end administrator." />
 		<cfargument name="imageWidth"  default="1280" hint="width in pixels" />
 		<cfargument name="imageHeight" default="500" hint="height in pixels" />
 		<cfargument name="interval" type="any" default="5000" hint="Use either milliseconds OR use 'false' to NOT auto-advance to next slide." />
-		<cfargument name="autoStart" type="boolean" default="true" />
-		<cfargument name="showIndicators" type="boolean" default="true" />
+		<cfargument name="autoStart" type="string" default="Yes" />
 
 		<cfscript>
 			var local = {};
@@ -566,20 +565,17 @@
 
 					<!---showPager--->
 					<cfif arguments.showPager>
-						<!--- Indicators --->
-						<cfif arguments.showIndicators>
-							<ol class="carousel-indicators">
-								<cfset local.iterator.reset()>
-								<cfset local.idx = 0>
-								<cfloop condition="local.iterator.hasNext()">
-									<cfset local.item=iterator.next()>
-									<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
-										<li data-target="###arguments.cssID#" data-slide-to="#idx#" class="<cfif local.idx eq 0>active</cfif>"></li>
-										<cfset local.idx++>
-									</cfif>
-								</cfloop>
-							</ol>
-						</cfif>
+						<ol class="carousel-indicators">
+							<cfset local.iterator.reset()>
+							<cfset local.idx = 0>
+							<cfloop condition="local.iterator.hasNext()">
+								<cfset local.item=iterator.next()>
+								<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
+									<li data-target="###arguments.cssID#" data-slide-to="#idx#" class="<cfif local.idx eq 0>active</cfif>"></li>
+									<cfset local.idx++>
+								</cfif>
+							</cfloop>
+						</ol>
 					</cfif>
 					<!---/showPager--->
 
@@ -593,7 +589,7 @@
 									<div class="carousel-item<cfif local.idx eq 0> active</cfif>">
 
 										<img src="#local.item.getImageURL(argumentCollection=local.imageArgs)#" alt="#HTMLEditFormat(local.item.getTitle())#" class="d-block w-100">
-										<cfif arguments.showCaption>
+										<cfif yesnoformat(arguments.showCaption)>
 											<div class="carousel-caption d-none d-md-block p-md-5">
 												<div class="container">
 													<h3><a href="#local.item.getURL()#">#HTMLEditFormat(local.item.getTitle())#</a></h3>
@@ -612,7 +608,7 @@
 							<!--- Controls --->
 							<cfif local.idx gt 1>
 								<!---showArrows--->
-								<cfif arguments.showArrows>
+								<cfif yesnoformat(arguments.showArrows)>
 									<a class="carousel-control-prev" href="###arguments.cssID#" role="button" data-slide="prev">
 										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 										<span class="sr-only">Previous</span>
@@ -625,7 +621,7 @@
 								<!---/showArrows--->
 
 								<!--- AutoStart --->
-								<cfif arguments.autoStart>
+								<cfif yesnoformat(arguments.autoStart)>
 									<script>
 										jQuery(function($){
 											try{
@@ -661,7 +657,6 @@
 					</div>
 
 				</cfif>
-
 			</cfoutput>
 		</cfsavecontent>
 		<cfreturn local.str />

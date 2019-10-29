@@ -2,8 +2,8 @@
 <cfparam name="objectparams.imageSize" default="carouselimage">
 <cfparam name="objectparams.height" default="500">
 <cfparam name="objectparams.width" default="1280">
-<cfparam name="objectparams.autostart" default="true">
-<cfparam name="objectparams.showArrows" default="true">
-<cfparam name="objectparams.showPager" default="true">
-<cfparam name="objectparams.showCaption" default="true">
+<cfparam name="objectparams.autostart" default="Yes">
+<cfparam name="objectparams.showArrows" default="Yes">
+<cfparam name="objectparams.showPager" default="Yes">
+<cfparam name="objectparams.showCaption" default="Yes">
 <cfparam name="objectparams.cssID" default="myCarousel">

@@ -73,31 +73,31 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 	<div class="mura-control-group">
 		<label>Show Arrows</label>
 		<select name="showArrows" class="objectParam">
-			<option value="true"<cfif objectparams.showArrows> selected</cfif>>True</option>
-			<option value="false"<cfif not objectparams.showArrows> selected</cfif>>False</option>
+			<option value="Yes"<cfif objectparams.showArrows is "Yes"> selected</cfif>>Yes</option>
+			<option value="No"<cfif objectparams.showArrows is "No"> selected</cfif>>No</option>
 		</select>
 	</div>
 
 	<div class="mura-control-group">
 		<label>Show Pager</label>
 		<select name="showPager" class="objectParam">
-			<option value="true"<cfif objectparams.showPager> selected</cfif>>True</option>
-			<option value="false"<cfif not objectparams.showPager> selected</cfif>>False</option>
+			<option value="Yes"<cfif objectparams.showPager is "Yes"> selected</cfif>>Yes</option>
+			<option value="No"<cfif objectparams.showPager is "No"> selected</cfif>>No</option>
 		</select>
 	</div>
 
 	<div class="mura-control-group">
 		<label>#application.rbFactory.getKeyValue(session.rb,'collections.showCaption')#</label>
 		<select name="showCaption" class="objectParam">
-			<option value="true"<cfif objectparams.showCaption> selected</cfif>>True</option>
-			<option value="false"<cfif not objectparams.showCaption> selected</cfif>>False</option>
+			<option value="Yes"<cfif objectparams.showCaption is "Yes"> selected</cfif>>Yes</option>
+			<option value="No"<cfif objectparams.showCaption is "No"> selected</cfif>>No</option>
 		</select>
 	</div>
 	<div class="mura-control-group">
 		<label>#application.rbFactory.getKeyValue(session.rb,'collections.autoStart')#</label>
 		<select name="autostart" class="objectParam">
-			<option value="true"<cfif objectparams.autostart> selected</cfif>>True</option>
-			<option value="false"<cfif not objectparams.autostart> selected</cfif>>False</option>
+			<option value="Yes"<cfif objectparams.autostart is "Yes"> selected</cfif>>Yes</option>
+			<option value="No"<cfif objectparams.autostart is "No"> selected</cfif>>No</option>
 		</select>
 	</div>
 	<div class="mura-control-group">
