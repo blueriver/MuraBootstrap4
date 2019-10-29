@@ -12,6 +12,7 @@ if ( 'CKEDITOR' in window) {
 	[
 		/* Block Styles */
 
+			{ name: 'Lead', element: 'p', attributes: { 'class': 'lead' } },
 			{ name: 'Notice', element: 'p', attributes: { 'class': 'alert' } },
 			{ name: 'Success', element: 'p', attributes: { 'class': 'alert alert-success' } },
 			{ name: 'Error', element: 'p', attributes: { 'class': 'alert alert-danger' } },
