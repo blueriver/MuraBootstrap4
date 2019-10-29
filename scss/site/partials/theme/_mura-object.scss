@@ -32,3 +32,8 @@
 		}
 	}
 }
+[data-object="image"]{
+	> img{
+		@extend .rounded-lg, .shadow;
+	}
+}
