@@ -20,7 +20,7 @@
 						viewDepth=3
 						, id='navPrimary'
 						, class='navbar-nav mr-auto'
-						, displayHome='always'
+						, displayHome='never'
 						, closeFolders='72F9687F-C642-4F08-80B7182B81B91E7C'
 						, showCurrentChildrenOnly=false
 						, liClass='nav-item'

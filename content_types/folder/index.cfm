@@ -6,7 +6,7 @@
 	)#
 	#Mura.dspObjects(2)#<!---Pre-Content Display Region--->
 	<div class="container mt-3">
-	#m.dspObject(
+	#Mura.dspObject(
 		object="folder",
 		params=objectParams
 	)#

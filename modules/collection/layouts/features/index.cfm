@@ -24,7 +24,7 @@
 
             <!-- Image (placeholder) -->
             <img src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#item.getTitle()#" class="img-fluid w-100">
-
+            
           </div>
           <div class="col-12 col-md-6 col-lg-7 order-md-1">
 
