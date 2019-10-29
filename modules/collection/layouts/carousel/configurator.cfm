@@ -70,7 +70,21 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 			 	<input class="objectParam" name="imageWidth" data-displayobjectparam="imageWidth" type="text" value="#feed.getImageWidth()#" />
 		 </div>
 	</div>
+	<div class="mura-control-group">
+		<label>Show Arrows</label>
+		<select name="showArrows" class="objectParam">
+			<option value="true"<cfif objectparams.showArrows> selected</cfif>>True</option>
+			<option value="false"<cfif not objectparams.showArrows> selected</cfif>>False</option>
+		</select>
+	</div>
 
+	<div class="mura-control-group">
+		<label>Show Pager</label>
+		<select name="showPager" class="objectParam">
+			<option value="true"<cfif objectparams.showPager> selected</cfif>>True</option>
+			<option value="false"<cfif not objectparams.showPager> selected</cfif>>False</option>
+		</select>
+	</div>
 
 	<div class="mura-control-group">
 		<label>#application.rbFactory.getKeyValue(session.rb,'collections.showCaption')#</label>

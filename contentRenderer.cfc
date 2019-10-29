@@ -505,6 +505,8 @@
 	<cffunction name="dspCarouselByFeedName" output="false">
 		<cfargument name="feedName" type="string" default="Slideshow" />
 		<cfargument name="showCaption" type="boolean" default="true" />
+		<cfargument name="showArrows" type="boolean" default="true" />
+		<cfargument name="showPager" type="boolean" default="true" />
 		<cfargument name="carouselID" type="string" default="myCarousel" />
 		<cfargument name="imageSize" type="string" default="custom" hint="If you want to use a custom height/width, then use 'custom' ... otherwise, you can use 'small, medium, large' OR any other predefined custom image size 'name' you created via the back-end administrator." />
 		<cfargument name="imageWidth"  default="1280" hint="width in pixels" />
@@ -562,6 +564,8 @@
 
 					<div id="#arguments.carouselID#" class="carousel slide carousel-fade" data-ride="carousel" data-interval="#arguments.interval#">
 
+					<!---showPager--->
+					<cfif arguments.showPager>
 						<!--- Indicators --->
 						<cfif arguments.showIndicators>
 							<ol class="carousel-indicators">
@@ -576,6 +580,8 @@
 								</cfloop>
 							</ol>
 						</cfif>
+					</cfif>
+					<!---/showPager--->
 
 						<!--- Wrapper for slides --->
 						<div class="carousel-inner">
@@ -605,14 +611,19 @@
 						<cfif local.idx>
 							<!--- Controls --->
 							<cfif local.idx gt 1>
-								<a class="carousel-control-prev" href="###arguments.cssID#" role="button" data-slide="prev">
-								 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								 <span class="sr-only">Previous</span>
-							 </a>
-							 <a class="carousel-control-next" href="###arguments.cssID#" role="button" data-slide="next">
-								 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-								 <span class="sr-only">Next</span>
-							 </a>
+								<!---showArrows--->
+								<cfif arguments.showArrows>
+									<a class="carousel-control-prev" href="###arguments.cssID#" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control-next" href="###arguments.cssID#" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</cfif>
+								<!---/showArrows--->
+
 								<!--- AutoStart --->
 								<cfif arguments.autoStart>
 									<script>
