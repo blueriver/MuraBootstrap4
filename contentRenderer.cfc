@@ -74,9 +74,44 @@
 		this.cookieConsentWidth="sm";
 
 		this.primaryContentTypes="Page,Link,File";
-		this.spacingoptions=[{name="Tight",value="tight"},{name="Loose",value="loose"}];
-		this.modulethemeoptions=[{name="Lite",value="module-lite"},{name="Dark",value="module-dark"}];
-		this.coloroptions=[{name='White',value="##ffffff"},{name='Black',value="##000000"},{name='Grey',value="##A9A9A9"}];
+		this.spacingoptions=[{name="Tight",value="tight"},{name="Normal",value="normal"},{name="Loose",value="loose"}];
+		this.modulethemeoptions=[
+			{name="Brand Default",value="module-brand"},
+        	{name="Black",value="module-black"},
+        	{name="Light Gray",value="module-light-gray"},
+        	{name="Medium Gray",value="module-medium-gray"},
+        	{name="Dark Gray",value="module-dark-gray"},
+        	{name="Orange",value="module-orange"},
+        	{name="Red",value="module-red"},
+        	{name="Azul",value="module-azul"},
+        	{name="Sea Foam",value="module-sea-foam"},
+        	{name="Teal",value="module-teal"},
+        	{name="Green",value="module-green"},
+        	{name="Cranberry",value="module-cranberry"},
+        	{name="Goldenrod",value="module-goldenrod"},
+        	{name="Violet",value="module-violet"},
+        	{name="Purple",value="module-purple"},
+        	{name="Blue",value="module-blue"},
+			{name="White",value="module-white"},
+			{name="Image Grid",value="module-image-grid"}
+        ];
+		this.coloroptions=[
+            {name='White',value="##ffffff"},
+			{name='Mura Light Gray',value="##d5d5d5"},
+			{name='Mura Medium Gray',value="##6b6b6b"},
+            {name='Mura Black',value="##2c2c2c"},
+            {name='Mura Red',value="##E34A36"},
+            {name='Mura Orange',value="##fd7334"},
+            {name='Mura Azul',value="##00b7e3"},
+            {name='Mura Sea Foam',value="##5fd18c"},
+            {name='Mura Teal',value="##00c8b2"},
+            {name='Mura Green',value="##93c220"},
+            {name='Mura Cranberry',value="##da2048"},
+            {name='Mura Goldenrod',value="##e9ad01"},
+            {name='Mura Violet',value="##984ac1"},
+			{name='Mura Purple',value="##6565df"},
+			{name='Mura Blue',value="##2e5ad9"}
+        ];
 		// GENERAL
 		this.directImages=true;
 		this.deferMuraJS=true;
@@ -465,49 +500,6 @@
 		this.userFavoritesWrapperClass="bg-light p-3 mb-5 border rounded";
 		this.pageToolsWrapperClass="bg-light p-3 mb-5 border rounded";
 		
-		// 7.2 Module Specific Themes
-        this.primaryContentTypes="Folder,Page,Link,File";
-        
-        this.modulethemeoptions=[
-			{name="Brand Default",value="module-brand"},
-        	{name="Black",value="module-black"},
-        	{name="Light Gray",value="module-light-gray"},
-        	{name="Medium Gray",value="module-medium-gray"},
-        	{name="Dark Gray",value="module-dark-gray"},
-        	{name="Orange",value="module-orange"},
-        	{name="Red",value="module-red"},
-        	{name="Azul",value="module-azul"},
-        	{name="Sea Foam",value="module-sea-foam"},
-        	{name="Teal",value="module-teal"},
-        	{name="Green",value="module-green"},
-        	{name="Cranberry",value="module-cranberry"},
-        	{name="Goldenrod",value="module-goldenrod"},
-        	{name="Violet",value="module-violet"},
-        	{name="Purple",value="module-purple"},
-        	{name="Blue",value="module-blue"},
-			{name="White",value="module-white"},
-			{name="Image Grid",value="module-image-grid"}
-        ];
-        
-        this.coloroptions=[
-            {name='White',value="##ffffff"},
-			{name='Mura Light Gray',value="##d5d5d5"},
-			{name='Mura Medium Gray',value="##6b6b6b"},
-            {name='Mura Black',value="##2c2c2c"},
-            {name='Mura Red',value="##E34A36"},
-            {name='Mura Orange',value="##fd7334"},
-            {name='Mura Azul',value="##00b7e3"},
-            {name='Mura Sea Foam',value="##5fd18c"},
-            {name='Mura Teal',value="##00c8b2"},
-            {name='Mura Green',value="##93c220"},
-            {name='Mura Cranberry',value="##da2048"},
-            {name='Mura Goldenrod',value="##e9ad01"},
-            {name='Mura Violet',value="##984ac1"},
-			{name='Mura Purple',value="##6565df"},
-			{name='Mura Blue',value="##2e5ad9"}
-        ];
-		// -----------------------------
-
 	</cfscript>
 
 	<cffunction name="dspCarouselByFeedName" output="false">
