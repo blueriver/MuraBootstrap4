@@ -1,25 +1,25 @@
 <cfoutput>
-	#m.dspObject(
+	#Mura.dspObject(
 		object="header",
-		objectParams=urlDecode(m.content('headerParams')),
+		objectParams=urlDecode(Mura.content('headerParams')),
 		targetattr='headerParams'
     )#
-    #$.dspObjects(2)#<!---Pre-Content Display Region--->
+    #Mura.dspObjects(2)#<!---Pre-Content Display Region--->
     <div class="container mt-3">
     <!--- Primary Associated Image --->
-        <cfif $.content().hasImage(usePlaceholder=false)>
+        <cfif Mura.content().hasImage(usePlaceholder=false)>
             <cfscript>
-                img = $.content().getImageURL(
+                img = Mura.content().getImageURL(
                     size = 'carouselimage' // small, medium, large, custom, or any other pre-defined image size
                     ,complete = false // set to true to include the entire URL, not just the absolute path (default)
                 );
             </cfscript>
             <div class="mura-asset mb-4">
-                <img class="mura-meta-image img-fluid rounded-lg shadow" src="#img#" alt="#esapiEncode('html_attr', $.content('title'))#">
+                <img class="mura-meta-image img-fluid rounded-lg shadow" src="#img#" alt="#esapiEncode('html_attr', Mura.content('title'))#">
             </div>
         </cfif>
     <!--- /Primary Associated Image --->
-	#m.renderEditableAttribute(attribute="body",type="htmlEditor")#
+	#Mura.renderEditableAttribute(attribute="body",type="htmlEditor")#
     </div>
-    #$.dspObjects(3)#<!---Pre-Footer Display Region--->
+    #Mura.dspObjects(3)#<!---Pre-Footer Display Region--->
 </cfoutput>
