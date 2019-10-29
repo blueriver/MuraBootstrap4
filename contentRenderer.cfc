@@ -571,7 +571,7 @@
 							<cfloop condition="local.iterator.hasNext()">
 								<cfset local.item=iterator.next()>
 								<cfif ListFindNoCase('jpg,jpeg,gif,png', ListLast(local.item.getImageURL(), '.'))>
-									<li data-target="###arguments.cssID#" data-slide-to="#idx#" class="<cfif local.idx eq 0>active</cfif>"></li>
+									<li data-target="###arguments.carouselID#" data-slide-to="#idx#" class="<cfif local.idx eq 0>active</cfif>"></li>
 									<cfset local.idx++>
 								</cfif>
 							</cfloop>
@@ -609,11 +609,11 @@
 							<cfif local.idx gt 1>
 								<!---showArrows--->
 								<cfif yesnoformat(arguments.showArrows)>
-									<a class="carousel-control-prev" href="###arguments.cssID#" role="button" data-slide="prev">
+									<a class="carousel-control-prev" href="###arguments.carouselID#" role="button" data-slide="prev">
 										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 										<span class="sr-only">Previous</span>
 									</a>
-									<a class="carousel-control-next" href="###arguments.cssID#" role="button" data-slide="next">
+									<a class="carousel-control-next" href="###arguments.carouselID#" role="button" data-slide="next">
 										<span class="carousel-control-next-icon" aria-hidden="true"></span>
 										<span class="sr-only">Next</span>
 									</a>
@@ -632,6 +632,27 @@
 										});
 									</script>
 								</cfif>
+
+								<script>
+									$('.carousel-control-prev').click(function(e) {
+										e.stopPropagation();
+										$('###arguments.carouselID#').carousel('prev');
+										return false;
+									});
+
+									$('.carousel-control-next').click(function(e) {
+										e.stopPropagation();
+										$('###arguments.carouselID#').carousel('next');
+										return false;
+									});
+
+									$('.carousel-indicators li').click(function(e){
+										e.stopPropagation();
+										slideNum = $(this).data("slide-to");
+										$('###arguments.carouselID#').carousel(slideNum);
+										return false;
+									});
+								</script>
 
 							</cfif>
 
