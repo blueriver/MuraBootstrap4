@@ -3,7 +3,8 @@
 		object="header",
 		objectParams=urlDecode(m.content('headerParams')),
 		targetattr='headerParams'
-	)#
+    )#
+    #$.dspObjects(2)#<!---Pre-Content Display Region--->
     <div class="container mt-3">
     <!--- Primary Associated Image --->
         <cfif $.content().hasImage(usePlaceholder=false)>
@@ -19,5 +20,6 @@
         </cfif>
     <!--- /Primary Associated Image --->
 	#m.renderEditableAttribute(attribute="body",type="htmlEditor")#
-	</div> 
+    </div>
+    #$.dspObjects(3)#<!---Pre-Footer Display Region--->
 </cfoutput>
