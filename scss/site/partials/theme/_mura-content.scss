@@ -1,0 +1,5 @@
+.content{
+    > img{
+        @extend .rounded-lg, .shadow;
+    }
+}
