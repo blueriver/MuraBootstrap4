@@ -620,39 +620,7 @@
 								</cfif>
 								<!---/showArrows--->
 
-								<!--- AutoStart --->
-								<cfif yesnoformat(arguments.autoStart)>
-									<script>
-										jQuery(function($){
-											try{
-												jQuery('###arguments.carouselID#').carousel({interval:#arguments.interval#});
-											} catch(e){
-												console.log(e)
-											}
-										});
-									</script>
-								</cfif>
-
-								<script>
-									$('.carousel-control-prev').click(function(e) {
-										e.stopPropagation();
-										$('###arguments.carouselID#').carousel('prev');
-										return false;
-									});
-
-									$('.carousel-control-next').click(function(e) {
-										e.stopPropagation();
-										$('###arguments.carouselID#').carousel('next');
-										return false;
-									});
-
-									$('.carousel-indicators li').click(function(e){
-										e.stopPropagation();
-										slideNum = $(this).data("slide-to");
-										$('###arguments.carouselID#').carousel(slideNum);
-										return false;
-									});
-								</script>
+								
 
 							</cfif>
 
@@ -668,6 +636,39 @@
 						</cfif>
 
 					</div>
+					<!--- AutoStart --->
+					<cfif yesnoformat(arguments.autoStart)>
+						<script>
+							jQuery(function($){
+								try{
+									jQuery('###arguments.carouselID#').carousel({interval:#arguments.interval#});
+								} catch(e){
+									console.log(e)
+								}
+							});
+						</script>
+					</cfif>
+
+					<script>
+						jQuery('.carousel-control-prev').click(function(e) {
+							e.stopPropagation();
+							jQuery('###arguments.carouselID#').carousel('prev');
+							return false;
+						});
+
+						jQuery('.carousel-control-next').click(function(e) {
+							e.stopPropagation();
+							jQuery('###arguments.carouselID#').carousel('next');
+							return false;
+						});
+
+						jQuery('.carousel-indicators li').click(function(e){
+							e.stopPropagation();
+							slideNum = jQuery(this).data("slide-to");
+							jQuery('###arguments.carouselID#').carousel(slideNum);
+							return false;
+						});
+					</script>
 				<cfelse>
 
 					<div class="alert alert-warning alert-dismissible fade show" role="alert">
