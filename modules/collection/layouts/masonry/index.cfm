@@ -1,6 +1,6 @@
 <cfsilent>		
 	<cfparam name="objectParams.columnCount" default="5">
-	<cfparam name="objectParams.columnWidth" default="240px">
+	<cfparam name="objectParams.columnWidth" default="240">
 	<cfparam name="objectParams.imageSize" default="medium">
 	<cfparam name="objectParams.imageHeight" default="AUTO">
 	<cfparam name="objectParams.imageWidth" default="AUTO">
@@ -14,7 +14,7 @@
 	}>
 </cfsilent>
 <cfoutput>
-<div class="mura-collection card-columns" style="column-count: #esapiEncode('html_attr',objectParams.columnCount)#; column-width:#esapiEncode('html_attr',objectParams.columnWidth)#;">
+<div class="mura-collection card-columns" style="column-count: #esapiEncode('html_attr',objectParams.columnCount)#; column-width:#esapiEncode('html_attr',objectParams.columnWidth)#px;">
 	<cfloop condition="iterator.hasNext()">
 	<cfsilent>
 		<cfset item=iterator.next()>
