@@ -1,6 +1,6 @@
 //Mura Specific Overrides
 .mura-item-meta__date{
-    @extend .text-uppercase, .text-muted, .small, .mb-3;
+    @extend .text-uppercase, .text-muted, .small, .mb-2;
 }
 
 .mura-item-meta__title{
@@ -19,8 +19,7 @@
 }
   
 .mura-item-meta__subtype{
-    @extend .badge, .badge-pill, .badge-primary;
-    margin-bottom:.5rem;
+    @extend .badge, .badge-pill, .badge-primary, .mb-2;
 }
 
 .mura-meta-image{ 
