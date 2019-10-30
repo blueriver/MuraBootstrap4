@@ -26,30 +26,32 @@
 				<div class="accordion" id="rapidsAccordion">
 					<div class="card">
 						<div class="card-header #objectParams.bgStyle#" id="##content-#item.getContentID()#">
-						    <h2 class="mb-0">
-								<button class="btn btn-link collapsed text-reset" type="button" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</button>
+						    <h2 class="h5 mb-0 p-3">
+								<a class="collapsed text-reset" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</a>
 							</h2>
 						</div>
 						
 						<div id="content-#item.getContentID()#" class="collapse" aria-labelledby="##content-#item.getContentID()#" data-parent="##rapidsAccordion">
 							<div class="card-body"> <!--- #objectParams.bgStyle# ---> <!--- #item.getValue('CardBackgroundStyle')# --->
-								<cfif listFindNoCase(objectParams.displaylist,'Image')>
-									<div class="mura-item-content">
-										<cfif item.hasImage()>
-											<cfif objectparams.modalimages>
-												<a href="#item.getImageURL(size='small')#" title="#esapiEncode('html_attr',item.getValue('title'))#" data-rel="shadowbox[gallery]" class="#this.contentListItemImageLinkClass#"><img class="mb-4" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
-											<cfelse>
-												<a href="#item.getURL()#"><img class="mb-4" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
+								<div class="px-3">
+									<cfif listFindNoCase(objectParams.displaylist,'Image')>
+										<div class="mura-item-content">
+											<cfif item.hasImage()>
+												<cfif objectparams.modalimages>
+													<a href="#item.getImageURL(size='small')#" title="#esapiEncode('html_attr',item.getValue('title'))#" data-rel="shadowbox[gallery]" class="#this.contentListItemImageLinkClass#"><img class="mb-4" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
+												<cfelse>
+													<a href="#item.getURL()#"><img class="mb-4" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
+												</cfif>
 											</cfif>
-										</cfif>
-									</div>
-								</cfif>
-								
-								#m.dspObject_include(
-									theFile='collection/includes/dsp_meta_list.cfm',
-									item=item,
-									fields=objectParams.displaylist
-								)#
+										</div>
+									</cfif>
+									
+									#m.dspObject_include(
+										theFile='collection/includes/dsp_meta_list.cfm',
+										item=item,
+										fields=objectParams.displaylist
+									)#
+								</div>
 							</div>
 						</div>
 					</div>

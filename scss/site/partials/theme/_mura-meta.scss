@@ -22,7 +22,7 @@
     @extend .badge, .badge-pill, .badge-primary, .mb-2;
 }
 
-.mura-meta-image{ 
+.mura-meta-image, dd.image img{ 
     @extend  .img-fluid, .rounded-lg, .shadow;
 }
 
