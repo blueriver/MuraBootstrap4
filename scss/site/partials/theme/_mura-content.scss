@@ -3,3 +3,6 @@
         @extend .rounded-lg, .shadow;
     }
 }
+blockquote{
+    @extend .h2, .text-center, .text-primary, .py-4, .my-5, .px-5, .mx-5, .border-top, .border-bottom;
+}

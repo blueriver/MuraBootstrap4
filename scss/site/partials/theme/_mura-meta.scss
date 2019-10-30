@@ -14,7 +14,7 @@
     @extend .text-muted;
 }
 
-.mura-item-meta__credits{
+.mura-item-meta__credits, .mura-item-meta__tags{
     @extend .text-uppercase, .text-muted, .small;
 }
   
