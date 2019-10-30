@@ -1,3 +1,28 @@
-.mura-meta-image{
+//Mura Specific Overrides
+.mura-item-meta__date{
+    @extend .text-uppercase, .text-muted, .small, .mb-3;
+}
+
+.mura-item-meta__title{
+    @extend .h4;
+    a{
+      @extend .text-dark;
+    }
+}
+
+.mura-item-meta__summary{
+    @extend .text-muted;
+}
+
+.mura-item-meta__credits{
+    @extend .text-uppercase, .text-muted, .small;
+}
+  
+.mura-item-meta__subtype{
+    @extend .badge, .badge-pill, .badge-primary;
+    margin-bottom:.5rem;
+}
+
+.mura-meta-image{ 
     @extend  .img-fluid, .rounded-lg, .shadow;
 }

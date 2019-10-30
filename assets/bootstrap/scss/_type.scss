@@ -124,24 +124,3 @@ mark,
     content: "\2014\00A0"; // em dash, nbsp
   }
 }
-
-//Mura Specific Overrides
-.mura-item-meta__date{
-  @extend .text-uppercase, .text-muted, .small, .mb-3;
-}
-.mura-item-meta__title{
-  @extend .h4;
-  a{
-    @extend .text-dark;
-  }
-}
-.mura-item-meta__summary{
-  @extend .text-muted;
-}
-.mura-item-meta__credits{
-  @extend .text-uppercase, .text-muted, .small;
-}
-
-.mura-item-meta__subtype{
-  @extend .badge, .badge-pill, .badge-primary;
-}
