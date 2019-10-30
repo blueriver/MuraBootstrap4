@@ -25,3 +25,7 @@
 .mura-meta-image{ 
     @extend  .img-fluid, .rounded-lg, .shadow;
 }
+
+div[data-layout="grid"] .mura-item-meta div[class^="mura-item-meta_"]{
+    margin-top:0;
+}
