@@ -26,6 +26,27 @@
     @extend  .img-fluid, .rounded-lg, .shadow;
 }
 
-div[data-layout="grid"] .mura-item-meta div[class^="mura-item-meta_"]{
-    margin-top:0;
-}
+div[data-layout="grid"]{
+    .mura-item-content{
+        a {
+			// .transition(all, 0.3s, ease-in);
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+        img{
+			@extend .shadow;
+			@extend .rounded;
+		}
+    }
+    .mura-item-meta{
+        margin-top: 1.25rem;
+        // .mura-item-meta__title{
+        //     margin-top:0;
+        // }
+        // .mura-item-meta__date{
+        //     @extend .text-uppercase, .text-muted, .small, .mb-2;
+        //     margin-top:0;
+        // }
+    }
+} 
