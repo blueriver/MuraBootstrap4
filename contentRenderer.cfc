@@ -73,7 +73,7 @@
 		this.cookieConsentWrapperClass="";
 		this.cookieConsentWidth="sm";
 
-		this.primaryContentTypes="Page,Link,File";
+		this.primaryContentTypes="Page,Folder,Link,File";
 		this.spacingoptions=[{name="Tight",value="tight"},{name="Normal",value="normal"},{name="Loose",value="loose"}];
 		this.modulethemeoptions=[
 			{name="Brand Default",value="module-brand"},
