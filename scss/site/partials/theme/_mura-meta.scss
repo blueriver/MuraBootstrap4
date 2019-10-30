@@ -3,14 +3,14 @@
     @extend .text-uppercase, .text-muted, .small, .mb-2;
 }
 
-.mura-item-meta__title{
+.mura-item-meta__title, dt.title{
     @extend .h4;
     a{
       @extend .text-dark;
     }
 }
 
-.mura-item-meta__summary{
+.mura-item-meta__summary, dd.summary{
     @extend .text-muted;
 }
 
@@ -18,7 +18,7 @@
     @extend .text-uppercase, .text-muted, .small;
 }
   
-.mura-item-meta__subtype{
+.mura-item-meta__subtype, .sysSubType{
     @extend .badge, .badge-pill, .badge-primary, .mb-2;
 }
 
