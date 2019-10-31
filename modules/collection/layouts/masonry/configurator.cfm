@@ -81,7 +81,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 </div>
 
 <div class="mura-control-group">
-    <label>Background Style</label>    
+    <label>Card Style</label>    
     <select class="objectParam" name="bgStyle">
         <option value=""> - </option>
         <option value="text-white bg-primary"<cfif objectParams.bgStyle eq "text-white bg-primary"> selected="selected"</cfif>>Primary</option>
