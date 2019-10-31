@@ -22,9 +22,19 @@
     @extend .badge, .badge-pill, .badge-primary, .mb-2;
     &__webinar{
         background-color: $goldenrod;
+        &:before{
+            content:'\f108 ';
+            font-family:"fontawesome";
+            margin-right:.25rem;
+        }
     }
     &__whitepaper{
         background-color: $orange;
+        &:before{
+            content:'\f1c1 ';
+            font-family:"fontawesome";
+            margin-right:.25rem;
+        }
     }
 }
 
