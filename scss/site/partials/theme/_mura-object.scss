@@ -11,12 +11,12 @@
 	}
 }
 [data-object="image"]{
-	//@extend .rounded-lg;
-	img{
-		@extend .rounded-lg, .shadow;
-	}
+	.mura-object-content{
+		figure{
+			margin:0;
+			img{
+				@extend .rounded-lg, .shadow;
+			}
+		}
+	}	
 }
-
-// img{
-// 	@extend .rounded-lg, .shadow;
-// }
