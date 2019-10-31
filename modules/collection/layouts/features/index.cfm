@@ -20,11 +20,11 @@
 	</cfsilent>
   <div class="card card-row shadow rounded-lg mb-4">
       <div class="row no-gutters align-items-center">
-          <div class="col-12 col-md-6 col-lg-5<cfif iterator.getCurrentIndex() MOD 2> order-md-2</cfif> card-img-right">
+          <div class="col-12 col-md-6 col-lg-5<cfif iterator.getCurrentIndex() MOD 2> order-md-2 card-img-right<cfelse> card-img-left</cfif>">
 
             <!-- Image (placeholder) -->
             <img src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#item.getTitle()#" class="img-fluid w-100">
-            
+
           </div>
           <div class="col-12 col-md-6 col-lg-7 order-md-1">
 

@@ -1,0 +1,10 @@
+.card-img-right{
+    img{
+        border-radius:0 $border-radius-lg $border-radius-lg 0;
+    }
+}
+.card-img-left{
+    img{
+        border-radius:$border-radius-lg 0 0 $border-radius-lg;
+    }
+}
