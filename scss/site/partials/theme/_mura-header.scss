@@ -1,6 +1,10 @@
 [data-object="header"]{
     background-color:$blue;
-    padding:5rem 0;
+    padding: 0;
+    align-content:center !important;
+    height:460px;
+    display:flex;
+    flex-wrap:wrap;
     
     header{
         h1,h2,h3,h4,h5,h6,p{
@@ -36,6 +40,6 @@
         float: none;
     }
 }
-#blog [data-object="header"]{
-    padding:8rem 0;
-}
+// #blog [data-object="header"]{
+//     padding:8rem 0;
+// }
