@@ -18,5 +18,8 @@
 				@extend .rounded-lg, .shadow;
 			}
 		}
-	}	
+	}
+	&[data-stylesupport*="objectbackgroundimageurl"]{
+		@extend .rounded-lg, .shadow;
+	}
 }
