@@ -20,6 +20,12 @@
   
 .mura-item-meta__subtype, .sysSubType{
     @extend .badge, .badge-pill, .badge-primary, .mb-2;
+    &__webinar{
+        background-color: $goldenrod;
+    }
+    &__whitepaper{
+        background-color: $orange;
+    }
 }
 
 .mura-meta-image, dd.image img{ 
