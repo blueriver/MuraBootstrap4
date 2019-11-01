@@ -93,7 +93,8 @@
         	{name="Purple",value="module-purple"},
         	{name="Blue",value="module-blue"},
 			{name="White",value="module-white"},
-			{name="Image Grid",value="module-image-grid"}
+			{name="Image Grid",value="module-image-grid"},
+			{name="Big Header",value="module-big-header"}
         ];
 		this.coloroptions=[
             {name='White',value="##ffffff"},
