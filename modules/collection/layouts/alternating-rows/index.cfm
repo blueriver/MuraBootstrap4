@@ -19,11 +19,11 @@
 		<cfset item=iterator.next()>
 	</cfsilent>
   <div class="card card-row shadow rounded-lg mb-4">
-      <div class="row no-gutters align-items-center">
+      <div class="row no-gutters align-items-stretch">
           <div class="col-12 col-md-6 col-lg-5<cfif iterator.getCurrentIndex() MOD 2> order-md-2 card-img-right<cfelse> card-img-left</cfif>">
 
             <!-- Image (placeholder) -->
-            <img src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#item.getTitle()#" class="img-fluid w-100">
+            <img src="#item.getImageURL(size='landscape')#" alt="#item.getTitle()#" class="">
 
           </div>
           <div class="col-12 col-md-6 col-lg-7 order-md-1">

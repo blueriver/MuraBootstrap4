@@ -46,7 +46,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 <cfparam name="objectParams.modalimages" default="false">
 <cfset renderer=Mura.getContentRenderer()>
 
-<div class="mura-control-group">
+<!---<div class="mura-control-group">
     <label>Background Style</label>    
     <select class="objectParam" name="bgStyle">
         <option value=""> - </option>
@@ -58,9 +58,9 @@ version 2 without this exception.  You may, if you choose, apply this exception 
         <option value="text-white bg-info"<cfif objectParams.bgStyle eq "text-white bg-info"> selected="selected"</cfif>>Info</option>
         <option value="text-white bg-dark"<cfif objectParams.bgStyle eq "text-white bg-dark"> selected="selected"</cfif>>Dark</option>
     </select>
-</div>
+</div>--->
 
-<div class="mura-control-group">
+<!---<div class="mura-control-group">
   	<label>#application.rbFactory.getKeyValue(session.rb,'collections.imagesize')#</label>
 	<select name="imageSize" data-displayobjectparam="imageSize" class="objectParam">
 		<cfloop list="Small,Medium,Large" index="i">
@@ -84,7 +84,7 @@ version 2 without this exception.  You may, if you choose, apply this exception 
         <label class="mura-control-label">#application.rbFactory.getKeyValue(session.rb,'collections.imagewidth')#</label>
     	<input class="objectParam" name="imageWidth" data-displayobjectparam="imageWidth" type="text" value="#feed.getImageWidth()#" />
     </div>
-</div>
+</div>--->
 
 <div class="mura-control-group" id="availableFields">
 	<label>
@@ -102,14 +102,14 @@ version 2 without this exception.  You may, if you choose, apply this exception 
     </div>
 </div>
 
-<div class="mura-control-group">
+<!---<div class="mura-control-group">
   	<label>#application.rbFactory.getKeyValue(session.rb,'collections.viewimagesasgallery')#</label>
 	<select name="modalimages" data-displayobjectparam="modalimages" class="objectParam">
 		<cfloop list="True,False" index="i">
 			<option value="#i#"<cfif objectparams.modalimages eq i> selected</cfif>>#i#</option>
 		</cfloop>
 	</select>
-</div>
+</div>--->
 <script>
 	$(function(){
 		$('##editFields').click(function(){
@@ -143,18 +143,18 @@ version 2 without this exception.  You may, if you choose, apply this exception 
 
 		$('##layoutoptionscontainer').show();
 
-		function handleImageSizeChange(){
-			if($('select[name="imageSize"]').val()=='custom'){
-				$('##imageoptionscontainer').show()
-			}else{
-				$('##imageoptionscontainer').hide();
-				$('##imageoptionscontainer').find(':input').val('AUTO');
-			}
-		}
+		// function handleImageSizeChange(){
+		// 	if($('select[name="imageSize"]').val()=='custom'){
+		// 		$('##imageoptionscontainer').show()
+		// 	}else{
+		// 		$('##imageoptionscontainer').hide();
+		// 		$('##imageoptionscontainer').find(':input').val('AUTO');
+		// 	}
+		// }
 
-		$('select[name="imageSize"]').change(handleImageSizeChange);
+		// $('select[name="imageSize"]').change(handleImageSizeChange);
 
-		handleImageSizeChange();
+		// handleImageSizeChange();
 	});
 </script>
 </cfoutput>
