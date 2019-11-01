@@ -1,7 +1,7 @@
 [data-objectspacing="tight"],
 [data-metaspacing="tight"],
 [data-contentspacing="tight"]{
-    padding: 1rem;
+    padding: 1rem .5rem;
 }
 [data-objectspacing="normal"],
 [data-metaspacing="normal"],
@@ -47,6 +47,7 @@
         padding: 5rem;
     }
 }
+
 //image grid module theme
 .module-image-grid{
     > .mura-object-content{
