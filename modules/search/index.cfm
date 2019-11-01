@@ -114,7 +114,7 @@
 		targetattr='headerParams'
 	)#
 
-	<div id="svSearchResults" class="mura-search-results mt-3 container #this.searchResultWrapperClass#">
+	<div id="svSearchResults" class="mura-search-results container #this.searchResultWrapperClass#">
 		<div class="#this.searchResultInnerClass#">
 			<cfif validCSRFTokens>
 				<cfset variables.args=arrayNew(1)>
