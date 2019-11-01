@@ -59,10 +59,10 @@
 					<div class="input-group">
 						<input type="text" name="Keywords" id="navKeywords" class="form-control" value="#esapiEncode('html', Mura.event('keywords'))#" placeholder="#Mura.rbKey('search.search')#" aria-label="Search">
 						<div class="input-group-append">
-							<span class="input-group-text" id="basic-addon2">
+							<button class="input-group-text" id="search-submit">
 								<i class="fa fa-search" aria-hidden="true"></i>
 								<span class="sr-only">Search</span>
-							</span>
+							</button>
 						</div>
 					</div>
 					<input type="hidden" name="display" value="search">
