@@ -11,15 +11,15 @@
 		width: 100%;
 	}
 
-	@media(max-width:575.98px){
-		.hasImage{
-			padding-left:0 !important;//override inline style
-			.image{				
-				position:relative;
-				margin-bottom:1.25rem;
-			}
-		}
-	}
+	// @media(max-width:575.98px){
+	// 	.hasImage{
+	// 		padding-left:0 !important;//override inline style
+	// 		.image{				
+	// 			position:relative;
+	// 			margin-bottom:1.25rem;
+	// 		}
+	// 	}
+	// }
 
 	.comments {
 		font-size: $font-size-sm;

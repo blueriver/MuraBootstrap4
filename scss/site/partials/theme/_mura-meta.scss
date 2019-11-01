@@ -18,22 +18,24 @@
     @extend .text-uppercase, .text-muted, .small;
 }
   
-.mura-item-meta__subtype, .sysSubType{
+.mura-item-meta__subtype, .subtype{
     @extend .badge, .badge-pill, .badge-primary, .mb-2;
-    &__webinar{
+    &[data-value="Webinar"]{
         background-color: $goldenrod;
         &:before{
-            content:'\f108 ';
+            content:'\f108';
             font-family:"fontawesome";
-            margin-right:.25rem;
+            margin-left: .15rem;
+            vertical-align: top;
         }
     }
-    &__whitepaper{
+    &[data-value="White Paper"]{
         background-color: $orange;
         &:before{
-            content:'\f1c1 ';
+            content:'\f1c1';
             font-family:"fontawesome";
-            margin-right:.25rem;
+            margin-left: .15rem;
+            vertical-align: top;
         }
     }
 }

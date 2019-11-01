@@ -2,7 +2,7 @@
     background-color:$blue;
     padding: 0;
     align-content:center !important;
-    height:460px;
+    height:320px;
     display:flex;
     flex-wrap:wrap;
     
@@ -27,6 +27,7 @@
             & + .breadcrumb-item{
                 &:before{
                     color:rgba(255,255,255,.5);
+                    margin-right: .25rem;
                 }
             }
         }
