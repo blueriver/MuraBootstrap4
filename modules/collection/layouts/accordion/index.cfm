@@ -38,9 +38,9 @@
 										<div class="mura-item-content">
 											<cfif item.hasImage()>
 												<cfif objectparams.modalimages>
-													<a href="#item.getImageURL(size='small')#" title="#esapiEncode('html_attr',item.getValue('title'))#" data-rel="shadowbox[gallery]" class="#this.contentListItemImageLinkClass#"><img class="mb-4" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
+													<a href="#item.getImageURL(size='small')#" title="#esapiEncode('html_attr',item.getValue('title'))#" data-rel="shadowbox[gallery]" class="#this.contentListItemImageLinkClass#"><img class="mb-4 rounded-lg shadow" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
 												<cfelse>
-													<a href="#item.getURL()#"><img class="mb-4" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
+													<a href="#item.getURL()#"><img class="mb-4 rounded-lg shadow" src="#item.getImageURL(argumentCollection=imageSizeArgs)#" alt="#esapiEncode('html_attr',item.getValue('title'))#"></a>
 												</cfif>
 											</cfif>
 										</div>
