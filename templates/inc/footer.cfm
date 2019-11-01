@@ -7,6 +7,6 @@
     		<p class="alert alert-info">A component named 'Footer' is currently missing from your site.</p>
     	</cfif>
     </div>
-<footer>
+</footer>
 
 </cfoutput>

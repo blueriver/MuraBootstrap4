@@ -1,6 +1,8 @@
-footer {
-    .container{
-        padding-left:$mobile-horizontal-padding;
-        padding-right:$mobile-horiztonal-padding;
+@media(max-width:767px){
+    footer {
+        .container{
+            padding-left:$mobile-horizontal-padding;
+            padding-right:$mobile-horizontal-padding;
+        }
     }
 }
