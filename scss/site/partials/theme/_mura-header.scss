@@ -41,6 +41,7 @@
         float: none;
     }
 }
-// #blog [data-object="header"]{
-//     padding:8rem 0;
-// }
+//larger header on blog header
+#blog.depth-2 [data-object="header"]{
+    height:460px;
+}
