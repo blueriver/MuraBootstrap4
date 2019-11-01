@@ -1,10 +1,13 @@
 <mura>
 
 	<imagesizes>
-		<imagesize name="600x400" width="600" height="400" />
-		<imagesize name="600x600" width="600" height="600" />
-		<imagesize name="400x600" width="400" height="600" />
-		<imagesize name="carouselimage" width="1506" height="628" />
+		<imagesize name="Small" width="200" height="200" />
+		<imagesize name="Medium" width="400" height="400" />
+		<imagesize name="Large" width="1600" height="AUTO" />
+		<imagesize name="Landscape" width="1200" height="800" />
+		<imagesize name="Square" width="1200" height="1200" />
+		<imagesize name="Portrait" width="800" height="1200" />
+		<imagesize name="Carousel-Image" width="1600" height="900" />
 	</imagesizes>
 
 	<extensions>
