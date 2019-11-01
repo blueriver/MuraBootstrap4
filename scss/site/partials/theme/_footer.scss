@@ -1,1 +1,6 @@
-footer {}
+footer {
+    .container{
+        padding-left:$mobile-horizontal-padding;
+        padding-right:$mobile-horiztonal-padding;
+    }
+}
