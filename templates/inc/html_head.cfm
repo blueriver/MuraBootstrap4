@@ -43,5 +43,15 @@
 	<cfset rs=Mura.getBean('feedManager').getFeeds(Mura.event('siteID'),'Local',true,true) />
 	<cfset apiEndpoint=Mura.siteConfig().getApi('feed','v1').getEndpoint() />
 	<cfloop query="rs"><link rel="alternate" type="application/rss+xml" title="#esapiEncode('html_attr', Mura.siteConfig('site'))# - #esapiEncode('html_attr', rs.name)#" href="#XMLFormat('#apiEndpoint#/?feedID=#rs.feedID#')#"></cfloop>
+
+	<meta property="og:url" content="#esapiEncode('html_attr', Mura.content().getURL(complete=true))#" />
+    <meta property="og:site_name" content="#esapiEncode('html_attr', Mura.siteConfig('site'))#" />
+    <meta property="og:title" content="#esapiEncode('html_attr', Mura.content('HTMLTitle'))#" />
+    <meta property="og:description" content="#esapiEncode('html_attr', Mura.content('metaDesc'))#" />
+	<meta property="og:image" content="#esapiEncode('html_attr', Mura.content().getImageUrl(size='hero',complete='true'))#" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="900" />
+	<meta property="og:type" content="website" />
+
 </head>
 </cfoutput>
