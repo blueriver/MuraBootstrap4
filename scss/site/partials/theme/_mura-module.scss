@@ -1,32 +1,36 @@
 [data-objectspacing="tight"],
-[data-objectspacing="normal"],
-[data-objectspacing="loose"],
 [data-metaspacing="tight"],
-[data-metaspacing="normal"],
-[data-metaspacing="loose"],
-[data-contentspacing="tight"],
-[data-contentspacing="normal"],
-[data-contentspacing="loose"] {
+[data-contentspacing="tight"]{
     padding: 1rem;
+}
+[data-objectspacing="normal"],
+[data-metaspacing="normal"],
+[data-contentspacing="normal"]{
+    padding: 2rem 1rem;
+}
+[data-objectspacing="loose"],
+[data-metaspacing="loose"],
+[data-contentspacing="loose"] {
+    padding: 3rem 1rem;
 }
 
 @media (min-width: 768px) {
     [data-objectspacing="tight"],
     [data-metaspacing="tight"],
     [data-contentspacing="tight"] {
-        padding: .5rem;
+        padding: 1rem;
     }
 
     [data-objectspacing="normal"],
     [data-metaspacing="normal"],
     [data-contentspacing="normal"] {
-        padding: 1rem;
+        padding: 2rem;
     }
 
     [data-objectspacing="loose"],
     [data-metaspacing="loose"],
     [data-contentspacing="loose"] {
-        padding: 2rem;
+        padding: 3rem;
     }
 }
 
@@ -34,13 +38,13 @@
     [data-objectspacing="normal"],
     [data-metaspacing="normal"],
     [data-contentspacing="normal"]{
-        padding: 2rem;
+        padding: 2.5rem;
     }
     
     [data-objectspacing="loose"],
     [data-metaspacing="loose"],
     [data-contentspacing="loose"]{
-        padding: 4rem;
+        padding: 5rem;
     }
 }
 //image grid module theme
