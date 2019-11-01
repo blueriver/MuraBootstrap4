@@ -48,6 +48,18 @@
     }
 }
 
+//nested layout items
+@media(max-width:767px){
+    .mura-object .mura-object{
+        padding-left:0;
+        padding-right:0;
+        padding-bottom:0;
+        & + .mura-object{
+            padding-top:0.5rem;
+        }
+    }
+}
+
 //image grid module theme
 .module-image-grid{
     > .mura-object-content{

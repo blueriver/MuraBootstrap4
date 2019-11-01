@@ -46,3 +46,12 @@
 #blog.depth-2 [data-object="header"]{
     height:460px;
 }
+
+@media(max-width:767px){
+	[data-object="header"]{
+        .container{
+            padding-left:$mobile-horizontal-padding;
+		    padding-right:$mobile-horizontal-padding;
+        }
+	}
+}

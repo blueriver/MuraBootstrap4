@@ -23,3 +23,10 @@
 		padding-top:30%;
 	}
 }
+
+@media(max-width:767px){
+	.navbar{
+		padding-left:$mobile-horizontal-padding;
+		padding-right:$mobile-horizontal-padding;
+	}
+}
