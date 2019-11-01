@@ -7,7 +7,7 @@
 		<imagesize name="Landscape" width="1200" height="800" />
 		<imagesize name="Square" width="1200" height="1200" />
 		<imagesize name="Portrait" width="800" height="1200" />
-		<imagesize name="Carousel-Image" width="1600" height="900" />
+		<imagesize name="Hero" width="1600" height="900" />
 	</imagesizes>
 
 	<extensions>
