@@ -20,22 +20,23 @@
   
 .mura-item-meta__subtype, .subtype{
     @extend .badge, .badge-pill, .badge-primary, .mb-2;
+    &[data-value]:before{
+        position: relative;
+        font-family:"fontawesome";
+        margin-left: .15rem;
+        vertical-align: top;
+    }
     &[data-value="Webinar"]{
         background-color: $goldenrod;
         &:before{
             content:'\f108';
-            font-family:"fontawesome";
-            margin-left: .15rem;
-            vertical-align: top;
+            bottom: -1px;
         }
     }
     &[data-value="White Paper"]{
         background-color: $orange;
         &:before{
             content:'\f1c1';
-            font-family:"fontawesome";
-            margin-left: .15rem;
-            vertical-align: top;
         }
     }
 }
