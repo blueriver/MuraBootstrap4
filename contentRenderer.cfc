@@ -100,7 +100,7 @@
             {name='White',value="##ffffff"},
 			{name='Mura Light Gray',value="##f5f5f5"},
 			{name='Mura Medium Gray',value="##6b6b6b"},
-            {name='Mura Black',value="##2c2c2c"},
+            {name='Mura Black',value="##343a40"},
             {name='Mura Red',value="##E34A36"},
             {name='Mura Orange',value="##fd7334"},
             {name='Mura Azul',value="##00b7e3"},
