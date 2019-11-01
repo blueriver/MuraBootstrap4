@@ -25,15 +25,12 @@
 				
 				<div class="accordion" id="rapidsAccordion">
 					<div class="card">
-						<div class="card-header #objectParams.bgStyle#" id="##content-#item.getContentID()#">
-						    <h2 class="h5 mb-0 p-3">
-								<a class="collapsed text-reset" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</a>
-							</h2>
+						<div class="card-header p-0 #objectParams.bgStyle#" id="##content-#item.getContentID()#">
+							<a href="##" class="h5 m-0 d-block p-5 text-reset collapsed" data-toggle="collapse" data-target="##content-#item.getContentID()#" aria-expanded="false" aria-controls="content-#item.getContentID()#">#item.getTitle()#</a>
 						</div>
 						
 						<div id="content-#item.getContentID()#" class="collapse" aria-labelledby="##content-#item.getContentID()#" data-parent="##rapidsAccordion">
-							<div class="card-body"> <!--- #objectParams.bgStyle# ---> <!--- #item.getValue('CardBackgroundStyle')# --->
-								<div class="px-3">
+							<div class="card-body px-5"> <!--- #objectParams.bgStyle# ---> <!--- #item.getValue('CardBackgroundStyle')# --->
 									<cfif listFindNoCase(objectParams.displaylist,'Image')>
 										<div class="mura-item-content">
 											<cfif item.hasImage()>
@@ -51,7 +48,6 @@
 										item=item,
 										fields=objectParams.displaylist
 									)#
-								</div>
 							</div>
 						</div>
 					</div>
