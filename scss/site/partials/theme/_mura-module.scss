@@ -50,10 +50,11 @@
 
 //nested layout items
 @media(max-width:767px){
-    .mura-object .mura-object{
+    .mura-object .mura-object:not([data-objectname="Form"]){
         padding-left:0;
         padding-right:0;
         padding-bottom:0;
+        padding-top:0;
         & + .mura-object{
             padding-top:0.5rem;
         }
