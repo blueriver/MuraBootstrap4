@@ -1,0 +1,10 @@
+.accordion{
+    a{
+        &:hover{
+            background: rgba(0,0,0,.05);
+            text-decoration: none;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+        }
+    }
+}
