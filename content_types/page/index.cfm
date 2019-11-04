@@ -12,7 +12,7 @@
                 <cfif Mura.content().hasImage(usePlaceholder=false)>
                     <cfscript>
                         img = Mura.content().getImageURL(
-                            size = 'carouselimage' // small, medium, large, custom, or any other pre-defined image size
+                            size = 'hero' // small, medium, large, custom, or any other pre-defined image size
                             ,complete = false // set to true to include the entire URL, not just the absolute path (default)
                         );
                     </cfscript>
