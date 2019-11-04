@@ -1,17 +1,3 @@
-<cfsilent>		
-	<cfparam name="objectParams.gridstyle" default="mura-grid-two">
-	<cfparam name="objectParams.imageSize" default="medium">
-	<cfparam name="objectParams.imageHeight" default="AUTO">
-	<cfparam name="objectParams.imageWidth" default="AUTO">
-	<cfparam name="objectParams.modalimages" default="false">
-	<cfparam name="objectParams.bgStyle" default="">
-
-	<cfset imageSizeArgs={
-		size=objectParams.imageSize,
-		height=objectParams.imageHeight,
-		width=objectParams.imageWidth
-    }>
-</cfsilent>
 <cfoutput>
 <div class="mura-collection">    
 <cfloop condition="iterator.hasNext()">
@@ -21,27 +7,22 @@
   <div class="card card-row shadow rounded-lg mb-4">
       <div class="row no-gutters align-items-stretch">
           <div class="col-12 col-md-6 col-lg-5<cfif iterator.getCurrentIndex() MOD 2> order-md-2 card-img-right<cfelse> card-img-left</cfif>">
-
-            <!-- Image (placeholder) -->
-            <img src="#item.getImageURL(size='landscape')#" alt="#item.getTitle()#" class="">
-
+            <a href="#item.getUrl()#" target="#item.getTarget()#">
+              <img src="#item.getImageURL(size='landscape')#" alt="#item.getTitle()#" class="">
+            </a>
           </div>
           <div class="col-12 col-md-6 col-lg-7 order-md-1">
-
             <!-- Body -->
             <div class="card-body">
-
                 #m.dspObject_include(
                     theFile='collection/includes/dsp_meta_list.cfm',
                     item=item,
                     fields=objectParams.displaylist
                 )#
             </div>
-
           </div>
-
       </div> <!-- / .row -->
-</div>
+</div><!-- / .card -->
 </cfloop>
 </div>
   #m.dspObject_include(
