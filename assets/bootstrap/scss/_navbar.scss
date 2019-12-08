@@ -25,12 +25,22 @@
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
-  > .container,
-  > .container-fluid {
+  %container-flex-properties {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .container,
+  .container-fluid {
+    @extend %container-flex-properties;
+  }
+
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+      @extend %container-flex-properties;
+    }
   }
 }
 
@@ -47,11 +57,8 @@
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
-  font-weight: $font-weight-bold;
-  font-style: italic;
-  font-family: $headings-font-family;
 
-  @include hover-focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 }
@@ -116,7 +123,7 @@
   border: $border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
 
-  @include hover-focus {
+  @include hover-focus() {
     text-decoration: none;
   }
 }
@@ -142,10 +149,20 @@
 
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
-        > .container,
-        > .container-fluid {
+        %container-navbar-expand-#{$breakpoint} {
           padding-right: 0;
           padding-left: 0;
+        }
+
+        > .container,
+        > .container-fluid {
+          @extend %container-navbar-expand-#{$breakpoint};
+        }
+
+        @each $size, $container-max-width in $container-max-widths {
+          > .container#{breakpoint-infix($size, $container-max-widths)} {
+            @extend %container-navbar-expand-#{$breakpoint};
+          }
         }
       }
 
@@ -167,9 +184,19 @@
         }
 
         // For nesting containers, have to redeclare for alignment purposes
+        %container-nesting-#{$breakpoint} {
+          flex-wrap: nowrap;
+        }
+
         > .container,
         > .container-fluid {
-          flex-wrap: nowrap;
+          @extend %container-nesting-#{$breakpoint};
+        }
+
+        @each $size, $container-max-width in $container-max-widths {
+          > .container#{breakpoint-infix($size, $container-max-widths)} {
+            @extend %container-nesting-#{$breakpoint};
+          }
         }
 
         .navbar-collapse {
@@ -197,7 +224,7 @@
   .navbar-brand {
     color: $navbar-light-brand-color;
 
-    @include hover-focus {
+    @include hover-focus() {
       color: $navbar-light-brand-hover-color;
     }
   }
@@ -206,7 +233,7 @@
     .nav-link {
       color: $navbar-light-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-light-hover-color;
       }
 
@@ -229,7 +256,7 @@
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-light-toggler-icon-bg;
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
   }
 
   .navbar-text {
@@ -237,7 +264,7 @@
     a {
       color: $navbar-light-active-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-light-active-color;
       }
     }
@@ -249,7 +276,7 @@
   .navbar-brand {
     color: $navbar-dark-brand-color;
 
-    @include hover-focus {
+    @include hover-focus() {
       color: $navbar-dark-brand-hover-color;
     }
   }
@@ -258,7 +285,7 @@
     .nav-link {
       color: $navbar-dark-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-dark-hover-color;
       }
 
@@ -281,7 +308,7 @@
   }
 
   .navbar-toggler-icon {
-    background-image: $navbar-dark-toggler-icon-bg;
+    background-image: escape-svg($navbar-dark-toggler-icon-bg);
   }
 
   .navbar-text {
@@ -289,7 +316,7 @@
     a {
       color: $navbar-dark-active-color;
 
-      @include hover-focus {
+      @include hover-focus() {
         color: $navbar-dark-active-color;
       }
     }
