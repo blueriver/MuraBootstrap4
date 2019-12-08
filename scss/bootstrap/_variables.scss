@@ -1,6 +1,4 @@
-// ==================================================
-// BOOTSTRAP VARIABLES HERE
-// ==================================================
+@import "../../assets/bootstrap/scss/_functions.scss";
 
 // Variables
 //
@@ -183,7 +181,7 @@ $body-color:                $gray-800 !default;
 //
 // Style anchor elements.
 
-$link-color:                              theme-color("primary") !default;
+$link-color:                              $primary !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
@@ -1050,13 +1048,13 @@ $figure-caption-color:              $gray-600 !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              null !default;
-$breadcrumb-padding-x:              null !default;
-$breadcrumb-item-padding:           null !default;
+$breadcrumb-padding-y:              0rem !default;
+$breadcrumb-padding-x:              0rem !default;
+$breadcrumb-item-padding:           0rem !default;
 
 $breadcrumb-margin-bottom:          1rem !default;
 
-$breadcrumb-bg:                     null !default;
+$breadcrumb-bg:                     transparent !default;
 $breadcrumb-divider-color:          $white !default;
 $breadcrumb-active-color:           $gray-600 !default;
 $breadcrumb-divider:                quote("/") !default;
