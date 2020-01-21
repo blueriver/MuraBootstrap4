@@ -375,7 +375,7 @@
 		this.remoteFeedWrapperClass="";
 
 		// dsp_login.cfm
-		this.loginWrapperClass="container";
+		this.loginWrapperClass="container spacing-normal";
 		this.loginWrapperInnerClass="";
 		this.loginFormClass="form-horizontal form-signin p-4 shadow m-4 mb-5 mx-auto";
 		this.forgotPasswordFormClass="form-horizontal form-sendlogin p-4 shadow m-4 mx-auto";

@@ -6,7 +6,7 @@
 		<h1>#variables.Mura.rbKey('user.login')#</h1>
 	</div>
 
-	<div id="svLoginContainer" class="container mt-3 mura-login-container #this.loginWrapperClass#">
+	<div id="svLoginContainer" class="mura-login-container #this.loginWrapperClass#">
 		<div class="#this.loginWrapperInnerClass#">
 			<!---
 				SUMMARY
