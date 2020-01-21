@@ -1,35 +1,41 @@
 [data-objectspacing="tight"],
 [data-metaspacing="tight"],
-[data-contentspacing="tight"]{
+[data-contentspacing="tight"],
+.spacing-tight{
     padding: 1rem;
 }
 [data-objectspacing="normal"],
 [data-metaspacing="normal"],
-[data-contentspacing="normal"]{
+[data-contentspacing="normal"],
+.spacing-normal{
     padding: 2rem 1rem;
 }
 [data-objectspacing="loose"],
 [data-metaspacing="loose"],
-[data-contentspacing="loose"] {
+[data-contentspacing="loose"],
+.spacing-loose {
     padding: 3rem 1rem;
 }
 
 @media (min-width: 768px) {
     [data-objectspacing="tight"],
     [data-metaspacing="tight"],
-    [data-contentspacing="tight"] {
+    [data-contentspacing="tight"],
+    .spacing-tight {
         padding: 1rem;
     }
 
     [data-objectspacing="normal"],
     [data-metaspacing="normal"],
-    [data-contentspacing="normal"] {
+    [data-contentspacing="normal"],
+    .spacing-normal {
         padding: 2rem;
     }
 
     [data-objectspacing="loose"],
     [data-metaspacing="loose"],
-    [data-contentspacing="loose"] {
+    [data-contentspacing="loose"],
+    .spacing-loose {
         padding: 3rem;
     }
 }
@@ -37,13 +43,15 @@
 @media (min-width: 992px) {
     [data-objectspacing="normal"],
     [data-metaspacing="normal"],
-    [data-contentspacing="normal"]{
+    [data-contentspacing="normal"],
+    .spacing-normal{
         padding: 2.5rem;
     }
     
     [data-objectspacing="loose"],
     [data-metaspacing="loose"],
-    [data-contentspacing="loose"]{
+    [data-contentspacing="loose"],
+    .spacing-loose{
         padding: 5rem;
     }
 }
