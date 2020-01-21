@@ -377,15 +377,15 @@
 		// dsp_login.cfm
 		this.loginWrapperClass="container";
 		this.loginWrapperInnerClass="";
-		this.loginFormClass="form-horizontal form-signin";
-		this.forgotPasswordFormClass="form-horizontal form-sendlogin";
+		this.loginFormClass="form-horizontal form-signin p-4 shadow m-4 mb-5 mx-auto";
+		this.forgotPasswordFormClass="form-horizontal form-sendlogin p-4 shadow m-4 mx-auto";
 		this.loginFormGroupWrapperClass=this.formFieldWrapperClass;
 		this.loginFormFieldLabelClass="control-label";
-		this.loginFormFieldWrapperClass="";
+		this.loginFormFieldWrapperClass="w-100";
 		this.loginFormFieldClass=this.formInputClass;
 		this.loginFormPrefsClass="";
 		this.loginFormCheckboxClass="checkbox";
-		this.loginFormSubmitWrapperClass="";
+		this.loginFormSubmitWrapperClass="text-center";
 		this.loginFormSubmitClass=this.formButtonClass;
 		this.notRegisteredLinkClass="btn btn-primary";
 

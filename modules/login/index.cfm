@@ -1,63 +1,9 @@
-<!---
-	This file is part of Mura CMS.
-
-	Mura CMS is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, Version 2 of the License.
-
-	Mura CMS is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with Mura CMS. If not, see <http://www.gnu.org/licenses/>.
-
-	Linking Mura CMS statically or dynamically with other modules constitutes
-	the preparation of a derivative work based on Mura CMS. Thus, the terms
-	and conditions of the GNU General Public License version 2 ("GPL") cover
-	the entire combined work.
-
-	However, as a special exception, the copyright holders of Mura CMS grant
-	you permission to combine Mura CMS with programs or libraries that are
-	released under the GNU Lesser General Public License version 2.1.
-
-	In addition, as a special exception, the copyright holders of Mura CMS
-	grant you permission to combine Mura CMS with independent software modules
-	(plugins, themes and bundles), and to distribute these plugins, themes and
-	bundles without Mura CMS under the license of your choice, provided that
-	you follow these specific guidelines:
-
-	Your custom code
-
-	• Must not alter any default objects in the Mura CMS database and
-	• May not alter the default display of the Mura CMS logo within Mura CMS and
-	• Must not alter any files in the following directories:
-
-	/admin/
-	/core/
-	/Application.cfc
-	/index.cfm
-
-	You may copy and distribute Mura CMS with a plug-in, theme or bundle that
-	meets the above guidelines as a combined work under the terms of GPL for
-	Mura CMS, provided that you include the source code of that other code when
-	and as the GNU GPL requires distribution of source code.
-
-	For clarity, if you create a modified version of Mura CMS, you are not
-	obligated to grant this special exception for your modified version; it is
-	your choice whether to do so, or to make such modified version available
-	under the GNU General Public License version 2 without this exception.  You
-	may, if you choose, apply this exception to your own modified versions of
-	Mura CMS.
---->
-
 <cfif not isBoolean(variables.Mura.event('isBlocked'))>
 	<cfset variables.Mura.event('isBlocked',false)>
 </cfif>
 <cfoutput>
-	<div class="jumbotron text-center mb-0" style="background-image: url(#m.content().getImageURL(size='hero')#); background-size: cover; background-repeat: no-repeat; background-attachment: scroll;">
-		<h1 class="display-4" style="padding: 15px; display: inline-block; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.52); color: white;">#variables.Mura.rbKey('user.login')#</h1>
+	<div class="module-brand text-center mb-0 spacing-loose">
+		<h1>#variables.Mura.rbKey('user.login')#</h1>
 	</div>
 
 	<div id="svLoginContainer" class="container mt-3 mura-login-container #this.loginWrapperClass#">
@@ -66,9 +12,9 @@
 				SUMMARY
 				The page summary can be used to show some content before the user has logged in.
 				Outputs only if there is content in the summary field.
-			--->
+			
 			#variables.Mura.content('summary')#
-
+			--->
 			<cfset errorMessage = '' />
 			<cfif StructKeyExists(session, 'mfa') and Len(session.mfa.username)>
 				<cfset objStrikes = CreateObject('component', 'mura.user.userstrikes').init(session.mfa.username, application.configBean) />
@@ -153,19 +99,19 @@
 					<form role="form" id="login" class="mura-login-form #this.loginFormClass# <cfif this.formWrapperClass neq "">#this.formWrapperClass#</cfif>" name="frmLogin" method="post" novalidate="novalidate">
 
 						<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google') or listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook') >
-								<div class="#this.loginFormGroupWrapperClass#">
-									<div class="#this.loginFormSubmitWrapperClass#">
-										<div class="mura-login-auth-wrapper">
+								<div class="#this.loginFormGroupWrapperClass# w-100">
+									<div class="#this.loginFormSubmitWrapperClass# w-100">
+										<div class="mura-login-auth-wrapper w-100 text-center">
 										<!--- Use Google oAuth Button --->
 										<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google')>
 											<a href="#Mura.getBean('googleLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.Mura.rbKey('login.loginwithgoogle')#" class="mura-login-auth-btn ggl">
-												<i class="fa fa-lg fa-google mi-google"></i>
+												<i class="fab fa-1x fa-google mi-google"></i>
 												<span>#variables.Mura.rbKey('login.loginwithgoogle')#</span>
 											</a>
 										</cfif>
 										<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook')>
 											<a href="#Mura.getBean('facebookLoginProvider').generateAuthUrl(session.urltoken)#" title="#variables.Mura.rbKey('login.loginwithfacebook')#" class="mura-login-auth-btn fb">
-					               	<i class="fa fa-lg fa-facebook mi-facebook"></i>
+					               	<i class="fab fa-1x fa-facebook mi-facebook"></i>
 			                  	<span>#variables.Mura.rbKey('login.loginwithfacebook')#</span>
 			 									</a>
 										</cfif>
@@ -177,10 +123,10 @@
 						<div>
 							<cfif listFindNoCase(Mura.globalConfig().getEnableOauth(), 'google') or listFindNoCase(Mura.globalConfig().getEnableOauth(), 'facebook') >
 			              <div class="text-divider"><span>#variables.Mura.rbKey('login.or')#</span></div>
-										<h3>#variables.Mura.rbKey('login.loginwithcredentials')#</h3>
+										<h3 class="text-center">#variables.Mura.rbKey('login.loginwithcredentials')#</h3>
 
 							<cfelse>
-									<h3>#variables.Mura.rbKey('user.pleaselogin')#</h3>
+									<h3 class="text-center">#variables.Mura.rbKey('user.pleaselogin')#</h3>
 							</cfif>
 
 							<!--- Username --->
